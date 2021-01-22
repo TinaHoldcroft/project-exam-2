@@ -1,0 +1,119 @@
+
+.contact__bg {
+    background-color: #CCCCCC;
+    position: absolute;
+    height: 110vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -9;
+}
+.SoMe-container {
+    background-color: #1E313E;
+    box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    left: 50vw;
+    margin-left: -1.5rem;
+    top: 0vh;
+    margin-top: 9rem;
+    width: 7rem;
+    height: 32.5rem;
+    z-index: 9;
+    i {
+        color: #CCCCCC;
+        cursor: none;
+        font-size: 1.7em;
+    }
+    a i {
+        color: #ffffff;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+.contact-form {
+    background-color: #ffffff;
+    box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: left;
+    justify-content: center;
+    left: 50vw;
+    margin-left: -5rem;
+    top: 0vh;
+    margin-top: 10.25rem;
+    width: 40rem;
+    height: 30rem;
+    padding: 5rem 5rem 5rem 16rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+    input {
+        border-bottom: solid 1px #242424;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        padding-bottom: 1rem;
+        &::placeholder {
+            text-transform: uppercase; 
+            font-size: 0.8em;
+            color: #B7B7B7;
+            opacity: 1;
+        }
+    }
+    input:focus, input:active {
+        background-color: #ffffff;
+        border-bottom: solid 1px #242424;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        &::placeholder:focus, &::placeholder:active {
+            background-color: #ffffff;
+            
+        }
+    }
+    button {
+        position: relative;
+        width: 9rem;
+        padding: 0.5rem 1.6rem;
+        border: 1.5px solid #1E313E;
+        background-color: #1E313E;
+        color: #ffffff;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        &:hover {
+            color: #1E313E;
+            background-color: #ffffff;
+        }
+    }
+}
+.error {
+    font-size: 0.7em;
+    line-height: 1em;
+    color: #ffa500;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+}
+.about {
+    height: 20rem;
+    width: 40vw;
+    margin-top: 6rem;
+    margin-left: 5rem;
+    margin-bottom: 20rem;
+    p {
+        max-width: 32vw;
+    }
+}

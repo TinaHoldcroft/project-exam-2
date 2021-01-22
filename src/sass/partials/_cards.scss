@@ -1,0 +1,101 @@
+.recently-veiwed {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    h2 { margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 50rem;
+}
+.cards {
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: left;
+    width: 80vw;
+    margin-bottom: 3rem;
+}
+.cards__img {
+    position: relative;
+    width: 38rem;
+    height: 20rem;
+    overflow: hidden;
+    z-index: 1;
+    img {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+    }
+}
+.cards__txt {
+    background-color: #ffffff;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 40vw;
+    h3 {
+        text-transform: uppercase;
+    }
+}
+.highlights {
+    display: flex;
+    flex-flow: row nowrap;
+    p {
+        background-color: #D9D9D9;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        margin-right: 1rem;
+    }
+}
+.btn__book {
+    display: block;
+    position: relative;
+    width: 10rem;
+    padding: 0.5rem 1.6rem;
+    border: 1.5px solid #1E313E;
+    background-color: #ffffff;
+    color: #1E313E;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    &:hover {
+        background-color: #1E313E;
+        color: #ffffff;
+    }
+}
+.btn__learn {
+    display: none;
+    position: relative;
+    width: 12rem;
+    padding: 0.5rem 1.6rem;
+    border: 1.5px solid #1E313E;
+    background-color: #ffffff;
+    color: #1E313E;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    &:hover {
+        background-color: #1E313E;
+        color: #ffffff;
+    }
+}
+.btn__more {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 10rem;
+    margin-left: calc(50vw - 5rem);
+    margin-bottom: 3rem;
+    &:hover {
+        opacity: 0.5;
+    }
+}

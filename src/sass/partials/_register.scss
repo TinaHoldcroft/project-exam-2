@@ -1,0 +1,107 @@
+.register {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #CCCCCC;
+    background-image: url("../images/hero.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    .register__light {
+        position: absolute;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        left: 50vw;
+        margin-left: -30rem;
+        top: 50vh;
+        margin-top: -17.5rem;
+        width: 30rem;
+        height: 35rem;
+        padding: 5rem;
+        background-color: #ffffff;
+        box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+        p {
+            font-family: learning-curve, sans-serif;
+            font-size: 1.5em;
+            color: #8D8D8D;
+        }
+        h3 {
+            font-size: 2.5em;
+        }
+        input {
+            border-bottom: solid 1px #242424;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            &::placeholder {
+                text-transform: uppercase; 
+                font-size: 0.8em;
+                color: #B7B7B7;
+                opacity: 1;
+                
+            }
+        }
+        input:focus, input:active {
+            background-color: #ffffff;
+            border-bottom: solid 1px #242424;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            &::placeholder:focus, &::placeholder:active {
+                background-color: #ffffff;
+                
+            }
+        }
+        .btn__login { border: 1.5px solid #1E313E; }
+    }
+    .register__dark {
+        position: absolute;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        left: 50vw;
+        margin-left: -35rem;
+        top: 50vh;
+        margin-top: -12.5rem;
+        background-color: #1E313E;
+        width: 70rem;
+        height: 25rem;
+        padding-left: 44rem;
+        h3, p {
+            font-family: roboto, sans-serif;
+            font-weight: 200;
+            color:  #ffffff;
+            max-width: 15rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 2.5em;
+        }
+        .btn__login { border: 1.5px solid #ffffff; }
+    }
+}.btn__login {
+    position: relative;
+    width: 9rem;
+    padding: 0.5rem 1.6rem;
+    background-color: #1E313E;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 1.5rem;
+
+    &:hover {
+        color: #1E313E;
+        background-color: #ffffff;
+    }
+}

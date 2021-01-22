@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: auto; //shows scroll only when necessary
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: #ffffff; 
+}
+::-webkit-scrollbar-thumb { background: #bdbdbd; }
+::-webkit-scrollbar-thumb:hover { background: #bdbdbd86; }

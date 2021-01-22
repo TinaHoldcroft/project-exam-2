@@ -1,0 +1,58 @@
+.search-results {
+    position: absolute;
+    top: 57vh;
+    left: 15vw;
+    z-index: 9;
+    .cards {
+        width: 70vw;
+        background-color: #ffffff;
+        padding: 0.5rem 3rem;
+        box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+        margin-bottom: 0rem;
+    }
+    .highlights {
+        display: none;
+    }
+    .cards__txt {
+        margin-top: 5rem;
+    }
+    .btn__book {
+        display: none;
+    }
+    .btn__learn {
+        display: block;
+    }
+}
+.search {
+    position: absolute;
+    top: 55vh;
+    left: 50vw;
+    margin-left: -6.75rem;
+    input {
+        border: none;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 13.5rem;
+        text-align: left;
+        border-radius: 25px;
+        padding: 0.5rem 1rem;
+        &::placeholder {
+            color: #1E313E;
+            opacity: 1;
+            font-family: montserrat, FontAwesome, sans-serif;
+        }
+
+    }
+
+}
+.btn__close {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-left: 66vw;
+    margin-bottom: 1rem;
+    i { 
+        color: #ffffff; 
+        font-size: 2em;
+    }
+}
