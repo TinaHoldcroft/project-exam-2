@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function AccommodationItem({ id, name, image, price, maxGuests, description }) {
+function AccommodationItem({ id, name, image, price, maxGuests, description}) {
 	return (
 		<div className="cards" key={id}>
 		<div className="cards__img">
@@ -15,7 +15,7 @@ function AccommodationItem({ id, name, image, price, maxGuests, description }) {
 				<p>€ {price} per night</p>
 				<p>Up to {maxGuests} guests</p>
 			</div>
-			<Link to={"hotel/" + id}>
+			<Link to={"accommodations/" + id}>
 				<button className="btn__book">Book Now</button>
 				<button className="btn__learn">Learn More</button>
 			</Link>
@@ -30,7 +30,7 @@ AccommodationItem.propTypes = {
     price: PropTypes.number.isRequired,
 	maxGuests: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+	description: PropTypes.string.isRequired,
 };
 
 export default AccommodationItem;

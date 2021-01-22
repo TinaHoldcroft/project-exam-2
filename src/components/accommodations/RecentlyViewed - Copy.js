@@ -41,9 +41,7 @@ function RecentlyViewed() {
                                     <p>€ {hotel.price} per night</p>
                                     <p>Up to {hotel.maxGuests} guests</p>
                                 </div>
-                              
-                                    <button>Book Now</button>
-                        
+                                <button>Book Now</button>
                             </div>                     
                         </div>
                     );

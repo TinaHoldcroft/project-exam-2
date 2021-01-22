@@ -3,7 +3,13 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    h2 { margin-bottom: 3rem; }
+    h2 { 
+        margin-top: 2rem; 
+        margin-bottom: 5rem; 
+        font-weight: 600;
+        font-size: 2.5em;
+        text-transform: uppercase;
+    }
     margin-bottom: 3rem;
     overflow: hidden;
     height: 50rem;
@@ -14,6 +20,7 @@
     text-align: left;
     width: 80vw;
     margin-bottom: 3rem;
+
 }
 .cards__img {
     position: relative;
@@ -33,12 +40,16 @@
     }
 }
 .cards__txt {
+    display: flex;
+    flex-flow: column nowrap;
     background-color: #ffffff;
     margin-left: 2rem;
     margin-right: 2rem;
+    gap: 1rem;
     width: 40vw;
     h3 {
         text-transform: uppercase;
+        font-weight: 600;
     }
 }
 .highlights {
