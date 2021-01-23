@@ -26,7 +26,7 @@ function Hotels() {
 
     return (
         <div className="hotels">
-            <h3>Hotel list</h3>
+            <h3>Establishment list</h3>
             {error && <div className="error">{error}</div>}
             <ul>
                 {hotels.map((hotel) => {

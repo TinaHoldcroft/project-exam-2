@@ -23,6 +23,7 @@ function AddHotel() {
     }
 
     return (
+        <div className="add">
         <Form onSubmit={handleSubmit(onSubmit)}>
             <h1>Add Hotel</h1>
             <Form.Group>
@@ -37,6 +38,7 @@ function AddHotel() {
 
             <Button type="submit">Submit</Button>
         </Form>
+        </div>
     );
 }
 

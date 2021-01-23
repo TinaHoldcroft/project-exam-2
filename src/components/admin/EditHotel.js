@@ -38,7 +38,7 @@ function AddHotel() {
     }
 
     return (
-        <>
+        <div className="edit">
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <h1>Edit Hotel</h1>
                 <Form.Group>
@@ -54,7 +54,7 @@ function AddHotel() {
                 <Button type="submit">Update</Button>
             </Form>
             <DeleteHotel id={id} />
-        </>
+        </div>
     );
 }
 
