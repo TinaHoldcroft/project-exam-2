@@ -4,15 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-    firstName: yup
+    name: yup
         .string()
         .min(2, 'Name must contain at least 2 characters')
-        .matches(/[a-zA-z-\s]/g, 'Only characters A-Z are valid')
-        .required(),
-    lastName: yup
-        .string()
-        .min(2, 'Name must contain at least 2 characters')
-        .matches(/[a-zA-z-\s]/g, 'Only characters A-Z are valid')
+        .matches(/[a-zA-z-\s]/g , 'Only characters A-Z are valid')
         .required(),
     email: yup
         .string()
@@ -43,12 +38,9 @@ function Contact() {
             </div>
             <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
                     <h2>Contact Us</h2>
-                    <label>First Name</label>
-                    <input type="text" name="firstName" ref={register}/>
-                    <p className="error">{errors.firstName?.message}</p>
-                    <label>Last Name</label>
-                    <input type="text" name="lastName" ref={register}/>
-                    <p className="error">{errors.lastName?.message}</p>
+                    <label>Name</label>
+                    <input type="text" name="name" ref={register}/>
+                    <p className="error">{errors.name?.message}</p>
                     <label>E-mail</label>
                     <input name="email" ref={register}/>
                     <p className="error">{errors.email?.message}</p>
