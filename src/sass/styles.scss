@@ -1,12 +1,32 @@
 @import 'partials/base.scss';
 @import 'partials/typography.scss';
-@import 'partials/main.scss';
-@import 'partials/hero.scss';
 @import 'partials/nav.scss';
 @import 'partials/footer.scss';
+@import 'partials/hero.scss';
 @import 'partials/cards.scss';
 @import 'partials/search.scss';
-@import 'partials/login.scss';
 @import 'partials/logout.scss';
+
+@import 'partials/login.scss';
 @import 'partials/register.scss';
 @import 'partials/contact.scss';
+
+@import 'partials/admin-dashboard.scss';
+@import 'partials/admin-enquiries.scss';
+@import 'partials/admin-messages.scss';
+@import 'partials/admin-establishments.scss';
+
+/* Assignment:
+Visitor Side
+    Homepage
+    Search bar typeahead (auto dropdown with hotel names that match what has been typed)
+    A results page with all hotels
+    The hotel specific page which displays all details about the hotel
+    An enquiry page either modal or separate page
+    A contact page (different to enquiry page) which goes to the admin for Holidaze
+Admin side
+    Simulate a login section (can make use of localStorage)
+    List of enquiries and new enquiries appear when user submits the form on the enquiry page
+    List of messages from contact form
+    The admin can create a new establishment
+*/

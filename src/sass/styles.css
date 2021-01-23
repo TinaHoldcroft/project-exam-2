@@ -37,80 +37,20 @@ a, a:hover {
   font-weight: 900;
 }
 
-.typed-style::after {
-  content: "|";
-  display: inline;
-  animation: cursorAnimation 1.5s infinite;
-  opacity: 1;
-}
-
-@keyframes cursorAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.typed-banner {
-  position: absolute;
-  top: 50vh;
-  margin-top: -9rem;
-  left: 50vw;
-  width: 55rem;
-  margin-left: -27.5rem;
-  text-align: center;
-}
-.typed-banner h2 {
-  color: #ffffff;
-  font-weight: 100;
-  font-size: 2em;
-  line-height: 1.4em;
-}
-.typed-banner a {
-  color: #ffffff;
-}
-
-.hero-img {
-  background-image: url("../images/hero.svg");
-  background-color: #1E313E;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -9;
-}
-
-.hero-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-flow: column nowrap;
-  margin-top: 100vh;
-  margin-bottom: 0rem;
-}
-
 .menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   color: #ffffff;
-  margin: 1rem;
 }
-.menu a, .menu button {
+.menu a {
   color: #ffffff;
-  margin-left: 1rem;
+  margin-left: 2rem;
   background-color: transparent;
   border: none;
 }
-.menu a:hover, .menu button:hover {
+.menu a:hover {
+  opacity: 0.7;
+}
+
+.menu .active {
   opacity: 0.7;
 }
 
@@ -126,13 +66,42 @@ a, a:hover {
 }
 
 .logo {
-  background-image: url("../images/logo--blue.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 3.8rem;
   height: 2rem;
   position: relative;
+}
+
+.menu__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 1rem;
+  font-weight: 900;
+}
+.menu__user .logo {
+  background-image: url("../images/logo--blue.svg");
+}
+
+.menu__admin {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  top: 0vh;
+  left: 0vw;
+  height: 100%;
+  width: 15rem;
+  background-color: #1E313E;
+  z-index: 11;
+}
+.menu__admin .logo {
+  background-image: url("../images/logo--white.svg");
+}
+.menu__admin .nav-links {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .footer {
@@ -231,6 +200,66 @@ a, a:hover {
   width: 3rem;
   height: 1.5rem;
   position: relative;
+}
+
+.typed-style::after {
+  content: "|";
+  display: inline;
+  animation: cursorAnimation 1.5s infinite;
+  opacity: 1;
+}
+
+@keyframes cursorAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed-banner {
+  position: absolute;
+  top: 50vh;
+  margin-top: -9rem;
+  left: 50vw;
+  width: 55rem;
+  margin-left: -27.5rem;
+  text-align: center;
+}
+.typed-banner h2 {
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 1.4em;
+}
+.typed-banner a {
+  color: #ffffff;
+}
+
+.hero-img {
+  background-image: url("../images/hero.svg");
+  background-color: #1E313E;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -9;
+}
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column nowrap;
+  margin-top: 100vh;
+  margin-bottom: 0rem;
 }
 
 .recently-veiwed {
@@ -411,6 +440,27 @@ a, a:hover {
   font-size: 2em;
 }
 
+.fa-user-times, .btn_logout {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  color: #242424;
+  background-color: transparent;
+  border: none;
+  font-size: 1.1em;
+}
+
+.fa-user-times:active, .fa-user-times:focus, .btn_logout:focus, .btn_logout:active {
+  transform: scaleX(-1) scale(1.1);
+  border: none;
+  outline: none;
+}
+
+.logout {
+  position: absolute;
+  left: 97vw;
+  top: 0.7rem;
+}
+
 .login {
   position: absolute;
   top: 0;
@@ -520,17 +570,6 @@ a, a:hover {
 .btn__register:hover {
   color: #1E313E;
   background-color: #ffffff;
-}
-
-.fa-user-times, .btn_logout {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-.fa-user-times:active, .fa-user-times:focus, .btn_logout:focus, .btn_logout:active {
-  transform: scaleX(-1) scale(1.1);
-  border: none;
-  outline: none;
 }
 
 .register {
@@ -763,5 +802,41 @@ label {
   margin: 0;
   padding: 0;
 }
+
+.dashboard__bg {
+  position: relative;
+  height: 100vh;
+}
+
+.dashboard, .hotels {
+  position: absolute;
+  top: 25vh;
+  left: 25vw;
+  height: 50vh;
+  width: 50vw;
+}
+
+.hotels {
+  position: absolute;
+  top: 25vh;
+  left: 25vw;
+  height: 50vh;
+  width: 50vw;
+}
+
+/* Assignment:
+Visitor Side
+    Homepage
+    Search bar typeahead (auto dropdown with hotel names that match what has been typed)
+    A results page with all hotels
+    The hotel specific page which displays all details about the hotel
+    An enquiry page either modal or separate page
+    A contact page (different to enquiry page) which goes to the admin for Holidaze
+Admin side
+    Simulate a login section (can make use of localStorage)
+    List of enquiries and new enquiries appear when user submits the form on the enquiry page
+    List of messages from contact form
+    The admin can create a new establishment
+*/
 
 /*# sourceMappingURL=styles.css.map */

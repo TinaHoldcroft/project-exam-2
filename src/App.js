@@ -27,10 +27,10 @@ function App() {
 				<Route path="/contact" component={Contact}/>
 				<Route path="/login" component={Login}/>
 
-				<ProtectedRoute path="/admin" exact component={Dashboard} />
+				<ProtectedRoute path="/admin/dashboard" exact component={Dashboard} />
                 <ProtectedRoute path="/admin/hotels" exact component={Hotels} />
-                <ProtectedRoute path="/admin/hotels/add" exact component={AddHotel} />
-                <ProtectedRoute path="/admin/hotels/edit" exact component={EditHotel} />
+                <ProtectedRoute path="/admin/add" exact component={AddHotel} />
+                <ProtectedRoute path="/admin/edit" exact component={EditHotel} />
 				<Route path="/register" component={Register}/>
 				<Route path="/accommodations/:id" component={AccommodationDetail}/>
                 <Redirect to="/"/>

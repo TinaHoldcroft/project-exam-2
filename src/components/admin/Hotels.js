@@ -25,7 +25,7 @@ function Hotels() {
     },);
 
     return (
-        <>
+        <div className="hotels">
             <h3>Hotel list</h3>
             {error && <div className="error">{error}</div>}
             <ul>
@@ -37,7 +37,7 @@ function Hotels() {
                     );
                 })}
             </ul>
-        </>
+        </div>
     );
 }
 

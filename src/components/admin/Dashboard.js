@@ -1,22 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 function Dashboard() {
     return (
-        <>
-            <h1>Dashboard</h1>
-            <ul>
-                <li>
-                    <NavLink to="/admin/hotels">List Hotels</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/admin/hotels/add">Add Hotel</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/admin/hotels/edit">Edit Hotel</NavLink>
-                </li>
-            </ul>
-        </>
+            <>
+                <div className="dashboard__bg">
+                    <div className="dashboard">Dashboard</div>
+                </div>
+            </>
     );
 }
 

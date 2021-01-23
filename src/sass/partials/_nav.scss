@@ -1,18 +1,17 @@
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
     color: #ffffff;
-    margin: 1rem;
-    a, button {
+    a {
         color: #ffffff;
-        margin-left: 1rem;
+        margin-left: 2rem;
         background-color: transparent;
         border: none;
         &:hover {
             opacity: 0.7;
         }
     }
+}
+.menu .active {
+    opacity: 0.7;
 }
 .brand {
     display: flex;
@@ -25,11 +24,40 @@
     }
 }
 .logo {
-    background-image: url("../images/logo--blue.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 3.8rem;
     height: 2rem;
     position: relative;
+}
+//user side
+.menu__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 1rem;
+    font-weight: 900;
+    .logo {
+        background-image: url("../images/logo--blue.svg");
+    }
+}
+//admin side
+.menu__admin {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    top: 0vh;
+    left: 0vw;
+    height: 100%;
+    width: 15rem;
+    background-color: #1E313E;
+    z-index: 11;
+    .logo {
+        background-image: url("../images/logo--white.svg");
+    }
+    .nav-links {
+        display: flex;
+        flex-flow: column nowrap;
+    }
 }

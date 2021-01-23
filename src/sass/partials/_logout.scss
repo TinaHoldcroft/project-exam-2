@@ -1,9 +1,18 @@
 .fa-user-times, .btn_logout {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    color: #242424;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
 }
 .fa-user-times:active,.fa-user-times:focus, .btn_logout:focus, .btn_logout:active {
     transform: scaleX(-1) scale(1.1);
     border: none;
     outline: none;
+}
+.logout {
+    position: absolute;
+    left: 97vw;
+    top: 0.7rem;
 }
