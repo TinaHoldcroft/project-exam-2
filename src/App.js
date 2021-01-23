@@ -10,7 +10,6 @@ import Contact from "./components/contact/Contact";
 import Accommodations from "./components/accommodations/Accommodations";
 import Hotels from "./components/admin/Hotels";
 import AddHotel from "./components/admin/AddHotel";
-import EditHotel from "./components/admin/EditHotel";
 import Dashboard from "./components/admin/Dashboard";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
@@ -30,7 +29,6 @@ function App() {
 				<ProtectedRoute path="/admin/dashboard" exact component={Dashboard} />
                 <ProtectedRoute path="/admin/hotels" exact component={Hotels} />
                 <ProtectedRoute path="/admin/add" exact component={AddHotel} />
-                <ProtectedRoute path="/admin/edit" exact component={EditHotel} />
 				<Route path="/register" component={Register}/>
 				<Route path="/accommodations/:id" component={AccommodationDetail}/>
                 <Redirect to="/"/>

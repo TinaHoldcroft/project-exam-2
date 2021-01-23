@@ -21,7 +21,6 @@ function Nav() {
                     <NavLink activeClassName="active" to="/admin/dashboard"><i className="fas fa-tachometer-alt"></i> Dashboard</NavLink>
                     <NavLink activeClassName="active" to="/admin/hotels"><i className="fas fa-hotel"></i> Establishments</NavLink>
                     <NavLink activeClassName="active" to="/admin/add"><i className="fas fa-plus-square"></i> Add Hotel</NavLink>
-                    <NavLink activeClassName="active" to="/admin/edit"><i className="fas fa-edit"></i> Edit Hotel</NavLink>
                     <NavLink activeClassName="active" to="/admin/messages"><i className="fas fa-envelope-open"></i> Messages</NavLink>
                     <NavLink activeClassName="active" to="/admin/enquer"><i className="fas fa-calendar-plus"></i> Enquiries</NavLink>
                 </div>
