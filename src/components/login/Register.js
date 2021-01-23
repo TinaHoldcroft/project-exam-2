@@ -12,7 +12,7 @@ function Register() {
     function onSubmit(data) {
         console.log("data", data);
         registerUser(data.username);
-        history.push("/admin");
+        history.push("/admin/dashboard");
     }
 
     return (
