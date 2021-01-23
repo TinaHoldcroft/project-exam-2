@@ -2,7 +2,7 @@
 .contact__bg {
     background-color: #CCCCCC;
     position: absolute;
-    height: 110vh;
+    height: 110%;
     width: 100vw;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
 }
 .SoMe-container {
     background-color: #1E313E;
-    box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+    //box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
     position: absolute;
     display: flex;
     flex-flow: column nowrap;
@@ -55,19 +55,13 @@
     h2 {
         margin-bottom: 2rem;
     }
-    input {
+    input, textarea {
         border-bottom: solid 1px #242424;
         border-top: none;
         border-left: none;
         border-right: none;
         width: 100%;
-        padding-bottom: 1rem;
-        &::placeholder {
-            text-transform: uppercase; 
-            font-size: 0.8em;
-            color: #B7B7B7;
-            opacity: 1;
-        }
+
     }
     input:focus, input:active {
         background-color: #ffffff;
@@ -76,10 +70,6 @@
         border-left: none;
         border-right: none;
         outline: none;
-        &::placeholder:focus, &::placeholder:active {
-            background-color: #ffffff;
-            
-        }
     }
     button {
         position: relative;
@@ -116,4 +106,12 @@
     p {
         max-width: 32vw;
     }
+}
+label {
+    text-transform: uppercase; 
+    font-size: 0.8em;
+    color: #B7B7B7;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
 }

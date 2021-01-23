@@ -43,13 +43,19 @@ function Contact() {
             </div>
             <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
                     <h2>Contact Us</h2>
-                    <input type="text" name="firstName" placeholder="First name" ref={register}/>
+                    <label>First Name</label>
+                    <input type="text" name="firstName" ref={register}/>
                     <p className="error">{errors.firstName?.message}</p>
-                    <input type="text" name="lastName" placeholder="Last name" ref={register}/>
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" ref={register}/>
                     <p className="error">{errors.lastName?.message}</p>
-                    <input name="email" placeholder="E-mail" ref={register}/>
+                    <label>E-mail</label>
+                    <input name="email" ref={register}/>
                     <p className="error">{errors.email?.message}</p>
-                    <input type="message" name="message" placeholder="Message" ref={register}/>
+                    <div>
+                        <label>Message</label>
+                        <textarea type="text" name="message" ref={register}></textarea>
+                    </div>
                     <p className="error">{errors.message?.message}</p>
                 <button type="submit">Send</button>
             </form>
