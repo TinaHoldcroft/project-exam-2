@@ -29,9 +29,9 @@ function RecentlyViewed() {
             <h2>Recently Viewed Accommodations</h2>
             {error && <div className="error">{error}</div>}
                 {hotels.map(hotel => {
-                    const { id, name, image, price, maxGuests, description } = hotel;
+                    const { id, name, image, price, maxGuests, description, address } = hotel;
                     return (
-                        <AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description}/>
+                        <AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests} description={description} address={address}/>
                     );
                 })}
         </div>

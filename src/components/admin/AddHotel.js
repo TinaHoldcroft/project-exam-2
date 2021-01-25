@@ -1,8 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { BASE_URL, headers } from "../../constants/api";
 
 function AddHotel() {
@@ -18,21 +16,51 @@ function AddHotel() {
     }
 
     return (
-        <div className="add">
-        <Form onSubmit={handleSubmit(onSubmit)}>
-            <h1>Add Hotel</h1>
-            <Form.Group>
-                <Form.Label>Name</Form.Label>
-                <Form.Control name="name" placeholder="Enter a name for the hotel" ref={register} />
-            </Form.Group>
+        <div className="add-hotel">
+            <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
+                <div><h1>Add establishment</h1></div>
+                
+                <div>
+                    <label>Name: </label>
+                    <input name="name" placeholder="The Example Inn" ref={register} required/>
+                </div>
 
-            <Form.Group>
-                <Form.Label>Email</Form.Label>
-                <Form.Control name="email" placeholder="Enter an email address" ref={register} />
-            </Form.Group>
+                <div>
+                    <label>E-mail: </label>
+                    <input name="email" placeholder="example@domain .com" ref={register} required/>
+                </div>
 
-            <Button type="submit">Submit</Button>
-        </Form>
+                <div className="topic-group">
+                    <label>Price: </label>
+                    <input name="price" placeholder="00" ref={register} required/>
+                    <label>Maximum guests: </label>
+                    <input name="maxGuests" placeholder="00" ref={register}/>
+                </div>
+
+                <div>
+                    <label>Image URL: </label>
+                    <input name="image" placeholder="https://...." ref={register} required/>
+                </div>
+
+                <div>
+                    <label>Description: </label>
+                    <input name="description" placeholder="full hotel description" ref={register} required/>
+                </div>
+
+                <div className="topic-group">
+                    <label>Latitude: </label>
+                    <input name="lat" placeholder="00.000000" ref={register}/>
+                    <label>Longitude: </label>
+                    <input name="lng" placeholder="00.000000" ref={register}/>
+                </div>
+
+                <div>
+                    <label>Address: </label>
+                    <input name="address" placeholder="streetname, postalcode" ref={register}/>
+                </div>
+
+                <div className="btn-group"><button>Add hotel</button></div>
+            </form>
         </div>
     );
 }

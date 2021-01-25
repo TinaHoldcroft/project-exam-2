@@ -2,10 +2,162 @@
     position: relative;
     height: 100vh;  
 }
-.dashboard, .hotels, .edit, .add  {
+.dashboard {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 3rem;
+    margin-left: 17rem;
+}
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(30, 49, 62, 0.068);
+    width: 15rem;
+    height: 13rem;
+    border-radius: 30px;
+    margin: 1rem;
+    padding: 3rem;
+}
+.hotels {
+    display: flex;
+    flex-flow: column nowrap;
     position: absolute;
-    top: 25vh;
-    left: 25vw;
-    height: 50vh;
-    width: 50vw;  
+    top: 3rem;
+    left: 17rem;
+}
+.accommodations  {
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 3rem;
+    left: 17rem;
+}
+.accommodations-links  {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    margin-left: 58vw;
+    .fa-edit, .fa-eye {
+        color: #000000;
+        font-size: 1.5em;
+        background: rgba(30, 49, 62, 0.068);
+        border-radius: 50%;
+        &:hover {
+            background: #ffffff;
+        }
+    }
+    .fa-edit {
+        padding: 1rem 0.9rem 0.9rem 1rem; //top right bottom left 
+    }
+    .fa-eye { padding: 1rem; }
+}
+.accommodations-info {
+    background-color: rgba(30, 49, 62, 0.068);
+    border-radius: 30px;
+    padding: 3rem;
+    margin: 1rem;
+    max-width: 75vw;
+    p {
+        margin: 0;
+    }
+    h4 {
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+}
+#id {
+    font-size: 0.75em;
+}
+.add-hotel, .edit-hotel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    margin-left: 15rem;
+}
+.admin-form {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    min-height: 80vh;
+    width: 50vw;
+    min-width: 35rem;
+    box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+    padding: 3rem;
+    div { margin: 0.3rem 2rem; }
+    label {
+        text-transform: uppercase; 
+        font-size: 0.8em;
+        color: #888888;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
+    .topic-group {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 0.5rem;
+
+        label {
+            margin-right: 0.3rem;
+            margin-top: 0.2rem;
+        }
+        input {
+            margin-right: 2rem;
+            width: 26%;
+        }
+    }
+    input {
+        border-bottom: solid 1px #242424;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        &::placeholder {
+            color: #d8d8d8;
+          }
+    }
+    input:focus, input:active {
+        background-color: #ffffff;
+        border-bottom: solid 1px #242424;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+    }
+    button {
+        position: relative;
+        width: 15rem;
+        padding: 0.5rem 1.6rem;
+        border: 1.5px solid #1E313E;
+        background-color: #1E313E;
+        color: #ffffff;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        margin-right: 0.1rem;
+        &:hover {
+            color: #1E313E;
+            background-color: #ffffff;
+        }
+    }
+    button + button {
+        border: 1.5px solid #ff0000;
+        background-color: #ff0000;
+        &:hover {
+            color: #ff0000;
+            background-color: #ffffff;
+        }
+    }
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
 }

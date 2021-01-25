@@ -11,8 +11,6 @@
         text-transform: uppercase;
     }
     margin-bottom: 3rem;
-    overflow: hidden;
-    height: 50rem;
 }
 .cards {
     display: flex;
@@ -45,7 +43,6 @@
     background-color: #ffffff;
     margin-left: 2rem;
     margin-right: 2rem;
-    gap: 1rem;
     width: 40vw;
     h3 {
         text-transform: uppercase;

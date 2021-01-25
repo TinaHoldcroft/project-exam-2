@@ -13,7 +13,6 @@ function Hotels() {
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
-                // handle error
                 if (json.error) {
                     setHotels([]);
                     setError(json.message);
@@ -25,18 +24,26 @@ function Hotels() {
     },);
 
     return (
-        <div className="hotels">
-            <h3>Establishment list</h3>
+        <div className="accommodations">
+            <h2>Establishment</h2>
             {error && <div className="error">{error}</div>}
-            <ul>
                 {hotels.map((hotel) => {
                     return (
-                        <li key={hotel.id}>
-                            <NavLink to={`/admin/hotels/edit/${hotel.id}`}>{hotel.name}</NavLink>
-                        </li>
+                        <div key={hotel.id}>
+                            <div className="accommodations-info">
+                                <div className="accommodations-links">
+                                    <NavLink to={`edit/${hotel.id}`}><i class="fas fa-edit"></i></NavLink>
+                                    <NavLink to={"../accommodations/" + hotel.id}><i class="fas fa-eye"></i></NavLink>
+                                </div>
+                                <p id="id">{hotel.id} | {hotel.email}</p>
+                                <h4>{hotel.name}</h4>
+                                <p>€ {hotel.price} | <i className="fas fa-user-friends"></i> {hotel.maxGuests} | <a target={"_blank"} rel="noreferrer" href={hotel.image}><i className="fas fa-camera"></i></a></p>
+                                <p>Description: {hotel.description}</p>
+                                <p>Location: {hotel.lat}, {hotel.lng} | {hotel.address}</p>
+                            </div>
+                        </div>
                     );
                 })}
-            </ul>
         </div>
     );
 }

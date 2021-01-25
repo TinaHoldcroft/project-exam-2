@@ -42,19 +42,19 @@ function RecentlyViewed() {
     
     return (
         <>
-        <Search handleSearch={filterCards}/>
-        <div className="search-results">
-            {error && <div className="error">{error}</div>}
-            {filteredHotels.map(hotel => {
-                const { id, name, image, price, maxGuests, description } = hotel;
-                return (
-                    <>
-                        <Link to={"/home"}><button  className="btn__close"><i className="fas fa-times"></i></button></Link>
-                        <AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description}/>
-                    </>
-                );
-            })}
-        </div>
+            <Search handleSearch={filterCards}/>
+            <div className="search-results">
+                {error && <div className="error">{error}</div>}
+                {filteredHotels.map(hotel => {
+                    const { id, name, image, price, maxGuests, description, address } = hotel;
+                    return (
+                        <>
+                            <Link to={"/home"}><button  className="btn__close"><i className="fas fa-times"></i></button></Link>
+                            <AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/>
+                        </>
+                    );
+                })}
+            </div>
         </>
     );
 }

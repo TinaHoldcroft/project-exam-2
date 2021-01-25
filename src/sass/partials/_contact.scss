@@ -89,6 +89,14 @@
             background-color: #ffffff;
         }
     }
+    label {
+        text-transform: uppercase; 
+        font-size: 0.8em;
+        color: #B7B7B7;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
 }
 .error {
     font-size: 0.7em;
@@ -106,12 +114,4 @@
     p {
         max-width: 32vw;
     }
-}
-label {
-    text-transform: uppercase; 
-    font-size: 0.8em;
-    color: #B7B7B7;
-    opacity: 1;
-    margin: 0;
-    padding: 0;
 }
