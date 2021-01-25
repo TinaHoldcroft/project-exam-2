@@ -302,15 +302,18 @@ a, a:hover {
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
+  flex-direction: column-reverse;
   align-items: center;
   margin-bottom: 3rem;
 }
-.recently-veiwed h2 {
+
+.recently-veiwed__h2 {
   margin-top: 2rem;
   margin-bottom: 5rem;
   font-weight: 600;
   font-size: 2.5em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .cards {

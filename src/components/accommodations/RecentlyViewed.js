@@ -25,8 +25,10 @@ function RecentlyViewed() {
     },);
 
     return (
+        <>
+        <h2 className="recently-veiwed__h2">Recently Viewed Accommodations</h2>
         <div className="recently-veiwed">
-            <h2>Recently Viewed Accommodations</h2>
+            
             {error && <div className="error">{error}</div>}
                 {hotels.map(hotel => {
                     const { id, name, image, price, maxGuests, description, address } = hotel;
@@ -35,6 +37,7 @@ function RecentlyViewed() {
                     );
                 })}
         </div>
+        </>
     );
 }
 
