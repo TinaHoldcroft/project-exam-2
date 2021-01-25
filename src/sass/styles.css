@@ -321,7 +321,7 @@ a, a:hover {
   flex-flow: row nowrap;
   text-align: left;
   width: 80vw;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .cards__img {
@@ -345,10 +345,12 @@ a, a:hover {
 .cards__txt {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-evenly;
   background-color: #ffffff;
   margin-left: 2rem;
   margin-right: 2rem;
   width: 40vw;
+  height: 100%;
 }
 .cards__txt h3 {
   text-transform: uppercase;
@@ -419,24 +421,23 @@ a, a:hover {
 
 .search-results {
   position: absolute;
-  top: 57vh;
-  left: 15vw;
+  top: 62vh;
   z-index: 9;
+  width: 100vw;
 }
 .search-results .cards {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 15vw;
   width: 70vw;
   background-color: #ffffff;
-  padding: 0.5rem 3rem;
+  padding-left: 2rem;
   box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
-  margin-bottom: 0rem;
-}
-.search-results .highlights {
-  display: none;
 }
 .search-results .cards__txt {
-  margin-top: 2rem;
+  padding: 2rem;
 }
-.search-results .btn__book {
+.search-results .highlights, .search-results .btn__book, .search-results .cards__address {
   display: none;
 }
 .search-results .btn__learn {
@@ -467,9 +468,9 @@ a, a:hover {
 .btn__close {
   background-color: transparent;
   border: none;
-  position: relative;
-  margin-left: 66vw;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: -6.2vh;
+  left: 60vw;
 }
 .btn__close i {
   color: #ffffff;

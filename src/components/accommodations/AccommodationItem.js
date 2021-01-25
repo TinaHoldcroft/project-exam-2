@@ -10,7 +10,7 @@ function AccommodationItem({ id, name, image, price, maxGuests, description, add
 		</div>
 		<div className="cards__txt">
 			<h3>{name}</h3>
-			<p><i className="fas fa-map-marker-alt"></i> {address}</p>
+			<p className="cards__address"><i className="fas fa-map-marker-alt"></i> {address}</p>
 			<p>{description}</p>
 			<div className="highlights">
 				<p>€ {price} per night</p>

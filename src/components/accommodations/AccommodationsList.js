@@ -49,8 +49,8 @@ function RecentlyViewed() {
                     const { id, name, image, price, maxGuests, description, address } = hotel;
                     return (
                         <>
-                            <Link to={"/home"}><button  className="btn__close"><i className="fas fa-times"></i></button></Link>
-                            <AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/>
+                            <div><Link to={"/home"}><button  className="btn__close"><i className="fas fa-times"></i></button></Link></div>
+                            <div><AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/></div>
                         </>
                     );
                 })}
