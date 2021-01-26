@@ -86,7 +86,7 @@
     min-height: 80vh;
     width: 50vw;
     min-width: 35rem;
-    box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+    box-shadow: $box-shadow;
     padding: 3rem;
     div { margin: 0.3rem 2rem; }
     label {

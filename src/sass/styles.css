@@ -722,10 +722,14 @@ a, a:hover {
 }
 
 .contact__bg {
+  background-image: url("https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #CCCCCC;
   position: absolute;
-  height: 110%;
-  width: 100vw;
+  height: 100%;
+  width: 105%;
   top: 0;
   left: 0;
   z-index: -9;
@@ -733,31 +737,33 @@ a, a:hover {
 
 .SoMe-container {
   background-color: #1e313e;
+  box-shadow: -4px -2px 16px rgba(78, 78, 78, 0.55);
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  gap: 3.5rem;
-  left: 50vw;
-  margin-left: -1.5rem;
-  top: 0vh;
-  margin-top: 9rem;
-  width: 7rem;
-  height: 32.5rem;
+  gap: 2rem;
+  left: 0vw;
+  margin-left: 5.8rem;
+  top: 50vh;
+  margin-top: -15rem;
+  width: 4rem;
+  height: 20rem;
   z-index: 9;
 }
 .SoMe-container i {
-  color: #CCCCCC;
+  color: #ffa500;
   cursor: none;
-  font-size: 1.7em;
+  font-size: 1.1em;
 }
 .SoMe-container a i {
   color: #ffffff;
   cursor: pointer;
+  transition: transform ease-out 0.1s;
 }
 .SoMe-container a i:hover {
-  opacity: 0.5;
+  transform: scale(1.1);
 }
 
 .contact-form {
@@ -768,15 +774,17 @@ a, a:hover {
   flex-flow: column nowrap;
   align-items: left;
   justify-content: center;
-  left: 50vw;
-  margin-left: -5rem;
-  top: 0vh;
-  margin-top: 10.25rem;
-  width: 40rem;
+  left: 0vw;
+  margin-left: 4rem;
+  top: 50vh;
+  margin-top: -15rem;
+  width: 27.5rem;
   height: 30rem;
-  padding: 5rem 5rem 5rem 16rem;
+  padding: 4rem 4rem 4rem 8.5rem;
 }
 .contact-form h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
   margin-bottom: 2rem;
 }
 .contact-form input, .contact-form textarea {

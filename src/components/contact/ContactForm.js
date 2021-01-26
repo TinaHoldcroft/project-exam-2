@@ -6,7 +6,7 @@ import * as yup from "yup";
 const schema = yup.object().shape({
     name: yup
         .string()
-        .min(2, 'Name must contain at least 2 characters')
+        .min(2, 'Name is required')
         .matches(/[a-zA-z-\s]/g , 'Only characters A-Z are valid')
         .required(),
     email: yup
