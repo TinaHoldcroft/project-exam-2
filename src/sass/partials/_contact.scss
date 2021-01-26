@@ -9,7 +9,7 @@
     z-index: -9;
 }
 .SoMe-container {
-    background-color: #1E313E;
+    background-color: $dark-blue;
     //box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
     position: absolute;
     display: flex;
@@ -30,7 +30,7 @@
         font-size: 1.7em;
     }
     a i {
-        color: #ffffff;
+        color: $white;
         cursor: pointer;
         &:hover {
             opacity: 0.5;
@@ -38,7 +38,7 @@
     }
 }
 .contact-form {
-    background-color: #ffffff;
+    background-color: $white;
     box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
     position: absolute;
     display: flex;
@@ -56,7 +56,7 @@
         margin-bottom: 2rem;
     }
     input, textarea {
-        border-bottom: solid 1px #242424;
+        border-bottom: solid 1px $black;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -64,8 +64,8 @@
 
     }
     input:focus, input:active {
-        background-color: #ffffff;
-        border-bottom: solid 1px #242424;
+        background-color: $white;
+        border-bottom: solid 1px $black;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -75,9 +75,9 @@
         position: relative;
         width: 9rem;
         padding: 0.5rem 1.6rem;
-        border: 1.5px solid #1E313E;
-        background-color: #1E313E;
-        color: #ffffff;
+        border: 1.5px solid $dark-blue;
+        background-color: $dark-blue;
+        color: $white;
         outline: none;
         cursor: pointer;
         text-transform: uppercase;
@@ -85,8 +85,8 @@
         font-weight: 500;
         margin-top: 1.5rem;
         &:hover {
-            color: #1E313E;
-            background-color: #ffffff;
+            color: $dark-blue;
+            background-color: $white;
         }
     }
     label {
@@ -101,7 +101,7 @@
 .error {
     font-size: 0.7em;
     line-height: 1em;
-    color: #ffa500;
+    color: $orange;
     margin-top: 0.5em;
     text-transform: uppercase;
 }

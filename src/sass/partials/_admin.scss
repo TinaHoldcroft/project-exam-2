@@ -46,7 +46,7 @@
         background: rgba(30, 49, 62, 0.068);
         border-radius: 50%;
         &:hover {
-            background: #ffffff;
+            background: $white;
         }
     }
     .fa-edit {
@@ -112,7 +112,7 @@
         }
     }
     input {
-        border-bottom: solid 1px #242424;
+        border-bottom: solid 1px $black;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -122,8 +122,8 @@
           }
     }
     input:focus, input:active {
-        background-color: #ffffff;
-        border-bottom: solid 1px #242424;
+        background-color: $white;
+        border-bottom: solid 1px $black;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -133,9 +133,9 @@
         position: relative;
         width: 15rem;
         padding: 0.5rem 1.6rem;
-        border: 1.5px solid #1E313E;
-        background-color: #1E313E;
-        color: #ffffff;
+        border: 1.5px solid $dark-blue;
+        background-color: $dark-blue;
+        color: $white;
         outline: none;
         cursor: pointer;
         text-transform: uppercase;
@@ -144,16 +144,16 @@
         margin-top: 1.5rem;
         margin-right: 0.1rem;
         &:hover {
-            color: #1E313E;
-            background-color: #ffffff;
+            color: $dark-blue;
+            background-color: $white;
         }
     }
     button + button {
-        border: 1.5px solid #ff0000;
-        background-color: #ff0000;
+        border: 1.5px solid $red;
+        background-color: $red;
         &:hover {
-            color: #ff0000;
-            background-color: #ffffff;
+            color: $red;
+            background-color: $white;
         }
     }
 }

@@ -18,16 +18,16 @@
     margin-left: -27.5rem;
     text-align: center;
     h2 { 
-        color: #ffffff; //contast tested: AAA
+        color: $white; //contast tested: AAA
         font-weight: 100;
         font-size: 2em;
         line-height: 1.4em;
     }
-    a { color: #ffffff; }
+    a { color: $white; }
 }
 .hero-img {
     background-image: url("../images/hero.svg");
-    background-color: #1E313E;
+    background-color: $dark-blue;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

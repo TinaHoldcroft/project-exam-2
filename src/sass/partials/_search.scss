@@ -8,7 +8,7 @@
         margin-bottom: 1rem; 
         margin-left: 15vw;
         width: 70vw;
-        background-color: #ffffff;
+        background-color: $white;
         padding-left: 2rem;
         box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
     }
@@ -36,7 +36,7 @@
         border-radius: 25px;
         padding: 0.5rem 1rem;
         &::placeholder {
-            color: #1E313E;
+            color: $dark-blue;
             opacity: 1;
             font-family: montserrat, FontAwesome, sans-serif;
         }
@@ -51,7 +51,7 @@
     top: -6.2vh;
     left: 60vw;
     i { 
-        color: #ffffff; 
+        color: $white; 
         font-size: 2em;
     }
 }
