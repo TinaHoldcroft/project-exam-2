@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
-import Spinner from "react-bootstrap/Spinner";
+import Spinner from "./Spinner";
 import { useParams } from "react-router-dom";
 
 function AccommodationsDetail() {
@@ -16,16 +16,16 @@ function AccommodationsDetail() {
 			.then(json => setHotel(json))
 			.catch(error => console.log(error))
 			.finally(() => setLoading(false));
-	}, );
+	},);
 
 	if (loading) {
-		return <Spinner animation="border" className="spinner"/>;
+		return <Spinner/>;
 	}
 
 	return (
-		<div className="hotel-page">
+		<div className="detail-page">
 			<div md={6}>
-				<img className="hotel-image" src={hotel.image} alt="alt"/>
+				<img className="img__detail" src={hotel.image} alt={hotel.name}/>
 			</div>
 			<div>
 				<h1>{hotel.name}</h1>

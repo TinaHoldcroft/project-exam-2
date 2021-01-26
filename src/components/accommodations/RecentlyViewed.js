@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import AccommodationItem from "./AccommodationItem";
+import Spinner from "./Spinner";
 
 function RecentlyViewed() {
     const [hotels, setHotels] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
     const options = { headers };
@@ -21,9 +23,13 @@ function RecentlyViewed() {
                     setHotels(json);
                 }
             })
-            .catch((error) => console.log(error));
+            .catch((error) => console.log(error))
+            .finally(() => setLoading(false));
     },);
 
+	if (loading) {
+		return <Spinner/>;
+	}
     return (
         <>
         <h2 className="recently-veiwed__h2">Recently Viewed Accommodations</h2>

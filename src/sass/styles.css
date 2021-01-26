@@ -444,13 +444,13 @@ a, a:hover {
   display: block;
 }
 
-.search {
+.search-bar {
   position: absolute;
   top: 55vh;
   left: 50vw;
   margin-left: -6.75rem;
 }
-.search input {
+.search-bar input {
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
@@ -459,7 +459,7 @@ a, a:hover {
   border-radius: 25px;
   padding: 0.5rem 1rem;
 }
-.search input::placeholder {
+.search-bar input::placeholder {
   color: #1E313E;
   opacity: 1;
   font-family: montserrat, FontAwesome, sans-serif;
@@ -1016,6 +1016,37 @@ a, a:hover {
   justify-content: space-between;
 }
 
+.spinner-wrapper {
+  position: relative;
+  margin-left: calc(50% - 2.5em);
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.spinner {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  background-color: transparent;
+  animation: spin 1s infinite linear;
+}
+.spinner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0.25em 0.25em #1E313E;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 /* Assignment:
 Visitor Side
     Homepage

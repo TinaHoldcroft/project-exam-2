@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 function Search({ handleSearch }) {
 	return (
-		<div className="search">
-			<input placeholder="Search...                        
+		<div className="search-bar">
+			<input placeholder="Search...                       
 			&#xF002;" onChange={event => handleSearch(event)}/>
 		</div>
 	);
