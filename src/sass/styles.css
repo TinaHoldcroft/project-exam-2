@@ -1081,6 +1081,9 @@ a, a:hover {
     transform: rotateZ(360deg);
   }
 }
+.accommodations-page {
+  min-height: 47vh;
+}
 .accommodations-page .search-results {
   position: relative;
   top: 22vh;
@@ -1122,8 +1125,8 @@ a, a:hover {
 
 .accommodations-footer {
   position: relative;
-  bottom: 0;
-  left: 0;
+  bottom: 0vh;
+  left: 0vh;
 }
 
 /* Assignment:
