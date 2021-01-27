@@ -14,9 +14,7 @@ function AddHotel() {
     const history = useHistory();
     const { register, handleSubmit } = useForm();
     const [hotel, setHotel] = useState(defaultState);
-
     let { id } = useParams();
-
     const options = { headers };
     const fetchUrl = BASE_URL + "establishments/" + id;
 
@@ -29,7 +27,6 @@ function AddHotel() {
 
     async function onSubmit(data) {
         console.log("data", data);
-
         const updateOptions = { headers, method: PATCH, body: JSON.stringify(data) };
         await fetch(fetchUrl, updateOptions);
         history.push("/admin/hotels");

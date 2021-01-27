@@ -1,0 +1,43 @@
+.accommodations-page {
+    .search-results {
+        position: relative;
+        top: 22vh;
+        left: 0;
+        z-index: 9;
+        width: 100vw;
+        height: 100%;
+        margin-bottom: 15rem;
+        .cards {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 7.5vw;
+            width: 85vw;
+            background-color: $white;
+            padding-left: 2rem;
+            box-shadow: none;
+        }
+        .highlights, .btn__book, .cards__address {
+            display: flex;
+        }
+    }
+    .search-bar {
+        position: absolute;
+        top: 25vh;
+        left: 3rem;
+        margin-left: 0rem;
+        input {
+            border-bottom: solid 1px $black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0px;
+            padding: 0.5rem 1rem;
+        }
+    }
+    .btn__close, .btn__learn { display: none; }
+}
+.accommodations-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}

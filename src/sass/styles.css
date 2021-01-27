@@ -25,6 +25,24 @@ body {
   background: #bdbdbd86;
 }
 
+.react-confirm-alert-body {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+.react-confirm-alert-body h1 {
+  font-family: montserrat, sans-serif;
+  font-size: 2em;
+}
+
+.react-confirm-alert-button-group {
+  flex-flow: row;
+}
+.react-confirm-alert-button-group button {
+  text-transform: uppercase;
+  font-family: montserrat, sans-serif;
+}
+
 body, input {
   font-family: montserrat, sans-serif;
 }
@@ -1063,6 +1081,51 @@ a, a:hover {
     transform: rotateZ(360deg);
   }
 }
+.accommodations-page .search-results {
+  position: relative;
+  top: 22vh;
+  left: 0;
+  z-index: 9;
+  width: 100vw;
+  height: 100%;
+  margin-bottom: 15rem;
+}
+.accommodations-page .search-results .cards {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 7.5vw;
+  width: 85vw;
+  background-color: #ffffff;
+  padding-left: 2rem;
+  box-shadow: none;
+}
+.accommodations-page .search-results .highlights, .accommodations-page .search-results .btn__book, .accommodations-page .search-results .cards__address {
+  display: flex;
+}
+.accommodations-page .search-bar {
+  position: absolute;
+  top: 25vh;
+  left: 3rem;
+  margin-left: 0rem;
+}
+.accommodations-page .search-bar input {
+  border-bottom: solid 1px #242424;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  padding: 0.5rem 1rem;
+}
+.accommodations-page .btn__close, .accommodations-page .btn__learn {
+  display: none;
+}
+
+.accommodations-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
 /* Assignment:
 Visitor Side
     Homepage

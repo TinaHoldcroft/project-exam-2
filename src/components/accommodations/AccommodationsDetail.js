@@ -17,7 +17,6 @@ function AccommodationsDetail() {
 			.catch(error => console.log(error))
 			.finally(() => setLoading(false));
 	},);
-
 	if (loading) {
 		return <Spinner/>;
 	}
@@ -39,7 +38,7 @@ function AccommodationsDetail() {
 			<div className="detail-col-2">
 				<div className="detail-sub-1">
 					<h2>{hotel.name}</h2>
-					<p>{hotel.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${hotel.lat},${hotel.lng}&hl=es&z=14&amp;output=embed`}>View Map</a></p>
+					<p>{hotel.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${hotel.lat},${hotel.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
 					<p>{hotel.description}</p>
 					<button>Book now</button>
 				</div>

@@ -22,3 +22,21 @@ $orange: #ffa500;
 $red: #ff0000;
 $black: #242424;
 $box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+
+//react alert module
+.react-confirm-alert-body  {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    h1 {
+        font-family: montserrat, sans-serif;
+        font-size: 2em;
+    }
+}
+.react-confirm-alert-button-group {
+    flex-flow: row;
+    button {
+        text-transform: uppercase;
+        font-family: montserrat, sans-serif;
+    }
+}

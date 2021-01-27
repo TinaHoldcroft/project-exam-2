@@ -15,7 +15,7 @@ function DeleteHotel(props) {
                     label: "yes",
                     onClick: () => deleteHotel(),
                 },
-                { label: "no", },
+                { label: "cancel", },
             ],
         });
     }
