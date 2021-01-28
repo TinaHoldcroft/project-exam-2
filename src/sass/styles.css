@@ -1124,7 +1124,7 @@ a, a:hover {
   flex-flow: column nowrap;
   flex-direction: column-reverse;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .btn-default {
@@ -1134,11 +1134,12 @@ a, a:hover {
   font-weight: 600;
   width: 10rem;
   margin-left: calc(50vw - 5rem);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   text-transform: capitalize;
+  transition: transform ease-out 0.1s;
 }
 .btn-default:hover {
-  opacity: 0.5;
+  transform: scale(1.05);
 }
 
 .btn-more {

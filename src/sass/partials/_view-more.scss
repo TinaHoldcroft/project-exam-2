@@ -11,9 +11,7 @@
 .default {
     .cards {
         display: none;
-        &:nth-child(16), &:nth-child(15)  {
-            display: flex;
-        }
+        &:nth-child(16), &:nth-child(15)  { display: flex; }
     }
 }
 .more { .cards { display: flex; } }
@@ -23,7 +21,7 @@
     flex-flow: column nowrap;
     flex-direction: column-reverse;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .btn-default {
     background-color: transparent;
@@ -32,8 +30,9 @@
     font-weight: 600;
     width: 10rem;
     margin-left: calc(50vw - 5rem);
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     text-transform: capitalize;
-    &:hover { opacity: 0.5; }
+    transition: transform ease-out 0.1s;
+    &:hover { transform: scale(1.05) }
 }
 .btn-more { display: none; }
