@@ -316,24 +316,6 @@ a, a:hover {
   margin-bottom: 0rem;
 }
 
-.recently-veiwed {
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  flex-direction: column-reverse;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-
-.recently-veiwed__h2 {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  font-weight: 600;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .cards {
   display: flex;
   flex-flow: row nowrap;
@@ -423,19 +405,6 @@ a, a:hover {
 .btn__learn:hover {
   background-color: #1e313e;
   color: #ffffff;
-}
-
-.btn__more {
-  background-color: transparent;
-  border: none;
-  font-size: 1.2em;
-  font-weight: 600;
-  width: 10rem;
-  margin-left: calc(50vw - 5rem);
-  margin-bottom: 3rem;
-}
-.btn__more:hover {
-  opacity: 0.5;
 }
 
 .search-results {
@@ -1127,6 +1096,53 @@ a, a:hover {
   position: relative;
   bottom: 0vh;
   left: 0vh;
+}
+
+.recently-veiwed-container h2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.default .cards {
+  display: none;
+}
+.default .cards:nth-child(16), .default .cards:nth-child(15) {
+  display: flex;
+}
+
+.more .cards {
+  display: flex;
+}
+
+.recently-veiwed {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.btn-default {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  width: 10rem;
+  margin-left: calc(50vw - 5rem);
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+}
+.btn-default:hover {
+  opacity: 0.5;
+}
+
+.btn-more {
+  display: none;
 }
 
 /* Assignment:

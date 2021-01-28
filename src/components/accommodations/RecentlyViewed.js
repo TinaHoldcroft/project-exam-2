@@ -9,6 +9,8 @@ function RecentlyViewed() {
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
     const options = { headers };
+    const [isActive, setActive] = useState("false");
+    const handleToggle = () => { setActive(!isActive); };
 
     useEffect(() => {
         fetch(url, options)
@@ -27,23 +29,30 @@ function RecentlyViewed() {
             .finally(() => setLoading(false));
     },);
 
-	if (loading) {
-		return <Spinner/>;
-	}
+    if (loading) { return <Spinner/>; }
+    
     return (
-        <>
-        <h2 className="recently-veiwed__h2">Recently Viewed Accommodations</h2>
-        <div className="recently-veiwed">
-            
-            {error && <div className="error">{error}</div>}
+        <div className="recently-veiwed-container">
+            <h2>Recently Viewed Accommodations</h2>
+            <div className={isActive ? "recently-veiwed default" : "recently-veiwed more"}>
+                {error && <div className="error">{error}</div>}
                 {hotels.map(hotel => {
                     const { id, name, image, price, maxGuests, description, address } = hotel;
                     return (
-                        <AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests} description={description} address={address}/>
+                        <AccommodationItem 
+                            id={id} 
+                            name={name} 
+                            image={image} 
+                            price={price} 
+                            maxGuests={maxGuests} 
+                            description={description} 
+                            address={address}
+                        />
                     );
                 })}
+            </div>
+            <button className={isActive ? "btn-default" : "btn-more"}onClick={handleToggle}>View more <i className="fas fa-arrow-right"></i></button>
         </div>
-        </>
     );
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Typed from 'react-typed';
-//import $ from 'jquery';
 
 function Hero() {
 
