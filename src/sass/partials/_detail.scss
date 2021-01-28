@@ -1,6 +1,42 @@
-.detail-row-2 {
-    background: $dark-blue;
-    h2 {
-        color: $white;
+.detail-page {
+    display: flex;
+    flex-flow: column;
+    .detail-col-1 { 
+        display: flex; 
+        div {
+            display: flex;
+            flex-flow: column;
+            margin-top: -5rem;
+            z-index: -9;
+            &:nth-child(1) {
+                flex: 1.6;
+                img { height: 100%; }
+            }
+            &:nth-child(2) {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                background-color: $dark-blue;
+                padding: 3rem;
+                h2 {
+                    margin-top: 5rem;
+                    font-size: 4em;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: $white;
+                }
+                div {
+                    display: flex;
+                    flex-flow: row;
+                }
+            }
+        }
+    }
+    .detail-col-2 { 
+        display: flex; 
+        margin: 3rem 5rem;
+    }
+    .detail-footer { 
+        display: flex; 
     }
 }

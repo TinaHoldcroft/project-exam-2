@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import Spinner from "./Spinner";
 import { useParams } from "react-router-dom";
+import Footer from "../layout/Footer"
 
 function AccommodationsDetail() {
 	const [hotel, setHotel] = useState(null);
@@ -24,10 +25,10 @@ function AccommodationsDetail() {
 	return (
 		<div className="detail-page">
 			<div className="detail-col-1">
-				<div className="detail-row-1">
-					<img className="img__detail" src={hotel.image} alt={hotel.name}/>
+				<div>
+					<img src={hotel.image} alt={hotel.name}/>
 				</div>
-				<div className="detail-row-2">
+				<div>
 					<h2>{hotel.name}</h2>
 					<div className="highlights">
 						<p>€ {hotel.price} per night</p>
@@ -36,12 +37,15 @@ function AccommodationsDetail() {
 				</div>
 			</div>
 			<div className="detail-col-2">
-				<div className="detail-sub-1">
+				<div>
 					<h2>{hotel.name}</h2>
 					<p>{hotel.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${hotel.lat},${hotel.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
 					<p>{hotel.description}</p>
 					<button>Book now</button>
 				</div>
+			</div>
+			<div className="detail-footer">
+				<Footer/>
 			</div>
 		</div>
 	);

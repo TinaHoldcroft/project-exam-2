@@ -111,6 +111,7 @@
         border-right: none;
         width: 100%;
         outline: none;
+        line-height: 2em;
         &::placeholder {
             color: $light-grey;
         }
@@ -145,10 +146,10 @@
         color: $dark-blue;
     }
     h3 {
+
         font-family: learning-curve, sans-serif;
         font-size: 1.6em;
         color: $light-grey;
-        margin-top: 2rem;
         margin-bottom: 1rem;
     }
 }

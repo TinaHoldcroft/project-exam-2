@@ -34,5 +34,6 @@
     text-transform: capitalize;
     transition: transform ease-out 0.1s;
     &:hover { transform: scale(1.05) }
+    &:focus, &:active { outline: none; }
 }
 .btn-more { display: none; }
