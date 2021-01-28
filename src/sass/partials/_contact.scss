@@ -62,19 +62,12 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
     }
-    input, textarea {
+    input, textarea, input:focus, input:active, textarea:focus, textarea:active {
         border-bottom: solid 1px $black;
         border-top: none;
         border-left: none;
         border-right: none;
         width: 100%;
-    }
-    input:focus, input:active {
-        background-color: $white;
-        border-bottom: solid 1px $black;
-        border-top: none;
-        border-left: none;
-        border-right: none;
         outline: none;
     }
     button {
@@ -98,18 +91,11 @@
     label {
         text-transform: uppercase; 
         font-size: 0.8em;
-        color: #B7B7B7;
+        color: $light-grey;
         opacity: 1;
         margin: 0;
         padding: 0;
     }
-}
-.error {
-    font-size: 0.7em;
-    line-height: 1em;
-    color: $orange;
-    margin-top: 0.5em;
-    text-transform: uppercase;
 }
 .about {
     height: 20rem;

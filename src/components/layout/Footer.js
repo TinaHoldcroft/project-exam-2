@@ -1,4 +1,5 @@
 import React from "react";
+import Newsletter from "./Newsletter"
 
 const Footer = () => (
     <div className="footer">
@@ -44,7 +45,7 @@ const Footer = () => (
         <div className="footer-col-3">
 			<h4>Newsletter</h4>
 			<p>Stay up to date on all events and special deals in Bergen by subscribing to our newsletter.</p>
-			<button>Sign Up</button>
+			<Newsletter/>
 		</div>
     </div>
 );
