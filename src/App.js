@@ -4,7 +4,6 @@ import "./sass/styles.scss";
 import { BrowserRouter as Router, Switch, Route, Redirect  } from "react-router-dom";
 import { AuthorizationProvider } from "./constants/Authorization";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
-
 import Home from "./components/home/Home";
 import Contact from "./components/contact/Contact";
 import Accommodations from "./components/accommodations/Accommodations";
@@ -12,7 +11,6 @@ import Hotels from "./components/admin/Hotels";
 import AddHotel from "./components/admin/AddHotel";
 import EditHotel from "./components/admin/EditHotel";
 import DeleteHotel from "./components/admin/DeleteHotel";
-import Dashboard from "./components/admin/Dashboard";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 import AccommodationDetail from "./components/accommodations/AccommodationsDetail";
@@ -28,7 +26,6 @@ function App() {
 				<Route path="/contact" component={Contact}/>
 				<Route path="/login" component={Login}/>
 
-				<ProtectedRoute path="/admin/dashboard" exact component={Dashboard} />
                 <ProtectedRoute path="/admin/hotels" exact component={Hotels} />
                 <ProtectedRoute path="/admin/add" exact component={AddHotel} />
 				<ProtectedRoute path="/admin/edit/:id" exact component={EditHotel} />

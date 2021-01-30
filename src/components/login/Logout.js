@@ -11,7 +11,7 @@ function LogOut() {
         history.push("/");
     }
 
-    return <button className="btn_logout" onClick={doLogout}><i className="fas fa-user-times" title="Log out"></i></button>;
+    return <button className="btn_logout" onClick={doLogout}><p><i className="fas fa-sign-out-alt"></i>Log Out</p></button>;
 }
 
 export default LogOut;

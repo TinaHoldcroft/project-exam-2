@@ -8,9 +8,13 @@
             flex-flow: column;
             margin-top: -5rem;
             z-index: -9;
+            box-shadow: $box-shadow;
             &:nth-child(1) {
-                flex: 1.6;
-                img { height: 100%; }
+                flex: 2.5;
+                img { 
+                    height: 100%; 
+                    width: 100%;
+                }
             }
             &:nth-child(2) {
                 flex: 1;
@@ -28,6 +32,8 @@
                 div {
                     display: flex;
                     flex-flow: row;
+                    padding: 0;
+                    box-shadow: none;
                 }
             }
         }

@@ -5,23 +5,23 @@ import { Link } from "react-router-dom";
 function AccommodationItem({ id, name, image, price, maxGuests, description, address}) {
 	return (
 		<div className="cards" key={id}>
-		<div className="cards__img">
-			<img src={image} alt={name}/>
-		</div>
-		<div className="cards__txt">
-			<h3>{name}</h3>
-			<p className="cards__address"><i className="fas fa-map-marker-alt"></i> {address}</p>
-			<p>{description}</p>
-			<div className="highlights">
-				<p>€ {price} per night</p>
-				<p>Up to {maxGuests} guests</p>
+			<div className="cards__img">
+				<img src={image} alt={name}/>
 			</div>
-			<Link to={"accommodations/" + id}>
-				<button className="btn-white btn__book">Book Now</button>
-				<button className="btn-white btn__learn">Learn More</button>
-			</Link>
-		</div>                     
-	</div>            
+			<div className="cards__txt">
+				<h3>{name}</h3>
+				<p className="cards__address"><i className="fas fa-map-marker-alt"></i> {address}</p>
+				<p>{description}</p>
+				<div className="highlights">
+					<p>€ {price} per night</p>
+					<p>Up to {maxGuests} guests</p>
+				</div>
+				<Link to={"accommodations/" + id}>
+					<button className="btn-white btn__book">Book Now</button>
+					<button className="btn-white btn__learn">Learn More</button>
+				</Link>
+			</div>                     
+		</div>            
 	);
 }
 

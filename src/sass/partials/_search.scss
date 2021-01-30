@@ -1,16 +1,22 @@
 .search-results {
     position: absolute;
     top: 62vh;
+    left: 10vw;
     z-index: 9;
-    width: 100vw;
+    width: 80vw;
+    background-color: $white;                
+    box-shadow: $box-shadow;
     .cards {
         margin-top: 2rem;
-        margin-bottom: 1rem; 
-        margin-left: 15vw;
-        width: 70vw;
+        margin-bottom: 1rem;
+        width: 100%;
         background-color: $white;
         padding-left: 2rem;
-        box-shadow: $box-shadow;
+    }
+    .cards__img {
+        position: relative;
+        width: 28rem;
+        height: 15rem;
     }
     .cards__txt { padding: 2rem; }
     .highlights, .btn__book, .cards__address { display: none; }

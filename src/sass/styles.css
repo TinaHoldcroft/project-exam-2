@@ -121,9 +121,11 @@ a, a:hover {
   width: 15rem;
   background-color: #1e313e;
   z-index: 11;
+  font-weight: 900;
+  letter-spacing: 0.03em;
 }
 .menu__admin .brand {
-  margin: -1rem 0rem 1rem 2.2rem;
+  margin: 2rem 0rem 1rem 2.2rem;
 }
 .menu__admin .brand a {
   display: flex;
@@ -146,7 +148,7 @@ a, a:hover {
   display: flex;
   flex-flow: column nowrap;
   margin-left: 0.5rem;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 .menu__admin .nav-links i {
   margin-right: 1em;
@@ -419,17 +421,23 @@ a, a:hover {
 .search-results {
   position: absolute;
   top: 62vh;
+  left: 10vw;
   z-index: 9;
-  width: 100vw;
+  width: 80vw;
+  background-color: #ffffff;
+  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
 }
 .search-results .cards {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  margin-left: 15vw;
-  width: 70vw;
+  width: 100%;
   background-color: #ffffff;
   padding-left: 2rem;
-  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+}
+.search-results .cards__img {
+  position: relative;
+  width: 28rem;
+  height: 15rem;
 }
 .search-results .cards__txt {
   padding: 2rem;
@@ -786,53 +794,61 @@ a, a:hover {
 
 .accommodations {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   position: absolute;
-  top: 3rem;
-  left: 17rem;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  column-gap: 2.2rem;
+  row-gap: 3.5rem;
+  margin: 1.5rem 0rem 0rem 15rem;
+  padding-bottom: 5rem;
+}
+
+.accommodations-tiles {
+  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+  border-radius: 30px;
+  width: 21rem;
+  height: calc(100% + 1.5rem);
+  line-height: 1em;
+}
+.accommodations-tiles p {
+  margin-bottom: 0.5rem;
 }
 
 .accommodations-links {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
-  margin-left: 58vw;
+  justify-content: space-evenly;
+  background-color: #1e313e;
+  color: #242424;
+  padding: 1.5rem 0rem;
+  border-radius: 30px 30px 0px 0px;
+  margin-bottom: 1.5rem;
 }
-.accommodations-links .fa-edit, .accommodations-links .fa-eye {
-  color: #000000;
+.accommodations-links .fa-edit, .accommodations-links .fa-eye, .accommodations-links .fa-camera {
+  color: #ffffff;
   font-size: 1.5em;
-  background: rgba(30, 49, 62, 0.068);
   border-radius: 50%;
 }
-.accommodations-links .fa-edit:hover, .accommodations-links .fa-eye:hover {
+.accommodations-links .fa-edit:hover, .accommodations-links .fa-eye:hover, .accommodations-links .fa-camera:hover {
   background: #ffffff;
+  color: #1e313e;
 }
 .accommodations-links .fa-edit {
   padding: 1rem 0.9rem 0.9rem 1rem;
 }
-.accommodations-links .fa-eye {
+.accommodations-links .fa-eye, .accommodations-links .fa-camera {
   padding: 1rem;
 }
 
 .accommodations-info {
-  background-color: rgba(30, 49, 62, 0.068);
-  border-radius: 30px;
-  padding: 3rem;
-  margin: 1rem;
-  max-width: 75vw;
-}
-.accommodations-info p {
-  margin: 0;
+  margin: 0rem 2rem;
 }
 .accommodations-info h4 {
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-#id {
-  font-size: 0.75em;
 }
 
 .add-hotel, .edit-hotel {
@@ -916,12 +932,14 @@ a, a:hover {
   flex-flow: column;
   margin-top: -5rem;
   z-index: -9;
+  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
 }
 .detail-page .detail-col-1 div:nth-child(1) {
-  flex: 1.6;
+  flex: 2.5;
 }
 .detail-page .detail-col-1 div:nth-child(1) img {
   height: 100%;
+  width: 100%;
 }
 .detail-page .detail-col-1 div:nth-child(2) {
   flex: 1;
@@ -940,6 +958,8 @@ a, a:hover {
 .detail-page .detail-col-1 div:nth-child(2) div {
   display: flex;
   flex-flow: row;
+  padding: 0;
+  box-shadow: none;
 }
 .detail-page .detail-col-2 {
   display: flex;
@@ -987,32 +1007,38 @@ a, a:hover {
   }
 }
 .accommodations-page {
-  min-height: 47vh;
+  margin-bottom: 50rem;
 }
 .accommodations-page .search-results {
   position: relative;
-  top: 22vh;
+  top: 85vh;
   left: 0;
   z-index: 9;
   width: 100vw;
   height: 100%;
   margin-bottom: 15rem;
+  box-shadow: none;
 }
 .accommodations-page .search-results .cards {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  margin-left: 7.5vw;
-  width: 85vw;
+  margin-left: 10vw;
+  width: 80vw;
   background-color: #ffffff;
   padding-left: 2rem;
   box-shadow: none;
 }
-.accommodations-page .search-results .highlights, .accommodations-page .search-results .btn__book, .accommodations-page .search-results .cards__address {
+.accommodations-page .search-results .cards__img {
+  position: relative;
+  width: 27rem;
+  height: 20rem;
+}
+.accommodations-page .search-results .highlights, .accommodations-page .search-results .btn__book {
   display: flex;
 }
 .accommodations-page .search-bar {
   position: absolute;
-  top: 25vh;
+  top: 85vh;
   left: 3rem;
   margin-left: 0rem;
 }
@@ -1032,6 +1058,31 @@ a, a:hover {
   position: relative;
   bottom: 0vh;
   left: 0vh;
+}
+
+.accommodations__img {
+  background-image: url("https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
+  background-color: #1e313e;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -9;
+}
+
+.accommodations-header {
+  background-color: #1e313e;
+  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+  width: 100vw;
+  height: 78%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -9;
 }
 
 .recently-veiwed-container h2 {
@@ -1109,37 +1160,16 @@ button:active, button:focus {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: -6.2vh;
-  left: 60vw;
+  top: -2vh;
+  left: calc(100% - 7rem);
 }
 .btn__close i {
-  color: #ffffff;
+  color: #1e313e;
   font-size: 2em;
 }
 .btn__close:hover {
   background-color: transparent;
   transform: scale(1.1);
-}
-
-.btn_logout {
-  left: calc(100vw - 3rem);
-  top: 0vh;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  color: #242424;
-  border: none;
-  font-size: 1.1em;
-  width: 3rem;
-  margin-top: 0.5rem;
-  background-color: transparent;
-}
-.btn_logout:hover {
-  background-color: transparent;
-  color: #242424;
-  transform: scaleX(-1) scale(1.1);
-}
-.btn_logout:active, .btn_logout:focus {
-  border: none;
 }
 
 .btn-more, .btn__learn {
@@ -1173,6 +1203,27 @@ button:active, button:focus {
   text-align: center;
   text-transform: uppercase;
   font-family: montserrat, sans-serif;
+}
+
+.btn_logout {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+  margin: 0.2rem 0 0 2rem;
+  font-weight: 900;
+}
+.btn_logout p {
+  font-size: 0.9em;
+}
+.btn_logout i {
+  font-size: 1.1em;
+}
+.btn_logout:hover {
+  background-color: transparent;
+  color: #ffa500;
 }
 
 /* Assignment:

@@ -18,7 +18,7 @@ function AddHotel() {
     return (
         <div className="add-hotel">
             <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
-                <div><h1>Add establishment</h1></div>
+                <div><h1>Add Hotel</h1></div>
                 
                 <div>
                     <label>Name: </label>
@@ -59,7 +59,7 @@ function AddHotel() {
                     <input name="address" placeholder="streetname, postalcode" ref={register}/>
                 </div>
 
-                <div className="btn-group"><button className="btn-white">Add hotel</button></div>
+                <div className="btn-group"><button className="btn-blue">Add hotel</button></div>
             </form>
         </div>
     );

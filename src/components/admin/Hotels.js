@@ -25,21 +25,26 @@ function Hotels() {
 
     return (
         <div className="accommodations">
-            <h2>Establishment</h2>
             {error && <div className="error">{error}</div>}
                 {hotels.map((hotel) => {
                     return (
                         <div key={hotel.id}>
-                            <div className="accommodations-info">
+                            <div className="accommodations-tiles">
                                 <div className="accommodations-links">
                                     <NavLink to={`edit/${hotel.id}`}><i class="fas fa-edit"></i></NavLink>
                                     <NavLink to={"../accommodations/" + hotel.id}><i class="fas fa-eye"></i></NavLink>
+                                    <a target={"_blank"} rel="noreferrer" href={hotel.image}><i className="fas fa-camera"></i></a>
                                 </div>
-                                <p id="id">{hotel.id} | {hotel.email}</p>
-                                <h4>{hotel.name}</h4>
-                                <p>€ {hotel.price} | <i className="fas fa-user-friends"></i> {hotel.maxGuests} | <a target={"_blank"} rel="noreferrer" href={hotel.image}><i className="fas fa-camera"></i></a></p>
-                                <p>Description: {hotel.description}</p>
-                                <p>Location: {hotel.lat}, {hotel.lng} | {hotel.address}</p>
+                                <div className="accommodations-info">
+                                    <h4>{hotel.name}</h4>
+                                    <p><b>ID: </b>{hotel.id}</p>
+                                    <p><b>E-mail: </b>{hotel.email}</p>
+                                    <p><b>Price: </b>{hotel.price}</p>
+                                    <p><b>Max-guests: </b>{hotel.maxGuests}</p>
+                                    <p><b>Description: </b>{hotel.description}</p>
+                                    <p><b>Address: </b>{hotel.address}</p>
+                                    <p><b>Location: </b>{hotel.lat}, {hotel.lng}</p>
+                                </div>
                             </div>
                         </div>
                     );

@@ -29,48 +29,54 @@
 }
 .accommodations  {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     position: absolute;
-    top: 3rem;
-    left: 17rem;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    column-gap: 2.2rem;
+    row-gap: 3.5rem;
+    margin: 1.5rem 0rem 0rem 15rem;
+    padding-bottom: 5rem;
+}
+.accommodations-tiles {
+    box-shadow: $box-shadow;
+    border-radius: 30px;
+    width: 21rem;
+    height: calc(100% + 1.5rem);
+    line-height: 1em;
+    p {
+        margin-bottom: 0.5rem; 
+    }
 }
 .accommodations-links  {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
-    gap: 1rem;
-    margin-left: 58vw;
-    .fa-edit, .fa-eye {
-        color: #000000;
+    justify-content: space-evenly;
+    background-color: $dark-blue;
+    color: $black;
+    padding: 1.5rem 0rem;
+    border-radius: 30px 30px 0px 0px;
+    margin-bottom: 1.5rem;
+    .fa-edit, .fa-eye, .fa-camera {
+        color: $white;
         font-size: 1.5em;
-        background: rgba(30, 49, 62, 0.068);
         border-radius: 50%;
         &:hover {
             background: $white;
+            color: $dark-blue;
         }
     }
-    .fa-edit {
-        padding: 1rem 0.9rem 0.9rem 1rem; //top right bottom left 
-    }
-    .fa-eye { padding: 1rem; }
+    .fa-edit { padding: 1rem 0.9rem 0.9rem 1rem; } //top right bottom left
+    .fa-eye, .fa-camera { padding: 1rem; }
 }
 .accommodations-info {
-    background-color: rgba(30, 49, 62, 0.068);
-    border-radius: 30px;
-    padding: 3rem;
-    margin: 1rem;
-    max-width: 75vw;
-    p {
-        margin: 0;
-    }
+    margin: 0rem 2rem;
     h4 {
         font-weight: 900;
         text-transform: uppercase;
-        margin-bottom: 0;
     }
-}
-#id {
-    font-size: 0.75em;
 }
 .add-hotel, .edit-hotel {
     display: flex;
@@ -101,7 +107,6 @@
         display: flex;
         flex-flow: row wrap;
         margin-top: 0.5rem;
-
         label {
             margin-right: 0.3rem;
             margin-top: 0.2rem;
@@ -117,9 +122,7 @@
         border-left: none;
         border-right: none;
         width: 100%;
-        &::placeholder {
-            color: #d8d8d8;
-          }
+        &::placeholder { color: #d8d8d8; }
     }
     input:focus, input:active {
         background-color: $white;
@@ -129,7 +132,6 @@
         border-right: none;
         outline: none;
     }
-
 }
 .btn-group {
     display: flex;

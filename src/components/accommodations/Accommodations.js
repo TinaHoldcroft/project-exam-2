@@ -5,8 +5,11 @@ import Footer from "../layout/Footer"
 export function Accommodations() {
 	return (
 		<>
+			<div className="accommodations-header">
+				<div className="accommodations__img"></div>
+			</div>
+
 			<div className="accommodations-page">
-				<h3>Search Accommodations</h3>
 				<SearchList/>
 			</div>
 			<div className="accommodations-footer">
