@@ -759,18 +759,6 @@ a, a:hover {
   max-width: 32vw;
 }
 
-.dashboard__bg {
-  position: relative;
-  height: 100vh;
-}
-
-.dashboard {
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: 3rem;
-  margin-left: 17rem;
-}
-
 .tile {
   display: flex;
   justify-content: center;
@@ -1007,7 +995,7 @@ a, a:hover {
   }
 }
 .accommodations-page {
-  margin-bottom: 50rem;
+  margin-bottom: 55rem;
 }
 .accommodations-page .search-results {
   position: relative;
@@ -1016,7 +1004,6 @@ a, a:hover {
   z-index: 9;
   width: 100vw;
   height: 100%;
-  margin-bottom: 15rem;
   box-shadow: none;
 }
 .accommodations-page .search-results .cards {
