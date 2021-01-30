@@ -376,7 +376,7 @@ a, a:hover {
 }
 
 .hero-img {
-  background-image: url("../images/hero.svg");
+  background-image: url("https://raw.githubusercontent.com/TinaHoldcroft/project-exam-2/7484d5ec993233a7ea27344893e91aa56f8fe2e7/src/sass/images/hero.svg?token=AM5KVTFYKXZI2SF7CPKROMLACUE6S");
   background-color: #1e313e;
   background-position: center;
   background-repeat: no-repeat;
