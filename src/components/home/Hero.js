@@ -7,11 +7,11 @@ function Hero() {
 		<div className="hero-banner">
 			<div className="hero-img"></div>
 			<div className="typed-banner">
-				<h2>Let Holidaze help you <span className="txt__bold">find the best</span>
-					<br></br>
+				<h2>Let Holidaze help you <span className="txt__bold">find the best</span></h2>
+				<h2>
 					<Typed className="typed-style"
 						strings={[
-    						'<a href="/">Bed and Breakfasts </a>',
+							'<a href="/">Bed and Breakfasts </a>',
 							'<a href="/">Hotels </a>',
 							'<a href="/">Guesthouses </a>']}
 						typeSpeed={30}
@@ -21,10 +21,9 @@ function Hero() {
 						backDelay={1000} // time before backspacing
 						loop={true} // infinite
 						showCursor={false} // hide corsor
-						></Typed>
-					<br></br>
-					in <span className="txt__bold">Bergen</span>
+					></Typed>
 				</h2>
+				<h2>in <span className="txt__bold">Bergen</span></h2>
 			</div>
 		</div>
     );

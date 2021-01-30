@@ -20,15 +20,15 @@ function Register() {
             <div className="register__dark">
                 <h3>Already have an Account?</h3>
                 <p>Click the button below to go to the log in page.</p>
-                <Link to={"/login"}><button  className="btn__login">Log In</button></Link>
+                <Link to={"/login"}><button  className="btn-blue">Log In</button></Link>
             </div>
             <div className="register__light">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h1>Register</h1>
                     <p title="Enter your information to create an account">Enter your information to create an account</p>
-                    <input name="username" placeholder="name" ref={register} />
+                    <input name="username" placeholder="name" ref={register} required/>
                     <input name="e-mail" placeholder="e-mail" ref={register} />
-                    <button className="btn__login" type="submit">Send</button>
+                    <button className="btn-blue" type="submit">Send</button>
                 </form>
             </div>
         </div>

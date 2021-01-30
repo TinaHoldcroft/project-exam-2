@@ -12,14 +12,11 @@
         padding-left: 2rem;
         box-shadow: $box-shadow;
     }
-    .cards__txt {
-        padding: 2rem;
-    }
-    .highlights, .btn__book, .cards__address {
-        display: none;
-    }
+    .cards__txt { padding: 2rem; }
+    .highlights, .btn__book, .cards__address { display: none; }
     .btn__learn {
         display: block;
+        width: 12rem;
     }
 }
 .search-bar {
@@ -43,15 +40,4 @@
 
     }
 
-}
-.btn__close {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: -6.2vh;
-    left: 60vw;
-    i { 
-        color: $white; 
-        font-size: 2em;
-    }
 }

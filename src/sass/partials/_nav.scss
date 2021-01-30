@@ -8,7 +8,6 @@
 }
 .brand {
     display: flex;
-    margin-left: 0.25rem;
     h1 {
         font-size: 0.8em;
         padding-top: 0.7rem;
@@ -23,12 +22,12 @@
     background-size: cover;
     position: relative;
 }
-//user side
+//user side//user side//user side//user side//user side//user side//user side
 .menu__user {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
     font-weight: 900;
     .nav-links {
         a {
@@ -47,7 +46,7 @@
     }
 }
 .menu__user .active { opacity: 0.7; }
-//admin side
+//admin side//admin side//admin side//admin side//admin side//admin side//admin side
 .menu__admin {
     position: fixed;
     display: flex;
@@ -59,7 +58,7 @@
     background-color: $dark-blue;
     z-index: 11;
     .brand {
-        margin: 2rem;
+        margin: -1rem 0rem 1rem 2.2rem;
         a {
             display: flex;
             flex-flow: row nowrap;

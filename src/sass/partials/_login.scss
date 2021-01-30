@@ -60,7 +60,10 @@
                 
             }
         }
-        .btn__register { border: 1.5px solid $dark-blue; }
+        .btn-blue { 
+            border: 2px solid $dark-blue;
+            margin-top: 1.5rem;
+        }
     }
     .login__dark {
         position: absolute;
@@ -85,23 +88,10 @@
         h3 {
             font-size: 2.5em;
         }
-        .btn__register { border: 1.5px solid $white; }
+        .btn-blue { 
+            border: 2px solid $white;
+            margin-top: 1.5rem;
+        }
     }
 }
-.btn__register {
-    position: relative;
-    width: 9rem;
-    padding: 0.5rem 1.6rem;
-    background-color: $dark-blue;
-    color: $white;
-    outline: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    &:hover {
-        color: $dark-blue;
-        background-color: $white;
-    }
-}
+

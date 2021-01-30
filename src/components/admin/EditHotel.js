@@ -78,7 +78,7 @@ function AddHotel() {
                 </div>
 
                 <div className="btn-group">
-                    <button>Update</button>
+                    <button className="btn-blue">Update</button>
                     <DeleteHotel id={id}/>
                 </div>
             </form>

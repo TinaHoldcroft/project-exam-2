@@ -41,7 +41,7 @@ function AccommodationsDetail() {
 					<h2>{hotel.name}</h2>
 					<p>{hotel.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${hotel.lat},${hotel.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
 					<p>{hotel.description}</p>
-					<button>Book now</button>
+					<button className="btn-white">Book now</button>
 				</div>
 			</div>
 			<div className="detail-footer">

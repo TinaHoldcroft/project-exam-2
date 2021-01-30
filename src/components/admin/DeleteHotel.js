@@ -27,7 +27,7 @@ function DeleteHotel(props) {
         history.push("/admin/hotels");
     }
 
-    return ( <button onClick={checkDelete}> Delete</button> );
+    return ( <button className="btn-red" onClick={checkDelete}>Delete</button> );
 }
 
 export default DeleteHotel;

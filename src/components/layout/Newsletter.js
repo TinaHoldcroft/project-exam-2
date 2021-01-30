@@ -18,14 +18,14 @@ function NewsLetter() {
         alert('Thank you for signing up for our newsletter');
     }
     return (
-        <Popup trigger={<button> Sign Up</button>}>
+        <Popup trigger={<button className="btn-blue"> Sign Up</button>}>
             <div className="pop-up">
                 <form  onSubmit={handleSubmit(onSubmit)}>
                     <h2>Sign Up</h2>
                     <h3>Submit your e-mail adress to register for our newsletter</h3>
                     <input name="email" placeholder="example@domain.com" ref={register}/>
                     <p className="error">{errors.email?.message}</p>
-                    <button type="submit">Send</button>
+                    <button className="btn-blue" type="submit">Send</button>
                 </form>
             </div>
         </Popup>

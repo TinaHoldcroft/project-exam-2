@@ -1,7 +1,7 @@
 .recently-veiwed-container { 
     h2 {
         margin-top: 1rem; 
-        margin-bottom: 2rem; 
+        margin-bottom: 3rem; 
         font-weight: 600;
         font-size: 2.5em;
         text-transform: uppercase;
@@ -23,17 +23,3 @@
     align-items: center;
     margin-bottom: 1rem;
 }
-.btn-default {
-    background-color: transparent;
-    border: none;
-    font-size: 1.2em;
-    font-weight: 600;
-    width: 10rem;
-    margin-left: calc(50vw - 5rem);
-    margin-bottom: 5rem;
-    text-transform: capitalize;
-    transition: transform ease-out 0.1s;
-    &:hover { transform: scale(1.05) }
-    &:focus, &:active { outline: none; }
-}
-.btn-more { display: none; }

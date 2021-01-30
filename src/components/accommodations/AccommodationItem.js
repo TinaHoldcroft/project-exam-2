@@ -17,8 +17,8 @@ function AccommodationItem({ id, name, image, price, maxGuests, description, add
 				<p>Up to {maxGuests} guests</p>
 			</div>
 			<Link to={"accommodations/" + id}>
-				<button className="btn__book">Book Now</button>
-				<button className="btn__learn">Learn More</button>
+				<button className="btn-white btn__book">Book Now</button>
+				<button className="btn-white btn__learn">Learn More</button>
 			</Link>
 		</div>                     
 	</div>            
