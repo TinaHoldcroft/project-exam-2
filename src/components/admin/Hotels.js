@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
+import { Helmet } from "react-helmet";
 
 function Hotels() {
     const [hotels, setHotels] = useState([]);
@@ -25,6 +26,7 @@ function Hotels() {
 
     return (
         <div className="accommodations">
+            <Helmet><title>Admin | Holidaze</title></Helmet>
             {error && <div className="error">{error}</div>}
                 {hotels.map((hotel) => {
                     return (

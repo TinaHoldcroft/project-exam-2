@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { Authorization } from "../../constants/Authorization";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Register() {
     const { register, handleSubmit } = useForm();
@@ -17,6 +18,7 @@ function Register() {
 
     return (
         <div className="register">
+            <Helmet><title>Register | Holidaze</title></Helmet>
             <div className="register__dark">
                 <h3>Already have an Account?</h3>
                 <p>Click the button below to go to the log in page.</p>

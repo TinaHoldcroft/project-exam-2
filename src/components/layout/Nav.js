@@ -5,6 +5,7 @@ import { Authorization } from "../../constants/Authorization";
 
 function Nav() {
     const { user } = useContext(Authorization);
+    
     return (
         <>{user ? (
             <div className="menu menu__admin">

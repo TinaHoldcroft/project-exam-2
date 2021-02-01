@@ -1,9 +1,11 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+import { Helmet } from "react-helmet";
 
 export function Contact() {
 	return (
-		<>        
+		<>
+			<Helmet><title>Contact | Holidaze</title></Helmet>
 			<div className="contact">
 				<div className="contact__bg"></div>
 				<div className="SoMe-container">

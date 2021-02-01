@@ -1,15 +1,15 @@
 
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Login() {
     const { register, handleSubmit } = useForm();
-    function onSubmit(data) {
-        console.log("data", data);
-    }
+    function onSubmit(data) { console.log("data", data); }
 
     return (
         <div className="login">
+            <Helmet><title>Log In | Holidaze</title></Helmet>
             <div className="login__dark">
                 <h3>Don't have an Account?</h3>
                 <p>Click the button below to register a admin account.</p>
@@ -24,8 +24,6 @@ function Login() {
                     <button className="btn-blue" type="submit">Log in</button>
                 </form>
             </div>
-              
-
         </div>
     );
 }
