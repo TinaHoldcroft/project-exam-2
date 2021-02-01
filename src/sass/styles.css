@@ -951,7 +951,13 @@ a, a:hover {
 }
 .detail-page .detail-col-2 {
   display: flex;
-  margin: 3rem 5rem;
+  margin: 6rem 15vw;
+  width: 70vw;
+}
+.detail-page .detail-col-2 h2 {
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 .detail-page .detail-footer {
   display: flex;

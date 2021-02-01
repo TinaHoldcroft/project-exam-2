@@ -36,9 +36,9 @@ const Footer = () => (
 			</div>
 			<div>
 				<h4>Follow Us</h4>
-				<a href="https://www.messenger.com/">Facebook</a>
-				<a href="https://www.youtube.com/">LinkedIn</a>
-				<a href="https://twitter.com/">Twitter</a>
+				<a target={"_blank"} rel="noreferrer" href="https://www.messenger.com/">Facebook</a>
+				<a target={"_blank"} rel="noreferrer" href="https://www.youtube.com/">LinkedIn</a>
+				<a target={"_blank"} rel="noreferrer" href="https://twitter.com/">Twitter</a>
 			</div>
 		</div>
 

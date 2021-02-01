@@ -20,8 +20,8 @@ function Login() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h3>Admin Login</h3>
                     <p title="Please enter your login information">Please enter your login information</p>
-                    <input name="username" placeholder="Username" ref={register}/>
-                    <input name="password" placeholder="Password" ref={register}/>
+                    <input name="username" placeholder="Username" ref={register} required/>
+                    <input name="password" placeholder="Password" ref={register} required/>
                     <button className="btn-blue" type="submit">Log in</button>
                 </form>
             </div>

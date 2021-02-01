@@ -28,6 +28,7 @@
                     text-transform: uppercase;
                     text-align: center;
                     color: $white;
+                    
                 }
                 div {
                     display: flex;
@@ -40,7 +41,13 @@
     }
     .detail-col-2 { 
         display: flex; 
-        margin: 3rem 5rem;
+        margin: 6rem 15vw;
+        width: 70vw;
+        h2 {
+            font-size: 3em;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
     }
     .detail-footer { display: flex; }
     .btn__book { display: block; }
