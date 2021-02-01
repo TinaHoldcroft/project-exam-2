@@ -18,9 +18,11 @@ function AccommodationsDetail() {
 			.catch(error => console.log(error))
 			.finally(() => setLoading(false));
 	},);
+
 	if (loading) {
 		return <Spinner/>;
 	}
+
 
 	return (
 		<div className="detail-page">

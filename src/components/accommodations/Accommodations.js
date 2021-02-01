@@ -8,7 +8,6 @@ export function Accommodations() {
 			<div className="accommodations-header">
 				<div className="accommodations__img"></div>
 			</div>
-
 			<div className="accommodations-page">
 				<SearchList/>
 			</div>

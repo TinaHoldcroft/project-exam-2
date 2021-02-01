@@ -18,26 +18,24 @@ import AccommodationDetail from "./components/accommodations/AccommodationsDetai
 function App() {
 	return (
 		<AuthorizationProvider>
-		<Router>
-			<Nav/>
-			<Switch>
-				<Route path="/" exact component={Home}/>
-				<Route path="/accommodations" exact component={Accommodations}/>
-				<Route path="/contact" component={Contact}/>
-				<Route path="/login" component={Login}/>
-
-                <ProtectedRoute path="/admin/hotels" exact component={Hotels} />
-                <ProtectedRoute path="/admin/add" exact component={AddHotel} />
-				<ProtectedRoute path="/admin/edit/:id" exact component={EditHotel} />
-				<ProtectedRoute path="/admin/delete" exact component={DeleteHotel} />
-				<Route path="/register" component={Register}/>
-				<Route path="/accommodations/:id" component={AccommodationDetail}/>
-                <Redirect to="/"/>
-			</Switch>
-		</Router>
+			<Router>
+				<Nav/>
+				<Switch>
+					<Route path="/" exact component={Home}/>
+					<Route path="/accommodations" exact component={Accommodations}/>
+					<Route path="/contact" component={Contact}/>
+					<Route path="/login" component={Login}/>
+					<ProtectedRoute path="/admin/hotels" exact component={Hotels}/>
+					<ProtectedRoute path="/admin/add" exact component={AddHotel}/>
+					<ProtectedRoute path="/admin/edit/:id" exact component={EditHotel}/>
+					<ProtectedRoute path="/admin/delete" exact component={DeleteHotel}/>
+					<Route path="/register" component={Register}/>
+					<Route path="/accommodations/:id" component={AccommodationDetail}/>
+					<Redirect to="/"/>
+				</Switch>
+			</Router>
 		</AuthorizationProvider>
 	);
 }
 
 export default App;
-//<ProtectedRoute path="/admin/hotels/edit/:id" exact component={EditHotel}/>
