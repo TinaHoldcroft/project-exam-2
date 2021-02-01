@@ -14,6 +14,8 @@ import DeleteHotel from "./components/admin/DeleteHotel";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 import AccommodationDetail from "./components/accommodations/AccommodationsDetail";
+import Messages from "./components/admin/Messages";
+import Enquiries from "./components/admin/Enquiries";
 
 function App() {
 	return (
@@ -29,6 +31,8 @@ function App() {
 					<ProtectedRoute path="/admin/add" exact component={AddHotel}/>
 					<ProtectedRoute path="/admin/edit/:id" exact component={EditHotel}/>
 					<ProtectedRoute path="/admin/delete" exact component={DeleteHotel}/>
+					<ProtectedRoute path="/admin/messages" exact component={Messages}/>
+					<ProtectedRoute path="/admin/enquiries" exact component={Enquiries}/>
 					<Route path="/register" component={Register}/>
 					<Route path="/accommodations/:id" component={AccommodationDetail}/>
 					<Redirect to="/"/>

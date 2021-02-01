@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
+import { Helmet } from "react-helmet";
 
 function AddHotel() {
     const { register, handleSubmit } = useForm();
@@ -17,6 +18,7 @@ function AddHotel() {
 
     return (
         <div className="add-hotel">
+            <Helmet><title>Add Hotel | Holidaze</title></Helmet>
             <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
                 <div><h1>Add Hotel</h1></div>
                 

@@ -959,9 +959,6 @@ a, a:hover {
   font-weight: 900;
   text-transform: uppercase;
 }
-.detail-page .detail-col-2 p {
-  line-height: 2em;
-}
 .detail-page .detail-footer {
   display: flex;
 }

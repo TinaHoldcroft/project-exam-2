@@ -7,7 +7,7 @@ function Nav() {
     const { user } = useContext(Authorization);
     
     return (
-        <>{user ? (
+        <>{user ? ( // Admin side
             <div className="menu menu__admin">
                 <div className="brand">
                     <NavLink activeClassName="none" to="/" exact>
@@ -19,11 +19,11 @@ function Nav() {
                     <NavLink activeClassName="active" to="/admin/hotels"><i className="fas fa-hotel"></i> Hotels</NavLink>
                     <NavLink activeClassName="active" to="/admin/add"><i className="fas fa-plus-square"></i> Add Hotel</NavLink>
                     <NavLink activeClassName="active" to="/admin/messages"><i className="fas fa-envelope-open"></i> Messages</NavLink>
-                    <NavLink activeClassName="active" to="/admin/enquirie"><i className="fas fa-calendar-plus"></i> Enquiries</NavLink>
+                    <NavLink activeClassName="active" to="/admin/enquiries"><i className="fas fa-calendar-plus"></i> Enquiries</NavLink>
                     <Logout/>
                 </div>
             </div>
-        ):(
+        ):( // User side
             <div className="menu menu__user">
                 <div className="brand">
                     <NavLink activeClassName="none" to="/" exact>
