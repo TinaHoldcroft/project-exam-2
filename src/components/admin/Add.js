@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
 
-function AddHotel() {
+function Add() {
     const { register, handleSubmit } = useForm();
     const history = useHistory();
 
@@ -17,10 +17,10 @@ function AddHotel() {
     }
 
     return (
-        <div className="add-hotel">
-            <Helmet><title>Add Hotel | Holidaze</title></Helmet>
+        <div className="add">
+            <Helmet><title>Add | Holidaze</title></Helmet>
             <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
-                <div><h1>Add Hotel</h1></div>
+                <div><h1>Add Establishment</h1></div>
                 
                 <div>
                     <label>Name: </label>
@@ -46,7 +46,7 @@ function AddHotel() {
 
                 <div>
                     <label>Description: </label>
-                    <input name="description" placeholder="full hotel description" ref={register} required/>
+                    <input name="description" placeholder="full establishment description" ref={register} required/>
                 </div>
 
                 <div className="topic-group">
@@ -61,10 +61,10 @@ function AddHotel() {
                     <input name="address" placeholder="streetname, postalcode" ref={register}/>
                 </div>
 
-                <div className="btn-group"><button className="btn-blue">Add hotel</button></div>
+                <div className="btn-group"><button className="btn-blue">Add establishment</button></div>
             </form>
         </div>
     );
 }
 
-export default AddHotel;
+export default Add;

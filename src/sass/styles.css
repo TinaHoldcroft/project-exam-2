@@ -624,7 +624,7 @@ a, a:hover {
   text-transform: uppercase;
 }
 
-.add-hotel, .edit-hotel {
+.add, .edit-hotel {
   display: flex;
   justify-content: center;
   align-items: center;

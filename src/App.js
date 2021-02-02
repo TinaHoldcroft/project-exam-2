@@ -8,7 +8,7 @@ import Home from "./components/home/Home";
 import Contact from "./components/contact/Contact";
 import Accommodations from "./components/accommodations/Accommodations";
 import Hotels from "./components/admin/Hotels";
-import AddHotel from "./components/admin/AddHotel";
+import Add from "./components/admin/Add";
 import EditHotel from "./components/admin/EditHotel";
 import DeleteHotel from "./components/admin/DeleteHotel";
 import Register from "./components/login/Register";
@@ -28,7 +28,7 @@ function App() {
 					<Route path="/contact" component={Contact}/>
 					<Route path="/login" component={Login}/>
 					<ProtectedRoute path="/admin/hotels" exact component={Hotels}/>
-					<ProtectedRoute path="/admin/add" exact component={AddHotel}/>
+					<ProtectedRoute path="/admin/add" exact component={Add}/>
 					<ProtectedRoute path="/admin/edit/:id" exact component={EditHotel}/>
 					<ProtectedRoute path="/admin/delete" exact component={DeleteHotel}/>
 					<ProtectedRoute path="/admin/messages" exact component={Messages}/>
