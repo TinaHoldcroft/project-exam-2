@@ -23,7 +23,6 @@ function AccommodationsDetail() {
 		return <Spinner/>;
 	}
 
-
 	return (
 		<div className="detail-page">
 			<div className="detail-col-1">

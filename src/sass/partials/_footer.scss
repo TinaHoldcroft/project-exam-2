@@ -82,6 +82,7 @@
     align-items: center;
     background-color: #ffffff;
     box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+    border-radius: 2.5px;
     bottom: 50vh;
     margin-bottom: -11rem;
     left: 50vw;
@@ -97,7 +98,10 @@
         width: 100%;
         outline: none;
         line-height: 2em;
-        &::placeholder { color: $light-grey; }
+        &::placeholder { 
+            color: $light-grey; 
+            text-transform: none;
+        }
     }
     .error { 
         text-align: left; 
@@ -112,9 +116,9 @@
     h2 {
         font-weight: 900;
         color: $dark-blue;
+        margin-bottom: 1rem;
     }
     h3 {
-
         font-family: learning-curve, sans-serif;
         font-size: 1.6em;
         color: $light-grey;

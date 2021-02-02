@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column;
     .detail-col-1 { 
-        display: flex; 
+        display: flex;
         div {
             display: flex;
             flex-flow: column;
@@ -28,7 +28,6 @@
                     text-transform: uppercase;
                     text-align: center;
                     color: $white;
-                    
                 }
                 div {
                     display: flex;
@@ -43,10 +42,19 @@
         display: flex; 
         margin: 6rem 15vw;
         width: 70vw;
+        div {
+            display: flex; 
+            gap: 1rem;
+            flex-flow: column;
+        }
         h2 {
             font-size: 3em;
             font-weight: 900;
             text-transform: uppercase;
+        }
+        a {
+            color: $light-grey;
+            &:hover { color: $black; }
         }
     }
     .detail-footer { display: flex; }

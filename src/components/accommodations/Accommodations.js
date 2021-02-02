@@ -9,6 +9,10 @@ export function Accommodations() {
 			<Helmet><title>Accommodations | Holidaze</title></Helmet>
 			<div className="accommodations-header">
 				<div className="accommodations__img"></div>
+				<div className="accommodations__txt">
+					<h1>Holidaze</h1>
+					<p>Find the perfect accommodations anywhere in Bergen</p>
+				</div>
 			</div>
 			<div className="accommodations-page">
 				<SearchList/>

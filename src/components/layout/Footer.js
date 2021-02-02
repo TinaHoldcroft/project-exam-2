@@ -18,15 +18,15 @@ const Footer = () => (
 		</div>
         <div className="footer-col-2">
 			<div>
-				<h4>Contat</h4>
-				<a href="/Contact">Contat Us</a>
+				<h4>Contact</h4>
+				<a href="/Contact">Contact Us</a>
 				<a href="https://www.messenger.com/">Messenger</a>
 				<a href="mailto:contact@holidaze.com">E-mail</a>
 				<a href="/Login">Admin Login</a>
 			</div>
 			<div>
 				<h4>Accommodations</h4>
-				<a href="/Accommodations">Search Accommodations</a>
+				<a href="/Accommodations">Search</a>
 				<a href="/Accommodations">Hotels</a>
 				<a href="/Accommodations">Bed and Breakfasts</a>
 				<a href="/Accommodations">Guesthouses</a>

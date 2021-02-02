@@ -20,4 +20,19 @@
         top: 0;
         z-index: -9;
     }
+    .accommodations__txt {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $white;
+        width: 26vw;
+        margin: 2vw;
+        text-align: center;
+        padding-top: 15%;
+        h1 {
+            font-size: 3.3em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+    }
 }
