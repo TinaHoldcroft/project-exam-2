@@ -87,14 +87,11 @@ button {
     text-align: left;
     margin: 0.2rem 0 0 2rem;
     font-weight: 900;
-    p {
-        font-size: 0.9em;
-    }
-    i {
-        font-size: 1.1em;
-    }
+    p { font-size: 0.9em; }
+    i { font-size: 1.1em; }
     &:hover {
         background-color: transparent;
         color: $orange;
     }
 }
+.btn__book { width: 8.7rem; }

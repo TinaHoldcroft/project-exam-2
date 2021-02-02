@@ -847,6 +847,10 @@ button:active, button:focus {
   color: #ffa500;
 }
 
+.btn__book {
+  width: 8.7rem;
+}
+
 .accommodations-page {
   margin-bottom: 55rem;
 }
