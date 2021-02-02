@@ -7,10 +7,10 @@ import ProtectedRoute from "./components/routes/ProtectedRoute";
 import Home from "./components/home/Home";
 import Contact from "./components/contact/Contact";
 import Accommodations from "./components/accommodations/Accommodations";
-import Hotels from "./components/admin/Hotels";
+import Establishments from "./components/admin/Establishments";
 import Add from "./components/admin/Add";
-import EditHotel from "./components/admin/EditHotel";
-import DeleteHotel from "./components/admin/DeleteHotel";
+import Edit from "./components/admin/Edit";
+import Delete from "./components/admin/Delete";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 import AccommodationDetail from "./components/accommodations/AccommodationsDetail";
@@ -27,10 +27,10 @@ function App() {
 					<Route path="/accommodations" exact component={Accommodations}/>
 					<Route path="/contact" component={Contact}/>
 					<Route path="/login" component={Login}/>
-					<ProtectedRoute path="/admin/hotels" exact component={Hotels}/>
+					<ProtectedRoute path="/admin/establishments" exact component={Establishments}/>
 					<ProtectedRoute path="/admin/add" exact component={Add}/>
-					<ProtectedRoute path="/admin/edit/:id" exact component={EditHotel}/>
-					<ProtectedRoute path="/admin/delete" exact component={DeleteHotel}/>
+					<ProtectedRoute path="/admin/edit/:id" exact component={Edit}/>
+					<ProtectedRoute path="/admin/delete" exact component={Delete}/>
 					<ProtectedRoute path="/admin/messages" exact component={Messages}/>
 					<ProtectedRoute path="/admin/enquiries" exact component={Enquiries}/>
 					<Route path="/register" component={Register}/>

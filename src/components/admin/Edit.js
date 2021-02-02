@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { BASE_URL, headers, PATCH } from "../../constants/api";
-import DeleteHotel from "./DeleteHotel";
+import Delete from "./Delete";
 
-function AddHotel() {
+function Edit() {
     const defaultState = {
         name: "",
         email: "",
@@ -29,11 +29,11 @@ function AddHotel() {
         console.log("data", data);
         const updateOptions = { headers, method: PATCH, body: JSON.stringify(data) };
         await fetch(fetchUrl, updateOptions);
-        history.push("/admin/hotels");
+        history.push("/admin/establishments");
     }
 
     return (
-        <div className="edit-hotel">
+        <div className="edit">
             <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
                 <div><h1>Edit establishment</h1></div>
                 
@@ -79,11 +79,11 @@ function AddHotel() {
 
                 <div className="btn-group">
                     <button className="btn-blue">Update</button>
-                    <DeleteHotel id={id}/>
+                    <Delete id={id}/>
                 </div>
             </form>
         </div>
     );
 }
 
-export default AddHotel;
+export default Edit;
