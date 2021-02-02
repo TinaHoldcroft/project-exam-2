@@ -31,16 +31,10 @@ label {
     margin-top: 1rem;
     padding: 0;
 }
-
 .contact-form, .login form, .register form {
     position: absolute;
     flex-flow: column nowrap;
     justify-content: center;
-    h2 {
-        font-size: 1.5em;
-        text-transform: uppercase;
-        margin-bottom: 0rem;
-    }
     .btn-blue { margin-top: 1.5rem; }
 }
 .contact-form {
@@ -48,11 +42,16 @@ label {
     left: 0vw;
     margin-left: 4rem;
     top: 50vh;
-    margin-top: -15rem;
-    width: 27.5rem;
-    height: 30rem;
+    margin-top: -17.5rem;
+    width: 35rem;
+    height: 35rem;
     padding: 4rem 4rem 4rem 8.5rem;
     .btn-blue { width: 9rem; }
+    h2 {
+        font-size: 2.5em; 
+        font-weight: 200;
+        margin-bottom: 1rem;
+    }
 }
 .admin-form {
     flex-flow: column nowrap;
@@ -100,7 +99,7 @@ label {
     left: 0vw;
     margin-left: 5.8rem;
     top: 50vh;
-    margin-top: -15rem;
+    margin-top: -17.5rem;
     width: 4rem;
     height: 20rem;
     z-index: 9;
