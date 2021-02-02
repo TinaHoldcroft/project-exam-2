@@ -35,10 +35,8 @@ function Contact() {
             <label>E-mail</label>
             <input name="email" ref={register}/>
             <p className="error">{errors.email?.message}</p>
-            <div>
-                <label>Message</label>
-                <textarea type="text" name="message" ref={register}></textarea>
-            </div>
+            <label>Message</label>
+            <textarea type="text" name="message" ref={register}></textarea>
             <p className="error">{errors.message?.message}</p>
             <button className="btn-blue" type="submit">Send</button>
         </form>

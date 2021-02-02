@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
-import AccommodationItem from "./AccommodationItem";
-import Spinner from "./Spinner";
+import AccommodationItem from "../accommodations/AccommodationItem";
+import Spinner from "../accommodations/Spinner";
 
 function RecentlyViewed() {
     const [hotels, setHotels] = useState([]);

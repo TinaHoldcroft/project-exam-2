@@ -16,13 +16,14 @@
     .cards__img {
         position: relative;
         width: 28rem;
-        height: 15rem;
+        height: 13rem;
     }
-    .cards__txt { padding: 2rem; }
+    .cards__txt { padding: 0rem 1rem; }
     .highlights, .btn__book, .cards__address { display: none; }
     .btn__learn {
         display: block;
         width: 12rem;
+        margin-top: 0;
     }
 }
 .search-bar {
@@ -30,7 +31,7 @@
     top: 55vh;
     left: 50vw;
     margin-left: -6.75rem;
-    input {
+    input, input:focus, input:active {
         border: none;
         outline: none;
         background-color: rgba(255, 255, 255, 0.5);

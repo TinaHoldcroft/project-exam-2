@@ -104,8 +104,10 @@
         margin-top: 0.7rem;
     }
     form {
+        display: block;
         text-align: center;
         .btn-blue { margin-top: 1.5rem; }
+        box-shadow: none;
     }
     h2 {
         font-weight: 900;
@@ -120,3 +122,8 @@
     }
 }
 .popup-arrow { display: none; }
+.accommodations-footer {
+    position: relative;
+    bottom: 0vh;
+    left: 0vh;
+}

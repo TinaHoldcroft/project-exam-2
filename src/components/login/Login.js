@@ -15,7 +15,7 @@ function Login() {
                 <p>Click the button below to register a admin account.</p>
                 <Link to={"/register"}><button className="btn-blue">Register</button></Link> 
             </div>
-            <div className="login__light">
+            <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h3>Admin Login</h3>
                     <p title="Please enter your login information">Please enter your login information</p>

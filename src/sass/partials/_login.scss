@@ -1,4 +1,4 @@
-.login {
+.login, .register {
     position: absolute;
     top: 0;
     left: 0;
@@ -10,62 +10,28 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    .login__light {
-        position: absolute;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        left: 50vw;
-        margin-left: 0rem;
+    h3 { font-size: 2.5em; }
+    form {
         top: 50vh;
-        margin-top: -17.5rem;
+        left: 50vw;
         width: 30rem;
         height: 35rem;
         padding: 5rem;
-        background-color: $white;
-        box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
-        p {
-            font-family: learning-curve, sans-serif;
-            font-size: 1.5em;
-            color: #8D8D8D;
-        }
-        h3 {
-            font-size: 2.5em;
-        }
-        input {
-            border-bottom: solid 1px $black;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            width: 100%;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            &::placeholder {
-                text-transform: uppercase; 
-                font-size: 0.8em;
-                color: #B7B7B7;
-                opacity: 1;
-                
-            }
-        }
-        input:focus, input:active {
-            background-color: $white;
-            border-bottom: solid 1px $black;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            outline: none;
-            &::placeholder:focus, &::placeholder:active {
-                background-color: $white;
-                
-            }
-        }
-        .btn-blue { 
-            border: 2px solid $dark-blue;
-            margin-top: 1.5rem;
-        }
+        margin-top: -17.5rem;
     }
-    .login__dark {
+    p {
+        font-family: learning-curve, sans-serif;
+        font-size: 1.5em;
+        color: #8D8D8D;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    input, input:focus, input:active {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+    .btn-blue { border: 2px solid $dark-blue; }
+    .login__dark, .register__dark {
         position: absolute;
         display: flex;
         flex-flow: column nowrap;
@@ -77,21 +43,24 @@
         background-color: $dark-blue;
         width: 70rem;
         height: 25rem;
-        padding: 7rem;
         h3, p {
             font-family: roboto, sans-serif;
             font-weight: 200;
             color:  $white;
             max-width: 20rem;
-            margin-bottom: 1.5rem;
         }
-        h3 {
-            font-size: 2.5em;
+        p { 
+            font-size: 1.2em;
+            margin-top: 1rem;
         }
-        .btn-blue { 
-            border: 2px solid $white;
-            margin-top: 1.5rem;
-        }
+        .btn-blue { border: 2px solid $white; }
     }
 }
-
+.login {
+    form { margin-left: 0rem; }
+    .login__dark { padding: 7rem; }
+}
+.register {
+    form { margin-left: -30rem; }
+    .register__dark { padding-left: 44rem; }
+}

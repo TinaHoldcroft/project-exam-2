@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Hero";
 import Footer from "../layout/Footer";
-import RecentlyViewed from "../accommodations/RecentlyViewed";
+import RecentlyViewed from "./RecentlyViewed";
 import SearchList from "../accommodations/SearchList";
 import { Helmet } from "react-helmet";
 

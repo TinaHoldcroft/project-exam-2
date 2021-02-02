@@ -24,9 +24,9 @@ function Register() {
                 <p>Click the button below to go to the log in page.</p>
                 <Link to={"/login"}><button  className="btn-blue">Log In</button></Link>
             </div>
-            <div className="register__light">
+            <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <h1>Register</h1>
+                    <h3>Register</h3>
                     <p title="Enter your information to create an account">Enter your information to create an account</p>
                     <input name="username" placeholder="name" ref={register} required/>
                     <input name="e-mail" placeholder="e-mail" ref={register} />
