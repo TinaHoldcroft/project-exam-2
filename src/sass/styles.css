@@ -1219,6 +1219,84 @@ button:active, button:focus {
   color: #ffa500;
 }
 
+.accommodations-page {
+  margin-bottom: 55rem;
+}
+.accommodations-page .search-results {
+  position: relative;
+  top: 85vh;
+  left: 0;
+  z-index: 9;
+  width: 100vw;
+  height: 100%;
+  box-shadow: none;
+}
+.accommodations-page .search-results .cards {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 10vw;
+  width: 80vw;
+  background-color: #ffffff;
+  padding-left: 2rem;
+  box-shadow: none;
+}
+.accommodations-page .search-results .cards__img {
+  position: relative;
+  width: 27rem;
+  height: 20rem;
+}
+.accommodations-page .search-results .highlights, .accommodations-page .search-results .btn__book {
+  display: flex;
+}
+.accommodations-page .search-bar {
+  position: absolute;
+  top: 85vh;
+  left: 3rem;
+  margin-left: 0rem;
+}
+.accommodations-page .search-bar input {
+  border-bottom: solid 1px #242424;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  padding: 0.5rem 1rem;
+}
+.accommodations-page .btn__close, .accommodations-page .btn__learn {
+  display: none;
+}
+
+.accommodations-footer {
+  position: relative;
+  bottom: 0vh;
+  left: 0vh;
+}
+
+.accommodations__img {
+  background-image: url("https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
+  background-color: #1e313e;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -9;
+}
+
+.accommodations-header {
+  background-color: #1e313e;
+  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+  width: 100vw;
+  height: 78%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -9;
+}
+
 /* Assignment:
 Visitor Side
     Homepage
