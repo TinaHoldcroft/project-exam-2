@@ -13,7 +13,7 @@ function Register() {
     function onSubmit(data) {
         console.log("data", data);
         registerUser(data.username);
-        history.push("/admin/accommodations");
+        history.push("/admin/establishments");
     }
 
     return (
