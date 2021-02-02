@@ -13,7 +13,7 @@ import Edit from "./components/admin/Edit";
 import Delete from "./components/admin/Delete";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
-import AccommodationDetail from "./components/accommodations/AccommodationsDetail";
+import Detail from "./components/accommodations/Detail";
 import Messages from "./components/admin/Messages";
 import Enquiries from "./components/admin/Enquiries";
 
@@ -34,7 +34,7 @@ function App() {
 					<ProtectedRoute path="/admin/messages" exact component={Messages}/>
 					<ProtectedRoute path="/admin/enquiries" exact component={Enquiries}/>
 					<Route path="/register" component={Register}/>
-					<Route path="/accommodations/:id" component={AccommodationDetail}/>
+					<Route path="/accommodations/:id" component={Detail}/>
 					<Redirect to="/"/>
 				</Switch>
 			</Router>

@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
 
-function Hotels() {
-    const [hotels, setHotels] = useState([]);
+function Establishments() {
+    const [establishments, setEstablishments] = useState([]);
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
     const options = { headers };
@@ -15,10 +15,10 @@ function Hotels() {
             .then((json) => {
                 console.log(json);
                 if (json.error) {
-                    setHotels([]);
+                    setEstablishments([]);
                     setError(json.message);
                 } else {
-                    setHotels(json);
+                    setEstablishments(json);
                 }
             })
             .catch((error) => console.log(error));
@@ -28,7 +28,7 @@ function Hotels() {
         <div className="accommodations">
             <Helmet><title>Admin | Holidaze</title></Helmet>
             {error && <div className="error">{error}</div>}
-                {hotels.map((hotel) => {
+                {establishments.map((hotel) => {
                     return (
                         <div key={hotel.id}>
                             <div className="accommodations-tiles">
@@ -55,4 +55,4 @@ function Hotels() {
     );
 }
 
-export default Hotels;
+export default Establishments;

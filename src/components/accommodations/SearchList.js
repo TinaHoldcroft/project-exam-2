@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
-import AccommodationItem from "./AccommodationItem";
+import Item from "./Item";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 
@@ -8,8 +8,8 @@ function RecentlyViewed() {
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
     const options = { headers };
-    const [accommodations, setHotels] = useState([]);
-    const [filteredHotels, setFilteredHotels] = useState([]);
+    const [accommodations, setEstablishments] = useState([]);
+    const [filteredEstablishments, setFilteredEstablishments] = useState([]);
     
     useEffect(() => {
         fetch(url, options)
@@ -17,13 +17,11 @@ function RecentlyViewed() {
             .then((json) => {
                 console.log(json);
                 if (json.error) {
-                    setHotels([]);
-                    setFilteredHotels(json.results);
+                    setEstablishments([]);
+                    setFilteredEstablishments(json.results);
                     setError(json.message);
                 } 
-                else {
-                    setHotels(json);
-                }
+                else { setEstablishments(json); }
             })
             .catch((error) => console.log(error));
     },);
@@ -32,12 +30,10 @@ function RecentlyViewed() {
 		const searchValue = f.target.value.toLowerCase(); // lowercase
 		const filteredArray = accommodations.filter(function(h) {
 			const lowerCaseName = h.name.toLowerCase(); // lowercase
-			if (lowerCaseName.includes(searchValue)) { // check if the game name begins with the search value
-				return true;
-			}
+			if (lowerCaseName.includes(searchValue)) { return true; } // check if the name matches the search value
 			return false;
 		});
-		setFilteredHotels(filteredArray);
+		setFilteredEstablishments(filteredArray);
 	};
     
     return (
@@ -45,12 +41,12 @@ function RecentlyViewed() {
             <Search handleSearch={filterCards}/>
             <div className="search-results">
                 {error && <div className="error">{error}</div>}
-                {filteredHotels.map(hotel => {
-                    const { id, name, image, price, maxGuests, description, address } = hotel;
+                {filteredEstablishments.map(establishments => {
+                    const { id, name, image, price, maxGuests, description, address } = establishments;
                     return (
                         <>
                             <div><Link to={"/home"}><button  className="btn__close"><i className="fas fa-times"></i></button></Link></div>
-                            <div><AccommodationItem id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/></div>
+                            <div><Item id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/></div>
                         </>
                     );
                 })}

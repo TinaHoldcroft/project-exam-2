@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function AccommodationItem({ id, name, image, price, maxGuests, description, address}) {
+function Item({ id, name, image, price, maxGuests, description, address}) {
 	return (
 		<div className="cards" key={id}>
 			<div className="cards__img">
@@ -25,7 +25,7 @@ function AccommodationItem({ id, name, image, price, maxGuests, description, add
 	);
 }
 
-AccommodationItem.propTypes = {
+Item.propTypes = {
 	id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
@@ -35,4 +35,4 @@ AccommodationItem.propTypes = {
 	description: PropTypes.string.isRequired
 };
 
-export default AccommodationItem;
+export default Item;

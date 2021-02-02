@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
-import AccommodationItem from "../accommodations/AccommodationItem";
+import Item from "../accommodations/Item";
 import Spinner from "../accommodations/Spinner";
 
 function RecentlyViewed() {
@@ -39,7 +39,7 @@ function RecentlyViewed() {
                 {hotels.map(hotel => {
                     const { id, name, image, price, maxGuests, description, address } = hotel;
                     return (
-                        <AccommodationItem 
+                        <Item 
                             id={id} 
                             name={name} 
                             image={image} 

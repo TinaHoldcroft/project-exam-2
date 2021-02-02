@@ -4,8 +4,8 @@ import Spinner from "./Spinner";
 import { useParams } from "react-router-dom";
 import Footer from "../layout/Footer"
 
-function AccommodationsDetail() {
-	const [hotel, setHotel] = useState(null);
+function Detail() {
+	const [establishment, setEstablishment] = useState(null);
 	const [loading, setLoading] = useState(true);
 	let { id } = useParams();
 	const url = BASE_URL + "establishments/" + id;
@@ -14,7 +14,7 @@ function AccommodationsDetail() {
 	useEffect(() => {
 		fetch(url, options)
 			.then(response => response.json())
-			.then(json => setHotel(json))
+			.then(json => setEstablishment(json))
 			.catch(error => console.log(error))
 			.finally(() => setLoading(false));
 	},);
@@ -27,21 +27,21 @@ function AccommodationsDetail() {
 		<div className="detail-page">
 			<div className="detail-col-1">
 				<div>
-					<img src={hotel.image} alt={hotel.name}/>
+					<img src={establishment.image} alt={establishment.name}/>
 				</div>
 				<div>
-					<h2>{hotel.name}</h2>
+					<h2>{establishment.name}</h2>
 					<div className="highlights">
-						<p>€ {hotel.price} per night</p>
-						<p>Up to {hotel.maxGuests} guests</p>
+						<p>€ {establishment.price} per night</p>
+						<p>Up to {establishment.maxGuests} guests</p>
 					</div>
 				</div>
 			</div>
 			<div className="detail-col-2">
 				<div>
-					<h2>{hotel.name}</h2>
-					<p><i className="fas fa-map-marker-alt"></i> {hotel.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${hotel.lat},${hotel.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
-					<p>{hotel.description}</p>
+					<h2>{establishment.name}</h2>
+					<p><i className="fas fa-map-marker-alt"></i> {establishment.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${establishment.lat},${establishment.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
+					<p>{establishment.description}</p>
 					<button className="btn-white">Book now</button>
 				</div>
 			</div>
@@ -53,4 +53,4 @@ function AccommodationsDetail() {
 }
 
 
-export default AccommodationsDetail;
+export default Detail;
