@@ -17,9 +17,8 @@ function Establishments() {
                 if (json.error) {
                     setEstablishments([]);
                     setError(json.message);
-                } else {
-                    setEstablishments(json);
-                }
+                } 
+                else { setEstablishments(json); }
             })
             .catch((error) => console.log(error));
     },);
