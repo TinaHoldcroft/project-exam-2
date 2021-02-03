@@ -624,10 +624,11 @@ a, a:hover {
   text-transform: uppercase;
 }
 
-.add, .edit {
+.add, .edit, .messages {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
   margin-top: 5vh;
   margin-left: 15rem;
 }
@@ -834,7 +835,7 @@ button:active, button:focus {
   width: 100%;
   text-align: left;
   margin: 0.2rem 0 0 2rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 .btn_logout p {
   font-size: 0.9em;
@@ -845,10 +846,6 @@ button:active, button:focus {
 .btn_logout:hover {
   background-color: transparent;
   color: #ffa500;
-}
-
-.btn__book {
-  width: 8.7rem;
 }
 
 .accommodations-page {
@@ -1000,10 +997,12 @@ form input, form textarea, form input:focus, form input:active, form textarea:fo
 }
 form input::placeholder, form input::placeholder:focus, form input::placeholder:active, form textarea::placeholder, form textarea::placeholder:focus, form textarea::placeholder:active, form input:focus::placeholder, form input:focus::placeholder:focus, form input:focus::placeholder:active, form input:active::placeholder, form input:active::placeholder:focus, form input:active::placeholder:active, form textarea:focus::placeholder, form textarea:focus::placeholder:focus, form textarea:focus::placeholder:active, form textarea:active::placeholder, form textarea:active::placeholder:focus, form textarea:active::placeholder:active {
   background-color: #ffffff;
-  text-transform: uppercase;
   font-size: 1em;
   color: #B7B7B7;
   opacity: 1;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder, form input:focus::-webkit-input-placeholder, form input:active::-webkit-input-placeholder, form textarea:focus::-webkit-input-placeholder, form textarea:active::-webkit-input-placeholder {
+  text-transform: uppercase;
 }
 
 label {

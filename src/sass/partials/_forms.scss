@@ -16,10 +16,12 @@ form {
         padding-left: 0.2em;
         &::placeholder, &::placeholder:focus, &::placeholder:active {
             background-color: $white;
-            text-transform: uppercase; 
             font-size: 1em;
             color: #B7B7B7;
             opacity: 1;
+        }
+        &::-webkit-input-placeholder {
+            text-transform: uppercase; 
         }
     }
 }

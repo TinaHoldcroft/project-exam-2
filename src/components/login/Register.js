@@ -7,12 +7,13 @@ import { Helmet } from "react-helmet";
 
 function Register() {
     const { register, handleSubmit } = useForm();
-    const { registerUser } = useContext(Authorization);
+    const { registerUser, registerPassword } = useContext(Authorization);
     const history = useHistory();
 
     function onSubmit(data) {
         console.log("data", data);
         registerUser(data.username);
+        registerPassword(data.password);
         history.push("/admin/establishments");
     }
 
@@ -29,7 +30,7 @@ function Register() {
                     <h3>Register</h3>
                     <p title="Enter your information to create an account">Enter your information to create an account</p>
                     <input name="username" placeholder="name" ref={register} required/>
-                    <input name="e-mail" placeholder="e-mail" ref={register} />
+                    <input name="password" placeholder="password" ref={register} />
                     <button className="btn-blue" type="submit">Send</button>
                 </form>
             </div>

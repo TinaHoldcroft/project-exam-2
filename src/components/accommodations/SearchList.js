@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import Item from "./Item";
 import Search from "./Search";
-import { Link } from "react-router-dom";
 
 function RecentlyViewed() {
     const [error, setError] = useState(null);
@@ -45,7 +44,7 @@ function RecentlyViewed() {
                     const { id, name, image, price, maxGuests, description, address } = establishments;
                     return (
                         <>
-                            <div><Link to={"/home"}><button  className="btn__close"><i className="fas fa-times"></i></button></Link></div>
+                            <button  className="btn__close" onClick={() => {window.location.reload()}}><i className="fas fa-times"></i></button>
                             <div><Item id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/></div>
                         </>
                     );

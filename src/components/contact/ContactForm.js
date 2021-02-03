@@ -21,9 +21,20 @@ const schema = yup.object().shape({
 
 function Contact() {
     const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema) });
+    
     function onSubmit(data) {
         console.log("data", data)
-        alert('Your form has been submitted');
+        var con = window.confirm("Said everything you needed to say? \nClick cancel to keep filling out the form or click OK to send it in");
+   
+        if (con === true) {
+            localStorage.setItem("name", data.name);
+            localStorage.setItem("email", data.email);
+            localStorage.setItem("message", data.message);
+        }
+        if (con === false) {
+            localStorage.setItem("cancel", "message was canceled");
+        }
+        //window.localStorage.clear();
     }
 
     return (
