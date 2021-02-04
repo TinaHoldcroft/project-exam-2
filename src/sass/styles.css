@@ -640,6 +640,7 @@ a, a:hover {
   flex-flow: column;
   margin-top: 5vh;
   margin-left: 15rem;
+  transition: transform ease-out 0.5s;
 }
 .messages a {
   color: #242424;
@@ -652,9 +653,10 @@ a, a:hover {
 .messages a:hover {
   box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
   z-index: 99;
+  transform: scale(1.01);
 }
 .messages a:active, .messages a:focus {
-  background-color: #eeeeee;
+  background-color: #d4d3d3;
 }
 .messages div {
   display: flex;
