@@ -16,6 +16,7 @@ import DeleteMessage from "./components/admin/DeleteMessage";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 import Detail from "./components/accommodations/Detail";
+import Enquiry from "./components/enquiry/Enquiry";
 import Messages from "./components/admin/Messages";
 import Enquiries from "./components/admin/Enquiries";
 
@@ -39,6 +40,7 @@ function App() {
 					<ProtectedRoute path="/admin/enquiries" exact component={Enquiries}/>
 					<Route path="/register" component={Register}/>
 					<Route path="/accommodations/:id" component={Detail}/>
+					<Route path="/enquiry/:id" component={Enquiry}/>
 					<Redirect to="/"/>
 				</Switch>
 			</Router>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import { BASE_URL, headers, PATCH } from "../../constants/api";
+import { BASE_URL, headers } from "../../constants/api";
 import DeleteMessage from "./DeleteMessage";
 
 function Edit() {
@@ -27,8 +27,7 @@ function Edit() {
 
     async function onSubmit(data) {
         console.log("data", data);
-        const updateOptions = { headers, method: PATCH, body: JSON.stringify(data) };
-        await fetch(fetchUrl, updateOptions);
+        await fetch(fetchUrl);
         history.push("/admin/messages");
     }
 

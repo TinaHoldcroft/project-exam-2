@@ -27,25 +27,25 @@ function Establishments() {
         <div className="accommodations">
             <Helmet><title>Admin | Holidaze</title></Helmet>
             {error && <div className="error">{error}</div>}
-                {establishments.map((hotel) => {
+                {establishments.map((establishment) => {
                     return (
-                        <div key={hotel.id}>
+                        <div key={establishment.id}>
                             <div className="accommodations-tiles">
                                 <div className="accommodations-links">
-                                    <NavLink to={`edit/${hotel.id}`}><i className="fas fa-edit"></i></NavLink>
-                                    <NavLink to={"../accommodations/" + hotel.id}><i className="fas fa-eye"></i></NavLink>
-                                    <a target={"_blank"} rel="noreferrer" href={hotel.image}><i className="fas fa-camera"></i></a>
+                                    <NavLink to={`edit/${establishment.id}`}><i className="fas fa-edit"></i></NavLink>
+                                    <NavLink to={"../accommodations/" + establishment.id}><i className="fas fa-eye"></i></NavLink>
+                                    <a target={"_blank"} rel="noreferrer" href={establishment.image}><i className="fas fa-camera"></i></a>
                                 </div>
                                 <div className="accommodations-info">
-                                    <h4>{hotel.name}</h4>
-                                    <p><b>ID: </b>{hotel.id}</p>
-                                    <p><b>E-mail: </b>{hotel.email}</p>
-                                    <p><b>Price: </b>{hotel.price}</p>
-                                    <p><b>Max-guests: </b>{hotel.maxGuests}</p>
-                                    <p><b>Description: </b>{hotel.description}</p>
-                                    <p><b>Message: </b>{hotel.message}</p>
-                                    <p><b>Address: </b>{hotel.address}</p>
-                                    <p><b>Location: </b>{hotel.lat}, {hotel.lng}</p>
+                                    <h4>{establishment.name}</h4>
+                                    <p><b>ID: </b>{establishment.id}</p>
+                                    <p><b>E-mail: </b>{establishment.email}</p>
+                                    <p><b>Price: </b>{establishment.price}</p>
+                                    <p><b>Max-guests: </b>{establishment.maxGuests}</p>
+                                    <p><b>Description: </b>{establishment.description}</p>
+                                    <p><b>Message: </b>{establishment.message}</p>
+                                    <p><b>Address: </b>{establishment.address}</p>
+                                    <p><b>Location: </b>{establishment.lat}, {establishment.lng}</p>
                                 </div>
                             </div>
                         </div>

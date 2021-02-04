@@ -3,6 +3,7 @@ import { BASE_URL, headers } from "../../constants/api";
 import Spinner from "./Spinner";
 import { useParams } from "react-router-dom";
 import Footer from "../layout/Footer"
+import { Link } from "react-router-dom";
 
 function Detail() {
 	const [establishment, setEstablishment] = useState(null);
@@ -42,7 +43,9 @@ function Detail() {
 					<h2>{establishment.name}</h2>
 					<p><i className="fas fa-map-marker-alt"></i> {establishment.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${establishment.lat},${establishment.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
 					<p>{establishment.description}</p>
-					<button className="btn-white">Book now</button>
+					<Link to={"../enquiry/" + id}>
+						<button className="btn-white">Book now</button>
+					</Link>
 				</div>
 			</div>
 			<div className="detail-footer">
