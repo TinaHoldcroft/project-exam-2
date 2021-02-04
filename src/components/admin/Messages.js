@@ -25,7 +25,7 @@ function Messages() {
 
     return (
         <div className="messages">
-            <Helmet><title>Messages| Holidaze</title></Helmet>
+            <Helmet><title>Messages | Holidaze</title></Helmet>
             {error && <div className="error">{error}</div>}
                 {contacts.map((contact) => {
                     return (
