@@ -27,6 +27,7 @@ function Edit() {
 
     async function onSubmit(data) {
         console.log("data", data);
+
         await fetch(fetchUrl);
         history.push("/admin/messages");
     }

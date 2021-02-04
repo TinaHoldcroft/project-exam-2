@@ -1,4 +1,4 @@
-.login, .register {
+.login, .register, .enquiry {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
         padding-bottom: 1rem;
     }
     .btn-blue { border: 2px solid $dark-blue; }
-    .login__dark, .register__dark {
+    .login__dark, .register__dark, .enquiry__dark {
         position: absolute;
         display: flex;
         flex-flow: column nowrap;
@@ -66,4 +66,27 @@
 .register {
     form { margin-left: -30rem; }
     .register__dark { padding-left: 44rem; }
+}
+.enquiry {
+    form {
+        width: 35rem;
+        height: 40rem;
+        padding: 5rem;
+        margin-top: -20rem;
+        margin-left: -4rem;
+    }
+    .enquiry__dark { 
+        padding: 5rem; 
+    }
+    label {
+        margin-top: 0;
+        margin-bottom: 0.3rem;
+    }
+    a, i {
+        color: $white;
+        font-weight: 900;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }

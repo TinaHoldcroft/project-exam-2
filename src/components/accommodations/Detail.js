@@ -4,6 +4,7 @@ import Spinner from "./Spinner";
 import { useParams } from "react-router-dom";
 import Footer from "../layout/Footer"
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Detail() {
 	const [establishment, setEstablishment] = useState(null);
@@ -26,6 +27,7 @@ function Detail() {
 
 	return (
 		<div className="detail-page">
+			<Helmet><title>{establishment.name} | Holidaze</title></Helmet>
 			<div className="detail-col-1">
 				<div>
 					<img src={establishment.image} alt={establishment.name}/>

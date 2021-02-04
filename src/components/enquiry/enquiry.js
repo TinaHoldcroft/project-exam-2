@@ -6,6 +6,7 @@ import { BASE_URL, headers } from "../../constants/api";
 import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Helmet } from "react-helmet";
 
 const schema = yup.object().shape({
     name: yup
@@ -61,33 +62,33 @@ function Enquiry() {
 
     return (
         <div className="enquiry">
-            <div>
+            <Helmet><title>Book {hotel.name} | Holidaze</title></Helmet>
+            <div className="enquiry__dark">
                 <h3>Book Your Stay at {hotel.name}</h3>
                 <p>Fill out the form to book your accommodations</p>
-                <Link to={"../accommodations/"}>&#8592; Keep browsing</Link>
+                <Link to={"../accommodations/"}><i className="fas fa-arrow-left"></i> Keep browsing</Link>
             </div>
-            <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
-                <div><h1>Booking Enquiry</h1></div>
-                <p>Please fill out the form</p>
- 
-                <label>Name: </label>
-                <input type="text" name="name" ref={register}/>
-                <p className="error">{errors.name?.message}</p>
+            <div>
+                <form className="enquiry-form" onSubmit={handleSubmit(onSubmit)}>
+       
+                    <h1>Booking Enquiry</h1>
+                    <p>Please fill out the form</p>
 
-                <label>E-mail</label>
-                <input name="email" ref={register}/>
-                <p className="error">{errors.email?.message}</p>
+                    <input placeholder="name" type="text" name="name" ref={register}/>
+                    <span className="error">{errors.name?.message}</span>
 
-                <label>Check in</label>
-                <input type="date" name="checkIn" ref={register}></input>
+                    <input placeholder="e-mail" name="email" ref={register}/>
+                    <span className="error">{errors.email?.message}</span>
 
-                <label>Check out</label>
-                <input type="date" name="checkOut" ref={register}></input>
+                    <label>Check in</label>
+                    <input type="date" name="checkIn" ref={register}></input>
 
-                <div className="btn-group">
+                    <label>Check out</label>
+                    <input type="date" name="checkOut" ref={register}></input>
+
                     <button className="btn-blue">Submit</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     );
 }

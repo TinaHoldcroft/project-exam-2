@@ -17,8 +17,9 @@ form {
         &::placeholder, &::placeholder:focus, &::placeholder:active {
             background-color: $white;
             font-size: 1em;
-            color: #B7B7B7;
+            color: $light-grey;
             opacity: 1;
+            text-transform: uppercase;
         }
         &::-webkit-input-placeholder { text-transform: uppercase; }
     }
@@ -31,7 +32,7 @@ label {
     margin-top: 1rem;
     padding: 0;
 }
-.contact-form, .login form, .register form {
+.contact-form, .login form, .register form, .enquiry form {
     position: absolute;
     flex-flow: column nowrap;
     justify-content: center;
@@ -114,4 +115,7 @@ label {
         transition: transform ease-out 0.1s;
         &:hover { transform: scale(1.1); }
     }
+}
+input[type=date] {
+    color: $light-grey;
 }

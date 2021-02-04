@@ -477,7 +477,7 @@ a, a:hover {
   font-family: montserrat, FontAwesome, sans-serif;
 }
 
-.login, .register {
+.login, .register, .enquiry {
   position: absolute;
   top: 0;
   left: 0;
@@ -490,11 +490,11 @@ a, a:hover {
   height: 100vh;
   width: 100vw;
 }
-.login h3, .register h3 {
+.login h3, .register h3, .enquiry h3 {
   font-size: 2.5em;
   font-weight: 200;
 }
-.login form, .register form {
+.login form, .register form, .enquiry form {
   top: 50vh;
   left: 50vw;
   width: 30rem;
@@ -502,21 +502,21 @@ a, a:hover {
   padding: 5rem;
   margin-top: -17.5rem;
 }
-.login p, .register p {
+.login p, .register p, .enquiry p {
   font-family: learning-curve, sans-serif;
   font-size: 1.5em;
   color: #8D8D8D;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
-.login input, .login input:focus, .login input:active, .register input, .register input:focus, .register input:active {
+.login input, .login input:focus, .login input:active, .register input, .register input:focus, .register input:active, .enquiry input, .enquiry input:focus, .enquiry input:active {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
-.login .btn-blue, .register .btn-blue {
+.login .btn-blue, .register .btn-blue, .enquiry .btn-blue {
   border: 2px solid #1e313e;
 }
-.login .login__dark, .login .register__dark, .register .login__dark, .register .register__dark {
+.login .login__dark, .login .register__dark, .login .enquiry__dark, .register .login__dark, .register .register__dark, .register .enquiry__dark, .enquiry .login__dark, .enquiry .register__dark, .enquiry .enquiry__dark {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
@@ -529,17 +529,17 @@ a, a:hover {
   width: 70rem;
   height: 25rem;
 }
-.login .login__dark h3, .login .login__dark p, .login .register__dark h3, .login .register__dark p, .register .login__dark h3, .register .login__dark p, .register .register__dark h3, .register .register__dark p {
+.login .login__dark h3, .login .login__dark p, .login .register__dark h3, .login .register__dark p, .login .enquiry__dark h3, .login .enquiry__dark p, .register .login__dark h3, .register .login__dark p, .register .register__dark h3, .register .register__dark p, .register .enquiry__dark h3, .register .enquiry__dark p, .enquiry .login__dark h3, .enquiry .login__dark p, .enquiry .register__dark h3, .enquiry .register__dark p, .enquiry .enquiry__dark h3, .enquiry .enquiry__dark p {
   font-family: roboto, sans-serif;
   font-weight: 200;
   color: #ffffff;
   max-width: 20rem;
 }
-.login .login__dark p, .login .register__dark p, .register .login__dark p, .register .register__dark p {
+.login .login__dark p, .login .register__dark p, .login .enquiry__dark p, .register .login__dark p, .register .register__dark p, .register .enquiry__dark p, .enquiry .login__dark p, .enquiry .register__dark p, .enquiry .enquiry__dark p {
   font-size: 1.2em;
   margin-top: 1rem;
 }
-.login .login__dark .btn-blue, .login .register__dark .btn-blue, .register .login__dark .btn-blue, .register .register__dark .btn-blue {
+.login .login__dark .btn-blue, .login .register__dark .btn-blue, .login .enquiry__dark .btn-blue, .register .login__dark .btn-blue, .register .register__dark .btn-blue, .register .enquiry__dark .btn-blue, .enquiry .login__dark .btn-blue, .enquiry .register__dark .btn-blue, .enquiry .enquiry__dark .btn-blue {
   border: 2px solid #ffffff;
 }
 
@@ -555,6 +555,28 @@ a, a:hover {
 }
 .register .register__dark {
   padding-left: 44rem;
+}
+
+.enquiry form {
+  width: 35rem;
+  height: 40rem;
+  padding: 5rem;
+  margin-top: -20rem;
+  margin-left: -4rem;
+}
+.enquiry .enquiry__dark {
+  padding: 5rem;
+}
+.enquiry label {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+.enquiry a, .enquiry i {
+  color: #ffffff;
+  font-weight: 900;
+}
+.enquiry a:hover, .enquiry i:hover {
+  opacity: 0.7;
 }
 
 .hotels {
@@ -703,15 +725,6 @@ a, a:hover {
   color: #8d8d8d;
   font-size: 0.8em;
   margin-top: 0.2rem;
-}
-
-.enquiries {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  margin-top: 5vh;
-  margin-left: 25rem;
 }
 
 .detail-page {
@@ -1120,8 +1133,9 @@ form input, form textarea, form input:focus, form input:active, form textarea:fo
 form input::placeholder, form input::placeholder:focus, form input::placeholder:active, form textarea::placeholder, form textarea::placeholder:focus, form textarea::placeholder:active, form input:focus::placeholder, form input:focus::placeholder:focus, form input:focus::placeholder:active, form input:active::placeholder, form input:active::placeholder:focus, form input:active::placeholder:active, form textarea:focus::placeholder, form textarea:focus::placeholder:focus, form textarea:focus::placeholder:active, form textarea:active::placeholder, form textarea:active::placeholder:focus, form textarea:active::placeholder:active {
   background-color: #ffffff;
   font-size: 1em;
-  color: #B7B7B7;
+  color: #8d8d8d;
   opacity: 1;
+  text-transform: uppercase;
 }
 form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder, form input:focus::-webkit-input-placeholder, form input:active::-webkit-input-placeholder, form textarea:focus::-webkit-input-placeholder, form textarea:active::-webkit-input-placeholder {
   text-transform: uppercase;
@@ -1136,12 +1150,12 @@ label {
   padding: 0;
 }
 
-.contact-form, .login form, .register form {
+.contact-form, .login form, .register form, .enquiry form {
   position: absolute;
   flex-flow: column nowrap;
   justify-content: center;
 }
-.contact-form .btn-blue, .login form .btn-blue, .register form .btn-blue {
+.contact-form .btn-blue, .login form .btn-blue, .register form .btn-blue, .enquiry form .btn-blue {
   margin-top: 1.5rem;
 }
 
@@ -1230,6 +1244,10 @@ label {
 }
 .SoMe-container a i:hover {
   transform: scale(1.1);
+}
+
+input[type=date] {
+  color: #8d8d8d;
 }
 
 /* Assignment:
