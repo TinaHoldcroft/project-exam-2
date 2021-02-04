@@ -125,9 +125,7 @@ button {
             border: 0;
             width: 7%;
             transition: transform ease-out 0.1s;
-            i {
-                color: $light-grey;
-            }
+            i { color: $light-grey; }
             &:hover {
                 background-color: transparent;
                 transform: scale(1.1);

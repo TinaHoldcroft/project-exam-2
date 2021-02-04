@@ -20,9 +20,7 @@ form {
             color: #B7B7B7;
             opacity: 1;
         }
-        &::-webkit-input-placeholder {
-            text-transform: uppercase; 
-        }
+        &::-webkit-input-placeholder { text-transform: uppercase; }
     }
 }
 label {
