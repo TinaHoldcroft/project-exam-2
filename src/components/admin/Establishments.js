@@ -32,8 +32,8 @@ function Establishments() {
                         <div key={hotel.id}>
                             <div className="accommodations-tiles">
                                 <div className="accommodations-links">
-                                    <NavLink to={`edit/${hotel.id}`}><i class="fas fa-edit"></i></NavLink>
-                                    <NavLink to={"../accommodations/" + hotel.id}><i class="fas fa-eye"></i></NavLink>
+                                    <NavLink to={`edit/${hotel.id}`}><i className="fas fa-edit"></i></NavLink>
+                                    <NavLink to={"../accommodations/" + hotel.id}><i className="fas fa-eye"></i></NavLink>
                                     <a target={"_blank"} rel="noreferrer" href={hotel.image}><i className="fas fa-camera"></i></a>
                                 </div>
                                 <div className="accommodations-info">
@@ -43,6 +43,7 @@ function Establishments() {
                                     <p><b>Price: </b>{hotel.price}</p>
                                     <p><b>Max-guests: </b>{hotel.maxGuests}</p>
                                     <p><b>Description: </b>{hotel.description}</p>
+                                    <p><b>Message: </b>{hotel.message}</p>
                                     <p><b>Address: </b>{hotel.address}</p>
                                     <p><b>Location: </b>{hotel.lat}, {hotel.lng}</p>
                                 </div>

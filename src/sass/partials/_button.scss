@@ -94,3 +94,44 @@ button {
         color: $orange;
     }
 }
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    button { width: 15rem; }
+}
+.view-message {
+    .btn-link {
+        border: none;
+        text-transform: none;
+        width: 25rem;
+        padding: 0;
+        margin-top: -1rem;
+        text-align: left;
+        color: $light-grey;
+        font-family: learning-curve, sans-serif;
+        font-size: 1.5em;
+        font-weight: 900;
+        transition: none;
+        &:hover {
+            background-color: transparent;
+            color: $black;
+            transform: none;
+        }
+    }
+    form {
+        button {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 7%;
+            transition: transform ease-out 0.1s;
+            i {
+                color: $light-grey;
+            }
+            &:hover {
+                background-color: transparent;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

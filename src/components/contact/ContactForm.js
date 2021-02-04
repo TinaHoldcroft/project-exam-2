@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import { BASE_URL, headers } from "../../constants/api";
 
 const schema = yup.object().shape({
     name: yup
@@ -21,9 +22,12 @@ const schema = yup.object().shape({
 
 function Contact() {
     const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema) });
-    
-    function onSubmit(data) {
+
+    async function onSubmit(data) {
         console.log("data", data)
+        const url = BASE_URL + "contacts";
+        const options = { headers, method: "POST", body: JSON.stringify(data) };
+        await fetch(url, options);
         var con = window.confirm("Said everything you needed to say? \nClick cancel to keep filling out the form or click OK to send it in");
    
         if (con === true) {

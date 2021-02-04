@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { BASE_URL, headers, PATCH } from "../../constants/api";
+import DeleteMessage from "./DeleteMessage";
+
+function Edit() {
+    const defaultState = {
+        name: "",
+        email: "",
+    };
+
+    const history = useHistory();
+    const { handleSubmit } = useForm();
+    const [contact, setContact] = useState(defaultState);
+    let { id } = useParams();
+    const options = { headers };
+    const fetchUrl = BASE_URL + "contacts/" + id;
+
+    useEffect(() => {
+        fetch(fetchUrl, options)
+            .then((response) => response.json())
+            .then((json) => setContact(json))
+            .catch((error) => console.log(error));
+    },);
+
+    async function onSubmit(data) {
+        console.log("data", data);
+        const updateOptions = { headers, method: PATCH, body: JSON.stringify(data) };
+        await fetch(fetchUrl, updateOptions);
+        history.push("/admin/messages");
+    }
+
+    return (
+        <div className="view-message">
+            <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
+                <button className="btn-link">&#8592; Back to messages</button>
+                <div>
+                    <p>{contact.name} <span>{contact.email}</span></p>
+                    <button title="reply"><i className="fas fa-reply"></i></button>
+                    <DeleteMessage id={id}/>
+                </div>
+                <div><p>{contact.message}</p></div>
+            </form>
+        </div>
+    );
+}
+
+export default Edit;

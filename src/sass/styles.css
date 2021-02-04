@@ -624,13 +624,83 @@ a, a:hover {
   text-transform: uppercase;
 }
 
-.add, .edit, .messages {
+.add, .edit, .view-message {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   margin-top: 5vh;
   margin-left: 15rem;
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin-top: 5vh;
+  margin-left: 15rem;
+}
+.messages a {
+  color: #242424;
+  border-top: solid 1px #e9e9e9;
+  border-left: solid 1px #e9e9e9;
+  border-right: solid 1px #e9e9e9;
+  border-bottom: solid 1px #e9e9e9;
+  background-color: #f5f5f5;
+}
+.messages a:hover {
+  box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
+  z-index: 99;
+}
+.messages a:active, .messages a:focus {
+  background-color: #eeeeee;
+}
+.messages div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-flow: row nowrap;
+  width: 75vw;
+  padding: 0.8rem;
+}
+.messages div h5 {
+  width: 25%;
+  margin-left: 1rem;
+}
+.messages div p {
+  white-space: nowrap;
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1rem;
+}
+
+.view-message {
+  margin-top: 10%;
+}
+.view-message form {
+  gap: 1rem;
+}
+.view-message form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-flow: row nowrap;
+  margin-top: 1rem;
+}
+.view-message form div + div {
+  margin-top: 0rem;
+}
+.view-message form p {
+  width: 86%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.view-message form p span {
+  color: #8d8d8d;
+  font-size: 0.8em;
+  margin-top: 0.2rem;
 }
 
 .detail-page {
@@ -846,6 +916,47 @@ button:active, button:focus {
 .btn_logout:hover {
   background-color: transparent;
   color: #ffa500;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-group button {
+  width: 15rem;
+}
+
+.view-message .btn-link {
+  border: none;
+  text-transform: none;
+  width: 25rem;
+  padding: 0;
+  margin-top: -1rem;
+  text-align: left;
+  color: #8d8d8d;
+  font-family: learning-curve, sans-serif;
+  font-size: 1.5em;
+  font-weight: 900;
+  transition: none;
+}
+.view-message .btn-link:hover {
+  background-color: transparent;
+  color: #242424;
+  transform: none;
+}
+.view-message form button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 7%;
+  transition: transform ease-out 0.1s;
+}
+.view-message form button i {
+  color: #8d8d8d;
+}
+.view-message form button:hover {
+  background-color: transparent;
+  transform: scale(1.1);
 }
 
 .accommodations-page {
@@ -1066,12 +1177,9 @@ label {
   margin-right: 2rem;
   width: 26%;
 }
-.admin-form .btn-group {
-  display: flex;
-  justify-content: space-between;
-}
-.admin-form .btn-group button {
-  width: 15rem;
+
+.view-message .admin-form {
+  height: 100%;
 }
 
 .error {

@@ -10,7 +10,9 @@ import Accommodations from "./components/accommodations/Accommodations";
 import Establishments from "./components/admin/Establishments";
 import Add from "./components/admin/Add";
 import Edit from "./components/admin/Edit";
+import ViewMessage from "./components/admin/ViewMessage";
 import Delete from "./components/admin/Delete";
+import DeleteMessage from "./components/admin/DeleteMessage";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 import Detail from "./components/accommodations/Detail";
@@ -30,7 +32,9 @@ function App() {
 					<ProtectedRoute path="/admin/establishments" exact component={Establishments}/>
 					<ProtectedRoute path="/admin/add" exact component={Add}/>
 					<ProtectedRoute path="/admin/edit/:id" exact component={Edit}/>
+					<ProtectedRoute path="/admin/viewmessage/:id" exact component={ViewMessage}/>
 					<ProtectedRoute path="/admin/delete" exact component={Delete}/>
+					<ProtectedRoute path="/admin/deletemessage" exact component={DeleteMessage}/>
 					<ProtectedRoute path="/admin/messages" exact component={Messages}/>
 					<ProtectedRoute path="/admin/enquiries" exact component={Enquiries}/>
 					<Route path="/register" component={Register}/>

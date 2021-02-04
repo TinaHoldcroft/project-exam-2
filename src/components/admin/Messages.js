@@ -1,30 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
 
 function Messages() {
-	const showName = localStorage.getItem("name");
-	const showEmail = localStorage.getItem("email");
-	const showMessage = localStorage.getItem("message");
+    const [contacts, setContacts] = useState([]);
+    const [error, setError] = useState(null);
+    const url = BASE_URL + "contacts/";
+    const options = { headers };
 
-	function deleteItem (){
-		localStorage.removeItem("message");
-		localStorage.removeItem("email");
-		localStorage.removeItem("name");
-		window.location.reload();
-	}
+    useEffect(() => {
+        fetch(url, options)
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json);
+                if (json.error) {
+                    setContacts([]);
+                    setError(json.message);
+                } 
+                else { setContacts(json); }
+            })
+            .catch((error) => console.log(error));
+    },);
 
-	return (
-		<div className="messages">
-            <Helmet><title>Messages | Holidaze</title></Helmet>
-			<h2>Messages</h2>
-			<div className="form-inputs">
-				<p>{showName}</p>
-				<p>{showEmail}</p>
-				<p>{showMessage}</p>
-				<button onClick={() => deleteItem()}>Delete</button>
-			</div>
-		</div>
-	);
+    return (
+        <div className="messages">
+            <Helmet><title>Messages| Holidaze</title></Helmet>
+            {error && <div className="error">{error}</div>}
+                {contacts.map((contact) => {
+                    return (
+						<NavLink to={`viewmessage/${contact.id}`}>
+							<div className="message-tiles" key={contact.id}>
+								<h5>{contact.name}</h5>
+								<p>{contact.message}</p>
+							</div>
+						</NavLink>
+                    );
+                })}
+        </div>
+    );
 }
 
 export default Messages;
