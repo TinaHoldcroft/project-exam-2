@@ -8,11 +8,11 @@ function RecentlyViewed() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
-    const options = { headers };
     const [isActive, setActive] = useState("false");
     const handleToggle = () => { setActive(!isActive); };
 
     useEffect(() => {
+        const options = { headers };
         fetch(url, options)
             .then((response) => response.json())
             .then((json) => {
@@ -25,7 +25,7 @@ function RecentlyViewed() {
             })
             .catch((error) => console.log(error))
             .finally(() => setLoading(false));
-    },);
+    },[url]);
 
     if (loading) { return <Spinner/>; }
     

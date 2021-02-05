@@ -7,13 +7,14 @@ function Establishments() {
     const [establishments, setEstablishments] = useState([]);
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
-    const options = { headers };
+
 
     useEffect(() => {
+        const options = { headers };
         fetch(url, options)
             .then((response) => response.json())
             .then((json) => {
-                console.log(json);
+                console.dir(json);
                 if (json.error) {
                     setEstablishments([]);
                     setError(json.message);
@@ -21,7 +22,7 @@ function Establishments() {
                 else { setEstablishments(json); }
             })
             .catch((error) => console.log(error));
-    },);
+    },[url]);
 
     return (
         <div className="accommodations">

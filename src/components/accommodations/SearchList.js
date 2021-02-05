@@ -6,11 +6,11 @@ import Search from "./Search";
 function RecentlyViewed() {
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
-    const options = { headers };
     const [accommodations, setEstablishments] = useState([]);
     const [filteredEstablishments, setFilteredEstablishments] = useState([]);
     
     useEffect(() => {
+        const options = { headers };
         fetch(url, options)
             .then((response) => response.json())
             .then((json) => {
@@ -23,7 +23,7 @@ function RecentlyViewed() {
                 else { setEstablishments(json); }
             })
             .catch((error) => console.log(error));
-    },);
+    },[url]);
 
 	const filterCards = function(f) {
 		const searchValue = f.target.value.toLowerCase(); // lowercase

@@ -4,8 +4,10 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
 import DeleteMessage from "./DeleteMessage";
+import Spinner from "../accommodations/Spinner";
 
 function Edit() {
+
     const defaultState = {
         name: "",
         email: "",
@@ -17,17 +19,20 @@ function Edit() {
     let { id } = useParams();
     const options = { headers };
     const fetchUrl = BASE_URL + "contacts/" + id;
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch(fetchUrl, options)
             .then((response) => response.json())
             .then((json) => setContact(json))
-            .catch((error) => console.log(error));
+            .catch((error) => console.log(error))
+            .finally(() => setLoading(false));
     },);
+
+    if (loading) { return <Spinner/>; }
 
     async function onSubmit(data) {
         console.log("data", data);
-
         await fetch(fetchUrl);
         history.push("/admin/messages");
     }

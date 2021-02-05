@@ -51,6 +51,7 @@ function Enquiry() {
             localStorage.setItem("name", data.name);
             localStorage.setItem("email", data.email);
             localStorage.setItem("checkIn", data.checkIn);
+            localStorage.setItem("checkIn", data.checkOut);
         }
         if (con === false) {
             localStorage.setItem("cancel", "enquiry was canceled");
