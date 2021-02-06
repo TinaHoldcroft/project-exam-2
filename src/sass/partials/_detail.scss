@@ -22,6 +22,7 @@
                 align-items: center;
                 background-color: $dark-blue;
                 padding: 3rem;
+                @media screen and (max-width: 800px) { display: none; }
                 h2 {
                     margin-top: 5rem;
                     font-size: 4em;
@@ -42,6 +43,10 @@
         display: flex; 
         margin: 6rem 15vw;
         width: 70vw;
+        @media screen and (max-width: 800px) { 
+            margin: 3rem 5vw; 
+            width: 90vw;
+        }
         div {
             display: flex; 
             gap: 1rem;
@@ -51,6 +56,9 @@
             font-size: 3em;
             font-weight: 900;
             text-transform: uppercase;
+            @media screen and (max-width: 800px) { 
+                font-size: 2em;
+            }
         }
         a {
             color: $light-grey;

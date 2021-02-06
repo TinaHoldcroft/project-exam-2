@@ -249,6 +249,11 @@ a, a:hover {
   flex-flow: row nowrap;
   padding: 3rem;
 }
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 2rem;
+  }
+}
 .footer h4 {
   text-transform: uppercase;
   margin-bottom: 0.8em;
@@ -272,6 +277,11 @@ a, a:hover {
 .footer .footer-col-1, .footer .footer-col-3 {
   flex: 1;
   margin: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .footer .footer-col-1, .footer .footer-col-3 {
+    margin: 0;
+  }
 }
 .footer .footer-col-1 p, .footer .footer-col-3 p {
   margin-bottom: 1.5rem;
@@ -349,9 +359,6 @@ a, a:hover {
   margin-left: -17.5rem;
   height: 22rem;
   width: 35rem;
-}
-.pop-up button {
-  display: inline;
 }
 .pop-up input, .pop-up input:active, .pop-up input:focus {
   border-bottom: solid 1px #242424;
@@ -435,7 +442,7 @@ a, a:hover {
 }
 @media screen and (max-width: 600px) {
   .typed-banner h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 .typed-banner a {
@@ -556,7 +563,6 @@ a, a:hover {
   .search-results {
     left: 2vw;
     width: 96vw;
-    padding-top: 2rem;
   }
 }
 .search-results .cards {
@@ -569,6 +575,9 @@ a, a:hover {
 @media screen and (max-width: 800px) {
   .search-results .cards {
     padding: 0;
+  }
+  .search-results .cards h3 {
+    max-width: 70%;
   }
 }
 .search-results .cards__img {
@@ -620,7 +629,7 @@ a, a:hover {
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #CCCCCC;
+  background-color: #5f6f79;
   background-image: url("../images/hero.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -695,11 +704,14 @@ a, a:hover {
   padding-left: 44rem;
 }
 
+.enquiry {
+  background-image: url("../images/hero.svg");
+}
 .enquiry form {
   width: 35rem;
   height: 40rem;
   padding: 5rem;
-  margin-top: -20rem;
+  margin-top: -19rem;
   margin-left: -4rem;
 }
 .enquiry .enquiry__dark {
@@ -893,6 +905,11 @@ a, a:hover {
   background-color: #1e313e;
   padding: 3rem;
 }
+@media screen and (max-width: 800px) {
+  .detail-page .detail-col-1 div:nth-child(2) {
+    display: none;
+  }
+}
 .detail-page .detail-col-1 div:nth-child(2) h2 {
   margin-top: 5rem;
   font-size: 4em;
@@ -911,6 +928,12 @@ a, a:hover {
   margin: 6rem 15vw;
   width: 70vw;
 }
+@media screen and (max-width: 800px) {
+  .detail-page .detail-col-2 {
+    margin: 3rem 5vw;
+    width: 90vw;
+  }
+}
 .detail-page .detail-col-2 div {
   display: flex;
   gap: 1rem;
@@ -920,6 +943,11 @@ a, a:hover {
   font-size: 3em;
   font-weight: 900;
   text-transform: uppercase;
+}
+@media screen and (max-width: 800px) {
+  .detail-page .detail-col-2 h2 {
+    font-size: 2em;
+  }
 }
 .detail-page .detail-col-2 a {
   color: #8d8d8d;
@@ -1129,6 +1157,32 @@ button:active, button:focus {
 .view-message form button:hover {
   background-color: transparent;
   transform: scale(1.1);
+}
+
+.SoMe-container .btn-contact {
+  display: inline;
+  background: transparent;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.SoMe-container .btn-contact i {
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform ease-out 0.1s;
+}
+.SoMe-container .btn-contact i:hover {
+  transform: scale(1.1);
+}
+.SoMe-container .btn-blue {
+  display: none;
+}
+
+.footer-col-3 .btn-blue {
+  display: inline;
+}
+.footer-col-3 .btn-contact {
+  display: none;
 }
 
 .accommodations-page {

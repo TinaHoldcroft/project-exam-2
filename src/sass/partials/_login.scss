@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: #CCCCCC;
+    background-color: #5f6f79;
     background-image: url("../images/hero.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -68,11 +68,12 @@
     .register__dark { padding-left: 44rem; }
 }
 .enquiry {
+    background-image: url("../images/hero.svg");
     form {
         width: 35rem;
         height: 40rem;
         padding: 5rem;
-        margin-top: -20rem;
+        margin-top: -19rem;
         margin-left: -4rem;
     }
     .enquiry__dark { 

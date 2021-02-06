@@ -135,3 +135,30 @@ button {
         }
     }
 }
+
+.SoMe-container {
+    .btn-contact {
+        display: inline;
+        background: transparent;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        i {
+            color: $white;
+            cursor: pointer;
+            transition: transform ease-out 0.1s;
+            &:hover { transform: scale(1.1); }
+        }
+    }
+    .btn-blue {
+        display: none;
+    }
+}
+.footer-col-3 {
+   .btn-blue {
+        display: inline;
+   }
+   .btn-contact {
+        display: none;
+    }
+}

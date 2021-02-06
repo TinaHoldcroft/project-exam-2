@@ -41,7 +41,9 @@ function Detail() {
 			<div className="detail-col-2">
 				<div>
 					<h2>{establishment.name}</h2>
-					<p><i className="fas fa-map-marker-alt"></i> {establishment.address} | <a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${establishment.lat},${establishment.lng}&hl=en&z=14&amp;output=embed`}>View Map</a></p>
+					<a target={"_blank"} rel="noreferrer" href={`https://maps.google.com/maps?q=${establishment.lat},${establishment.lng}&hl=en&z=14&amp;output=embed`}>
+						<i className="fas fa-map-marker-alt"></i> {establishment.address}
+					</a>
 					<p>{establishment.description}</p>
 					<Link to={"../enquiry/" + id}>
 						<button className="btn-white">Book now</button>
