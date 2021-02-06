@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logout from "../login/Logout";
 import { Authorization } from "../../constants/Authorization";
 
 function Nav() {
     const { user } = useContext(Authorization);
-    
+    const handleToggle = () => { setActive(!isActive); };
+    const [isActive, setActive] = useState("false");
+
     return (
         <>{user ? ( // Admin side
             <div className="menu menu__admin">
@@ -30,10 +32,17 @@ function Nav() {
                         <div className="logo"><h1 title="Home">Holidaze</h1></div>
                     </NavLink>
                 </div>
-                <div className="nav-links">                   
-                    <NavLink activeClassName="active" to="/accommodations" exact title="Accommodations">Accommodations</NavLink>
-                    <NavLink activeClassName="active" to="/contact" title="Contact">Contact</NavLink> 
-                    <NavLink activeClassName="active" to="/login"><i title="Admin login" className="fas fa-user"></i></NavLink>
+                <div className="nav-links dropdown">
+                    <button className={isActive ? "btn-closed" : "btn-open"} onClick={handleToggle}>
+                        <i className="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </button>         
+                    <div className={isActive ? "closed" : "open"}>
+                        <NavLink activeClassName="active" to="/" exact id="home" title="Home">Home</NavLink>
+                        <NavLink activeClassName="active" to="/accommodations" exact title="Accommodations">Accommodations</NavLink>
+                        <NavLink activeClassName="active" to="/contact" title="Contact">Contact</NavLink> 
+                        <NavLink activeClassName="active" to="/login"><i title="Admin login" className="fas fa-user"></i></NavLink>
+                    </div>
                 </div>
             </div>
         )}</>

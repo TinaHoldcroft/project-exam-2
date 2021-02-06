@@ -22,6 +22,7 @@
     background-size: cover;
     position: relative;
 }
+
 //user side//user side//user side//user side//user side//user side//user side
 .menu__user {
     display: flex;
@@ -43,7 +44,71 @@
         background-image: url("../images/logo--blue.svg");
         width: 3.8rem;
         height: 2rem;
+        @media screen and (max-width: 600px) {
+            margin-top: 0.5rem;
+        }
     }
+
+}
+
+
+@media only screen and (max-width: 800px)  { //phone
+    .dropdown { //phone menu
+        flex-flow: column;
+        gap: 0.5em;
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 11;
+        button {
+            height: auto;
+            width: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 1rem;
+            padding: 0;
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            color: $white;
+
+        }
+        .btn-closed { //when closed = hamburger
+            .fa-times {display: none; }
+            .fa-bars {
+                display: inline;
+
+            }
+        }
+        .btn-open { //when open = X
+            .fa-bars { display: none; }
+            .fa-times {
+                display: inline;
+
+                color: $dark-blue;
+            }
+        }
+        .closed { display: none; }
+        .open {
+            display: flex;
+            flex-flow: column;
+            background: $white;
+            height: 50vh;
+            width: 100vw;
+            a:first-child { margin-top: 5rem;}
+            a {
+                margin-right: 1rem;
+                color: $dark-blue;
+                font-size: 1.2em;
+                line-height: 2em;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 800px)  { //desktop
+    #home, .btn-open, .btn-closed { display: none;}
 }
 .menu__user .active { opacity: 0.7; }
 //admin side//admin side//admin side//admin side//admin side//admin side//admin side

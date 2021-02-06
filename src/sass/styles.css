@@ -111,7 +111,73 @@ a, a:hover {
   width: 3.8rem;
   height: 2rem;
 }
+@media screen and (max-width: 600px) {
+  .menu__user .logo {
+    margin-top: 0.5rem;
+  }
+}
 
+@media only screen and (max-width: 800px) {
+  .dropdown {
+    flex-flow: column;
+    gap: 0.5em;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+  }
+  .dropdown button {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    color: #ffffff;
+  }
+  .dropdown .btn-closed .fa-times {
+    display: none;
+  }
+  .dropdown .btn-closed .fa-bars {
+    display: inline;
+  }
+  .dropdown .btn-open .fa-bars {
+    display: none;
+  }
+  .dropdown .btn-open .fa-times {
+    display: inline;
+    color: #1e313e;
+  }
+  .dropdown .closed {
+    display: none;
+  }
+  .dropdown .open {
+    display: flex;
+    flex-flow: column;
+    background: #ffffff;
+    height: 50vh;
+    width: 100vw;
+  }
+  .dropdown .open a:first-child {
+    margin-top: 5rem;
+  }
+  .dropdown .open a {
+    margin-right: 1rem;
+    color: #1e313e;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #home, .btn-open, .btn-closed {
+    display: none;
+  }
+}
 .menu__user .active {
   opacity: 0.7;
 }
@@ -354,6 +420,11 @@ a, a:hover {
   font-size: 2em;
   line-height: 1.3em;
 }
+@media screen and (max-width: 600px) {
+  .typed-banner h2 {
+    font-size: 1.1em;
+  }
+}
 .typed-banner a {
   color: #ffffff;
 }
@@ -439,7 +510,7 @@ a, a:hover {
   position: absolute;
   top: 62vh;
   left: 10vw;
-  z-index: 9;
+  z-index: 99;
   width: 80vw;
   background-color: #ffffff;
   box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
@@ -477,7 +548,7 @@ a, a:hover {
 .search-bar input, .search-bar input:focus, .search-bar input:active {
   border: none;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(221, 221, 221, 0.5);
   width: 13.5rem;
   font-size: 1em;
   text-align: left;
