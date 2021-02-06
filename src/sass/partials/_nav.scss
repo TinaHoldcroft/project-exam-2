@@ -73,7 +73,9 @@
             border: none;
             font-size: 2em;
             color: $white;
-
+            &:hover {
+                background: transparent;
+            }
         }
         .btn-closed { //when closed = hamburger
             .fa-times {display: none; }
@@ -86,7 +88,6 @@
             .fa-bars { display: none; }
             .fa-times {
                 display: inline;
-
                 color: $dark-blue;
             }
         }

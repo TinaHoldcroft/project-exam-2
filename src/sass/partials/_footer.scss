@@ -51,7 +51,6 @@
     }
     .footer-col-2 {
         flex: 3;
-        display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
         margin: 1rem;
@@ -130,4 +129,10 @@
     position: relative;
     bottom: 0vh;
     left: 0vh;
+}
+@media only screen and (min-width: 800px)  { //desktop
+    .footer-col-2, .footer-col-3 { display: flex; }
+}
+@media only screen and (min-width: 0px)  { //desktop
+    .footer-col-2, .footer-col-3 { display: none; }
 }
