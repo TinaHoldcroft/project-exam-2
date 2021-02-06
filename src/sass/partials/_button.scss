@@ -11,6 +11,7 @@ button {
     font-size: 1em;
     font-weight: 500;
     margin-top: 1.5rem;
+    @media screen and (max-width: 800px) { margin-top: 0rem; }
     &:hover {
         background-color: $dark-blue;
         color: $white;
@@ -41,6 +42,7 @@ button {
     position: absolute;
     top: -2vh;
     left: calc(100% - 7rem);
+    @media screen and (max-width: 800px) { top: 1vh; }
     i { 
         color: $dark-blue; 
         font-size: 2em;

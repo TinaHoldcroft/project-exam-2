@@ -6,17 +6,24 @@
     width: 80vw;
     background-color: $white;                
     box-shadow: $box-shadow;
+    @media screen and (max-width: 800px) { 
+        left: 2vw;
+        width: 96vw;
+        padding-top: 2rem;
+    }
     .cards {
         margin-top: 2rem;
         margin-bottom: 1rem;
         width: 100%;
         background-color: $white;
         padding-left: 2rem;
+        @media screen and (max-width: 800px) { padding: 0; }
     }
     .cards__img {
         position: relative;
         width: 28rem;
         height: 13rem;
+        @media screen and (max-width: 800px) { display: none; }
     }
     .cards__txt { padding: 0rem 1rem; }
     .highlights, .btn__book, .cards__address { display: none; }

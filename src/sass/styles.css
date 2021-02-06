@@ -472,6 +472,12 @@ a, a:hover {
   width: 80vw;
   margin-bottom: 4rem;
 }
+@media screen and (max-width: 800px) {
+  .cards {
+    flex-flow: column nowrap;
+    width: 100vw;
+  }
+}
 
 .cards__img {
   position: relative;
@@ -479,6 +485,12 @@ a, a:hover {
   height: 20rem;
   overflow: hidden;
   z-index: 1;
+}
+@media screen and (max-width: 800px) {
+  .cards__img {
+    width: 100%;
+    margin-top: -2rem;
+  }
 }
 .cards__img img {
   left: 50%;
@@ -502,6 +514,13 @@ a, a:hover {
   height: 100%;
   gap: 1rem;
 }
+@media screen and (max-width: 800px) {
+  .cards__txt {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
 .cards__txt h3 {
   text-transform: uppercase;
   font-weight: 600;
@@ -510,6 +529,11 @@ a, a:hover {
 .highlights {
   display: flex;
   flex-flow: row nowrap;
+}
+@media screen and (max-width: 800px) {
+  .highlights {
+    display: none;
+  }
 }
 .highlights p {
   background-color: #D9D9D9;
@@ -528,6 +552,13 @@ a, a:hover {
   background-color: #ffffff;
   box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
 }
+@media screen and (max-width: 800px) {
+  .search-results {
+    left: 2vw;
+    width: 96vw;
+    padding-top: 2rem;
+  }
+}
 .search-results .cards {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -535,10 +566,20 @@ a, a:hover {
   background-color: #ffffff;
   padding-left: 2rem;
 }
+@media screen and (max-width: 800px) {
+  .search-results .cards {
+    padding: 0;
+  }
+}
 .search-results .cards__img {
   position: relative;
   width: 28rem;
   height: 13rem;
+}
+@media screen and (max-width: 800px) {
+  .search-results .cards__img {
+    display: none;
+  }
 }
 .search-results .cards__txt {
   padding: 0rem 1rem;
@@ -941,6 +982,11 @@ button {
   font-weight: 500;
   margin-top: 1.5rem;
 }
+@media screen and (max-width: 800px) {
+  button {
+    margin-top: 0rem;
+  }
+}
 button:hover {
   background-color: #1e313e;
   color: #ffffff;
@@ -975,6 +1021,11 @@ button:active, button:focus {
   position: absolute;
   top: -2vh;
   left: calc(100% - 7rem);
+}
+@media screen and (max-width: 800px) {
+  .btn__close {
+    top: 1vh;
+  }
 }
 .btn__close i {
   color: #1e313e;
@@ -1142,12 +1193,16 @@ button:active, button:focus {
 }
 
 .recently-veiwed-container h2 {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1em;
   font-weight: 600;
   font-size: 2.5em;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .recently-veiwed-container h2 {
+    font-size: 1.5em;
+  }
 }
 
 .default .cards {

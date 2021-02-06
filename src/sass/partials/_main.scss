@@ -57,12 +57,14 @@
 }
 .recently-veiwed-container { 
     h2 {
-        margin-top: 1rem; 
-        margin-bottom: 3rem; 
+        margin-bottom: 1em;
         font-weight: 600;
         font-size: 2.5em;
         text-transform: uppercase;
         text-align: center;
+        @media screen and (max-width: 800px) { 
+            font-size: 1.5em; 
+        }
     }
 }
 .default {
