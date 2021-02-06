@@ -7,6 +7,7 @@
     left: 0;
     top: 0;
     z-index: -9;
+    @media screen and (max-width: 800px) { height: 58%; }
     .accommodations__img {
         background-image: url("https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
         background-color: $dark-blue;
@@ -19,6 +20,7 @@
         left: 0;
         top: 0;
         z-index: -9;
+        @media screen and (max-width: 800px) { width: 100%; }
     }
     .accommodations__txt {
         position: absolute;
@@ -29,6 +31,7 @@
         margin: 2vw;
         text-align: center;
         padding-top: 15%;
+        @media screen and (max-width: 800px) { display: none; }
         h1 {
             font-size: 3.3em;
             text-transform: uppercase;

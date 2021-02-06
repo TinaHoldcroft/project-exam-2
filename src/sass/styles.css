@@ -442,7 +442,7 @@ a, a:hover {
 }
 @media screen and (max-width: 600px) {
   .typed-banner h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }
 .typed-banner a {
@@ -1188,6 +1188,31 @@ button:active, button:focus {
 .accommodations-page {
   margin-bottom: 55rem;
 }
+@media screen and (max-width: 800px) {
+  .accommodations-page {
+    margin-bottom: 35rem;
+  }
+}
+.accommodations-page .search-bar {
+  position: absolute;
+  top: 85vh;
+  left: 3rem;
+  margin-left: 0rem;
+}
+@media screen and (max-width: 800px) {
+  .accommodations-page .search-bar {
+    top: 65vh;
+  }
+}
+.accommodations-page .search-bar input {
+  border-bottom: solid 1px #242424;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+}
 .accommodations-page .search-results {
   position: relative;
   top: 85vh;
@@ -1196,6 +1221,11 @@ button:active, button:focus {
   width: 100vw;
   height: 100%;
   box-shadow: none;
+}
+@media screen and (max-width: 800px) {
+  .accommodations-page .search-results {
+    top: 65vh;
+  }
 }
 .accommodations-page .search-results .cards {
   margin-top: 2rem;
@@ -1206,27 +1236,25 @@ button:active, button:focus {
   padding-left: 2rem;
   box-shadow: none;
 }
+@media screen and (max-width: 800px) {
+  .accommodations-page .search-results .cards {
+    margin-left: 0;
+    padding: 0;
+    width: 100vw;
+  }
+}
 .accommodations-page .search-results .cards__img {
   position: relative;
   width: 27rem;
   height: 20rem;
 }
+@media screen and (max-width: 800px) {
+  .accommodations-page .search-results .highlights {
+    font-size: 0.7em;
+  }
+}
 .accommodations-page .search-results .highlights, .accommodations-page .search-results .btn__book {
   display: flex;
-}
-.accommodations-page .search-bar {
-  position: absolute;
-  top: 85vh;
-  left: 3rem;
-  margin-left: 0rem;
-}
-.accommodations-page .search-bar input {
-  border-bottom: solid 1px #242424;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0px;
-  padding: 0.5rem 1rem;
 }
 .accommodations-page .btn__close, .accommodations-page .btn__learn {
   display: none;
@@ -1289,6 +1317,11 @@ button:active, button:focus {
   top: 0;
   z-index: -9;
 }
+@media screen and (max-width: 800px) {
+  .accommodations-header {
+    height: 58%;
+  }
+}
 .accommodations-header .accommodations__img {
   background-image: url("https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
   background-color: #1e313e;
@@ -1302,6 +1335,11 @@ button:active, button:focus {
   top: 0;
   z-index: -9;
 }
+@media screen and (max-width: 800px) {
+  .accommodations-header .accommodations__img {
+    width: 100%;
+  }
+}
 .accommodations-header .accommodations__txt {
   position: absolute;
   right: 0;
@@ -1311,6 +1349,11 @@ button:active, button:focus {
   margin: 2vw;
   text-align: center;
   padding-top: 15%;
+}
+@media screen and (max-width: 800px) {
+  .accommodations-header .accommodations__txt {
+    display: none;
+  }
 }
 .accommodations-header .accommodations__txt h1 {
   font-size: 3.3em;

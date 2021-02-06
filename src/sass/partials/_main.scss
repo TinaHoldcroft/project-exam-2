@@ -1,5 +1,22 @@
 .accommodations-page {
     margin-bottom: 55rem;
+    @media screen and (max-width: 800px) { margin-bottom: 35rem; }
+    .search-bar {
+        position: absolute;
+        top: 85vh;
+        left: 3rem;
+        margin-left: 0rem;
+        @media screen and (max-width: 800px) { top: 65vh;}
+        input {
+            border-bottom: solid 1px $black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0px;
+            padding: 0.5rem 1rem;
+            background-color: $white;
+        }
+    }
     .search-results {
         position: relative;
         top: 85vh;
@@ -8,6 +25,9 @@
         width: 100vw;
         height: 100%;
         box-shadow: none;
+        @media screen and (max-width: 800px) { 
+            top: 65vh;
+        }
         .cards {
             margin-top: 2rem;
             margin-bottom: 1rem;
@@ -16,29 +36,21 @@
             background-color: $white;
             padding-left: 2rem;
             box-shadow: none;
+            @media screen and (max-width: 800px) { 
+                margin-left: 0;
+                padding: 0;
+                width: 100vw;
+            }
         }
         .cards__img {
             position: relative;
             width: 27rem;
             height: 20rem;
         }
-        .highlights, .btn__book{
-            display: flex;
+        .highlights {
+            @media screen and (max-width: 800px) { font-size: 0.7em; }
         }
-    }
-    .search-bar {
-        position: absolute;
-        top: 85vh;
-        left: 3rem;
-        margin-left: 0rem;
-        input {
-            border-bottom: solid 1px $black;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-radius: 0px;
-            padding: 0.5rem 1rem;
-        }
+        .highlights, .btn__book{ display: flex; }
     }
     .btn__close, .btn__learn { display: none; }
 }
