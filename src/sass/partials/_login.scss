@@ -1,3 +1,14 @@
+@mixin float-animation {
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    transition: all .2s ease-in-out;
+}
+@mixin fade {
+    animation-name: fade;
+    @include float-animation;
+}
 .login, .register, .enquiry {
     position: absolute;
     top: 0;
@@ -60,12 +71,32 @@
     }
 }
 .login {
-    form { margin-left: 0rem; }
-    .login__dark { padding: 7rem; }
+    form { 
+        @include float-animation;
+        animation-name: float-right;
+        margin-left: 0rem; 
+        p, h3 { @include fade; } 
+    }
+    .login__dark { 
+        padding: 7rem;
+        p, h3 { @include fade; }
+    }
 }
 .register {
-    form { margin-left: -30rem; }
-    .register__dark { padding-left: 44rem; }
+    form { 
+        margin-left: -30rem;
+        @include float-animation;
+        animation-name: float-left;
+        p, h3 {
+            @include fade;
+        } 
+    }
+    .register__dark { 
+        padding-left: 44rem; 
+        p, h3 {
+            @include fade;
+        }
+    }
 }
 .enquiry {
     background-image: url("../images/hero.svg");
@@ -90,4 +121,17 @@
             opacity: 0.7;
         }
     }
+}
+@keyframes float-left {
+    0%   { margin-left: 0rem; }
+    100% { margin-left: -30rem;}
+}
+@keyframes float-right {
+    0%   { margin-left: -30rem; }
+    100% { margin-left: 0rem;}
+}
+@keyframes fade {
+    0%   { opacity: 0; }
+    80% { opacity: 0.3; }
+    100% { opacity: 1; }
 }

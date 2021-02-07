@@ -25,7 +25,7 @@ function NewsLetter() {
                 </div>
             }>
             <div className="pop-up">
-                <form  onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <h2>Sign Up</h2>
                     <h3>Submit your e-mail adress to register for our newsletter</h3>
                     <input name="email" placeholder="example@domain.com" ref={register}/>
