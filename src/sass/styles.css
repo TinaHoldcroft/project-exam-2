@@ -111,7 +111,7 @@ a, a:hover {
   width: 3.8rem;
   height: 2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .menu__user .logo {
     margin-top: 0.5rem;
   }
@@ -649,6 +649,16 @@ a, a:hover {
   padding: 5rem;
   margin-top: -17.5rem;
 }
+@media screen and (max-width: 800px) {
+  .login form, .register form, .enquiry form {
+    top: 15vh;
+    left: 5vw;
+    width: 90vw;
+    height: 70vh;
+    padding: 3rem;
+    margin-top: 0;
+  }
+}
 .login p, .register p, .enquiry p {
   font-family: learning-curve, sans-serif;
   font-size: 1.5em;
@@ -663,6 +673,14 @@ a, a:hover {
 .login .btn-blue, .register .btn-blue, .enquiry .btn-blue {
   border: 2px solid #1e313e;
 }
+.login .register-btn, .login .login-btn, .register .register-btn, .register .login-btn, .enquiry .register-btn, .enquiry .login-btn {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .login .register-btn, .login .login-btn, .register .register-btn, .register .login-btn, .enquiry .register-btn, .enquiry .login-btn {
+    display: block;
+  }
+}
 .login .login__dark, .login .register__dark, .login .enquiry__dark, .register .login__dark, .register .register__dark, .register .enquiry__dark, .enquiry .login__dark, .enquiry .register__dark, .enquiry .enquiry__dark {
   position: absolute;
   display: flex;
@@ -675,6 +693,11 @@ a, a:hover {
   background-color: #1e313e;
   width: 70rem;
   height: 25rem;
+}
+@media screen and (max-width: 800px) {
+  .login .login__dark, .login .register__dark, .login .enquiry__dark, .register .login__dark, .register .register__dark, .register .enquiry__dark, .enquiry .login__dark, .enquiry .register__dark, .enquiry .enquiry__dark {
+    display: none;
+  }
 }
 .login .login__dark h3, .login .login__dark p, .login .register__dark h3, .login .register__dark p, .login .enquiry__dark h3, .login .enquiry__dark p, .register .login__dark h3, .register .login__dark p, .register .register__dark h3, .register .register__dark p, .register .enquiry__dark h3, .register .enquiry__dark p, .enquiry .login__dark h3, .enquiry .login__dark p, .enquiry .register__dark h3, .enquiry .register__dark p, .enquiry .enquiry__dark h3, .enquiry .enquiry__dark p {
   font-family: roboto, sans-serif;
@@ -691,13 +714,17 @@ a, a:hover {
 }
 
 .login form {
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  transition: all 0.2s ease-in-out;
-  animation-name: float-right;
   margin-left: 0rem;
+}
+@media screen and (min-width: 800px) {
+  .login form {
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    transition: all 0.2s ease-in-out;
+    animation-name: float-right;
+  }
 }
 .login form p, .login form h3 {
   animation-name: fade;
@@ -721,20 +748,29 @@ a, a:hover {
 
 .register form {
   margin-left: -30rem;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  transition: all 0.2s ease-in-out;
-  animation-name: float-left;
 }
-.register form p, .register form h3 {
-  animation-name: fade;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  transition: all 0.2s ease-in-out;
+@media screen and (min-width: 800px) {
+  .register form {
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    transition: all 0.2s ease-in-out;
+    animation-name: float-left;
+  }
+  .register form p, .register form h3 {
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@media screen and (max-width: 800px) {
+  .register form {
+    margin-left: 0rem;
+  }
 }
 .register .register__dark {
   padding-left: 44rem;
@@ -1168,7 +1204,9 @@ button:active, button:focus {
   font-family: montserrat, sans-serif;
 }
 
-.btn_logout {
+.btn-logout {
+  display: flex;
+  flex-flow: row;
   border: none;
   padding: 0;
   background-color: transparent;
@@ -1178,13 +1216,15 @@ button:active, button:focus {
   margin: 0.2rem 0 0 2rem;
   font-weight: 700;
 }
-.btn_logout p {
+.btn-logout p {
+  margin-top: 0.1rem;
+  margin-left: -0.2rem;
   font-size: 0.9em;
 }
-.btn_logout i {
+.btn-logout i {
   font-size: 1.1em;
 }
-.btn_logout:hover {
+.btn-logout:hover {
   background-color: transparent;
   color: #ffa500;
 }

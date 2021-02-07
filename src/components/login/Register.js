@@ -12,9 +12,10 @@ function Register() {
 
     function onSubmit(data) {
         console.log("data", data);
-        registerUser(data.username);
+        registerUser(data.email);
         registerPassword(data.password);
         history.push("/admin/establishments");
+        alert('Welcome');
     }
 
     return (
@@ -29,9 +30,10 @@ function Register() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h3>Register</h3>
                     <p title="Enter your information to create an account">Enter your information to create an account</p>
-                    <input name="username" placeholder="name" ref={register} required/>
-                    <input name="password" placeholder="password" ref={register} />
+                    <input name="email" placeholder="E-mail" ref={register} required/>
+                    <input name="password" placeholder="password" ref={register} required/>
                     <button className="btn-blue" type="submit">Send</button>
+                    <Link to={"/login"}><button className="login-btn btn-blue">Log in</button></Link>
                 </form>
             </div>
         </div>

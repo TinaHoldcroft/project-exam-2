@@ -4,12 +4,12 @@ import Logout from "../login/Logout";
 import { Authorization } from "../../constants/Authorization";
 
 function Nav() {
-    const { user } = useContext(Authorization);
+    const { admin } = useContext(Authorization);
     const handleToggle = () => { setActive(!isActive); };
     const [isActive, setActive] = useState("false");
 
     return (
-        <>{user ? ( // Admin side
+        <>{admin ? ( // Admin side
             <div className="menu menu__admin">
                 <div className="brand">
                     <NavLink activeClassName="none" to="/" exact>

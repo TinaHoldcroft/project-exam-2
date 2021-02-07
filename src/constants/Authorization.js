@@ -4,10 +4,10 @@ const Authorization = createContext();
 
 const AuthorizationProvider = ({ children }) => {
     const existingUser = localStorage.getItem("user") || null;
-    const [user, setUser] = useState(existingUser);
+    const [admin, setUser] = useState(existingUser);
 
     function registerUser(username) {
-        localStorage.setItem("user", JSON.stringify(username));
+        localStorage.setItem("user", username);
         setUser(username);
     }
 
@@ -21,7 +21,8 @@ const AuthorizationProvider = ({ children }) => {
         localStorage.removeItem("user");
         localStorage.removeItem("password");
     }
-    return <Authorization.Provider value={{ user, registerUser, registerPassword, logout }}>{children}</Authorization.Provider>;
+
+    return <Authorization.Provider value={{ admin, registerUser, registerPassword, logout }}>{children}</Authorization.Provider>;
 };
 
 export { Authorization, AuthorizationProvider };

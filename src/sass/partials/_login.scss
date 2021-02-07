@@ -32,6 +32,14 @@
         height: 35rem;
         padding: 5rem;
         margin-top: -17.5rem;
+        @media screen and (max-width: 800px) { 
+            top: 15vh;
+            left: 5vw;
+            width: 90vw;
+            height: 70vh;
+            padding: 3rem;
+            margin-top: 0;
+        }
     }
     p {
         font-family: learning-curve, sans-serif;
@@ -45,6 +53,10 @@
         padding-bottom: 1rem;
     }
     .btn-blue { border: 2px solid $dark-blue; }
+    .register-btn, .login-btn {
+        display: none;
+        @media screen and (max-width: 800px) { display: block;}
+    }
     .login__dark, .register__dark, .enquiry__dark {
         position: absolute;
         display: flex;
@@ -57,6 +69,7 @@
         background-color: $dark-blue;
         width: 70rem;
         height: 25rem;
+        @media screen and (max-width: 800px) { display: none;}
         h3, p {
             font-family: roboto, sans-serif;
             font-weight: 200;
@@ -72,8 +85,10 @@
 }
 .login {
     form { 
-        @include float-animation;
-        animation-name: float-right;
+        @media screen and (min-width: 800px) { 
+            @include float-animation;
+            animation-name: float-right;
+        }
         margin-left: 0rem; 
         p, h3 { @include fade; } 
     }
@@ -85,17 +100,19 @@
 .register {
     form { 
         margin-left: -30rem;
-        @include float-animation;
-        animation-name: float-left;
-        p, h3 {
-            @include fade;
-        } 
+        @media screen and (min-width: 800px) { 
+            @include float-animation;
+            animation-name: float-left;
+            p, h3 {
+                @include fade;
+            } 
+        }
+        @media screen and (max-width: 800px) { margin-left: 0rem;}
+
     }
     .register__dark { 
         padding-left: 44rem; 
-        p, h3 {
-            @include fade;
-        }
+        p, h3 { @include fade; }
     }
 }
 .enquiry {
@@ -107,9 +124,7 @@
         margin-top: -19rem;
         margin-left: -4rem;
     }
-    .enquiry__dark { 
-        padding: 5rem; 
-    }
+    .enquiry__dark { padding: 5rem; }
     label {
         margin-top: 0;
         margin-bottom: 0.3rem;
