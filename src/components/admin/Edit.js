@@ -22,7 +22,7 @@ function Edit() {
         fetch(fetchUrl, options)
             .then((response) => response.json())
             .then((json) => setHotel(json))
-            .catch((error) => console.log(error));
+            .catch((error) => console.debug(error));
     },);
 
     async function onSubmit(data) {

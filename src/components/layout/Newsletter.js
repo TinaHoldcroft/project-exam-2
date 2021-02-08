@@ -14,7 +14,7 @@ const schema = yup.object().shape({
 function NewsLetter() {
     const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema) });
     function onSubmit(data) {
-        console.log("data", data)
+        console.dir("data", data)
         alert('Thank you for signing up for our newsletter');
     }
     return (

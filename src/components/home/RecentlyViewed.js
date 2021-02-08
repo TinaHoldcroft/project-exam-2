@@ -16,14 +16,14 @@ function RecentlyViewed() {
         fetch(url, options)
             .then((response) => response.json())
             .then((json) => {
-                console.log(json);
+                console.dir(json);
                 if (json.error) {
                     setEstablishments([]);
                     setError(json.message);
                 } 
                 else { setEstablishments(json); }
             })
-            .catch((error) => console.log(error))
+            .catch((error) => console.debug(error))
             .finally(() => setLoading(false));
     },[url]);
 

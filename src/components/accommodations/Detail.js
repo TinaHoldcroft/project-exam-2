@@ -17,7 +17,7 @@ function Detail() {
 		fetch(url, options)
 			.then(response => response.json())
 			.then(json => setEstablishment(json))
-			.catch(error => console.log(error))
+			.catch(error => console.debug(error))
 			.finally(() => setLoading(false));
 	},);
 

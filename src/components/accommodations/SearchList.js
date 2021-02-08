@@ -14,7 +14,7 @@ function RecentlyViewed() {
         fetch(url, options)
             .then((response) => response.json())
             .then((json) => {
-                console.log(json);
+                console.dir(json);
                 if (json.error) {
                     setEstablishments([]);
                     setFilteredEstablishments(json.results);
@@ -22,7 +22,7 @@ function RecentlyViewed() {
                 } 
                 else { setEstablishments(json); }
             })
-            .catch((error) => console.log(error));
+            .catch((error) => console.debug(error));
     },[url]);
 
 	const filterCards = function(f) {

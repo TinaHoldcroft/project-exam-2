@@ -37,11 +37,11 @@ function Enquiry() {
         fetch(fetchUrl, options)
             .then((response) => response.json())
             .then((json) => setHotel(json))
-            .catch((error) => console.log(error));
+            .catch((error) => console.debug(error));
     },);
 
     async function onSubmit(data) {
-        console.log("data", data)
+        console.log("data", data);
         const url = BASE_URL + "enquiries";
         const options = { headers, method: "POST", body: JSON.stringify(data) };
         await fetch(url, options);

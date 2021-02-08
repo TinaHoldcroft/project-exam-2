@@ -24,7 +24,7 @@ function Contact() {
     const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema) });
 
     async function onSubmit(data) {
-        console.log("data", data)
+        console.log("data", data);
         const url = BASE_URL + "contacts";
         const options = { headers, method: "POST", body: JSON.stringify(data) };
         await fetch(url, options);

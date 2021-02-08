@@ -24,7 +24,7 @@ function Edit() {
         fetch(fetchUrl, options)
             .then((response) => response.json())
             .then((json) => setContact(json))
-            .catch((error) => console.log(error))
+            .catch((error) => console.debug(error))
             .finally(() => setLoading(false));
     },);
 
