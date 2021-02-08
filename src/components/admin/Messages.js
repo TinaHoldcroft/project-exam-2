@@ -36,7 +36,7 @@ function Messages() {
                 {contacts.map((contact) => {
                     return (
 						<NavLink to={`viewmessage/${contact.id}`}>
-							<div className="message-tiles" key={contact.id}>
+							<div key={contact.id}>
 								<h5>{contact.name}</h5>
 								<p>{contact.message}</p>
 							</div>

@@ -123,11 +123,28 @@
         padding: 5rem;
         margin-top: -19rem;
         margin-left: -4rem;
+        .big-screen { display: block; }
+        .small-screen { display: none; }
+        @media screen and (max-width: 800px) { 
+            margin-top: -1rem;
+            margin-left: -2.5vw;
+            padding: 2rem;
+            width: 95vw;
+            .big-screen { display: none; }
+            .small-screen { display: block; }
+            
+        }
     }
     .enquiry__dark { padding: 5rem; }
     label {
         margin-top: 0;
         margin-bottom: 0.3rem;
+    }
+    input, input:focus, input:active {
+        margin-bottom: 0em;
+    }
+    .error {
+        margin-bottom: 1em;
     }
     a, i {
         color: $white;

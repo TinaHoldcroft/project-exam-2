@@ -59,13 +59,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #CCCCCC;
+    background-color: $dark-blue;
     position: absolute;
     height: 100%;
     width: 105%;
     top: 0;
     left: 0;
     z-index: -9;
+    @media screen and (max-width: 800px) { background-image: none; }
 }
 .recently-veiwed-container { 
     h2 {
@@ -74,9 +75,7 @@
         font-size: 2.5em;
         text-transform: uppercase;
         text-align: center;
-        @media screen and (max-width: 800px) { 
-            font-size: 1.5em; 
-        }
+        @media screen and (max-width: 800px) { font-size: 1.5em; }
     }
 }
 .default {

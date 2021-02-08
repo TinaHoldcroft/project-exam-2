@@ -113,6 +113,28 @@
 }
 .menu__user .active { opacity: 0.7; }
 //admin side//admin side//admin side//admin side//admin side//admin side//admin side
+@mixin absolute-right {
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    &:hover, &:focus {
+        color: $orange;
+        outline: none;
+    }
+
+}
+.inn { margin-left: 0; }
+.btn-inn {
+    @include absolute-right;
+    .fa-arrow-right { display: none;}
+    .fa-arrow-left { display: flex;}
+}
+.out { margin-left: -12rem; }
+.btn-out {
+    @include absolute-right;
+    .fa-arrow-right { display: flex;}
+    .fa-arrow-left { display: none;}
+}
 .menu__admin {
     position: fixed;
     display: flex;
@@ -126,35 +148,46 @@
     font-weight: 900;
     letter-spacing: 0.03em;
     .brand {
-        margin: 2rem 0rem 1rem 2.2rem;
         a {
             display: flex;
             flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 0.4rem 1.5em;
         }
         h1 {
             font-size: 1.2em;
-            padding-top: 0rem;
             font-weight: 900;
             text-transform: uppercase;
-            margin-left: -0.2rem;
         }
-    }
-    .logo {
-        background-image: url("../images/logo--white.svg");
-        width: 2.29rem;
-        height: 1.2rem;
-        margin-right: 1rem;
     }
     .nav-links {
         display: flex;
         flex-flow: column nowrap;
+        margin-top: 1rem;
         margin-left: 0.5rem;
-        gap: 0.2rem;
-        i { margin-right: 1em; }
-        a {
-            padding: 0.4rem 2rem;
+        gap: 0.5rem;
+        i { 
+            font-size: 1.2em;
+            margin-left: 2rem;
+        }
+        i, p {
+            &:hover {
+                color: $orange;
+            }
+        }
+        a, div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.4rem 1em;
             font-size: 0.9em;
             text-transform: uppercase;
+        }
+        .logout {
+            cursor: pointer;
+            color: $orange;
         }
     }
 }

@@ -50,6 +50,7 @@ function Login() {
                     <input name="name" placeholder="name" ref={register} required/>
                     <input name="loginPassword" placeholder="Password" ref={register} required/>
                     <button className="btn-blue" type="submit">Log in</button>
+                    <Link to={"/register"}><button className="register-btn btn-blue">Register</button></Link> 
                 </form>
             </div>
         </div>

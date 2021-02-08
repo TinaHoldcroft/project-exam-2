@@ -13,10 +13,10 @@ function LogOut() {
     }
 
     return ( 
-        <button title="Log Out"className="btn-logout" onClick={doLogout}>
+        <div title="Log Out" className="logout" onClick={doLogout}>
+            <p>Log out: {username} </p>
             <i className="fas fa-sign-out-alt"></i>
-            <p>Log out: {username}</p>
-        </button>
+        </div>
     )
 }
 

@@ -18,6 +18,12 @@ const schema = yup.object().shape({
         .string()
         .email('E-mail is not valid', { regex: /^[\d-_.a-zA-z]+@[\d-_.a-zA-z]+\.[a-zA-z]+$/g })
         .required('E-mail is required'),
+    checkIn: yup
+        .string()
+        .required('DD.MM.YYYY is required'),
+    checkOut: yup
+        .string()
+        .required('DD.MM.YYYY is required'),
 });
 
 function Enquiry() {
@@ -70,8 +76,10 @@ function Enquiry() {
             </div>
             <div>
                 <form className="enquiry-form" onSubmit={handleSubmit(onSubmit)}>
-                    <h1>Booking Enquiry</h1>
-                    <p>Please fill out the form</p>
+                    <h1 className="big-screen">Booking Enquiry</h1>
+                    <p className="big-screen">Please fill out the form</p>
+                    <h1 className="small-screen">Enquiry</h1>
+                    <p className="small-screen">Please fill out the form to book your stay at {hotel.name}</p>
 
                     <input placeholder="name" type="text" name="name" ref={register}/>
                     <span className="error">{errors.name?.message}</span>
@@ -80,10 +88,12 @@ function Enquiry() {
                     <span className="error">{errors.email?.message}</span>
 
                     <label>Check in</label>
-                    <input type="date" name="checkIn" ref={register}></input>
+                    <input type="date" name="checkIn" ref={register}/>
+                    <span className="error">{errors.checkIn?.message}</span>
 
                     <label>Check out</label>
-                    <input type="date" name="checkOut" ref={register}></input>
+                    <input type="date" name="checkOut" ref={register}/>
+                    <span className="error">{errors.checkOut?.message}</span>
 
                     <button className="btn-blue">Submit</button>
                 </form>

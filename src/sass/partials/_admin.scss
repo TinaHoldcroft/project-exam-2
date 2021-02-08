@@ -1,10 +1,3 @@
-.hotels {
-    display: flex;
-    flex-flow: column nowrap;
-    position: absolute;
-    top: 3rem;
-    left: 17rem;
-}
 .accommodations  {
     display: flex;
     flex-flow: row wrap;
@@ -14,13 +7,14 @@
     left: 0;
     column-gap: 2.2rem;
     row-gap: 3.5rem;
-    margin: 1.5rem 0rem 0rem 15rem;
+    margin: 1.5rem 0rem 0rem 2.5rem;
     padding-bottom: 5rem;
 }
 .accommodations-tiles {
     box-shadow: $box-shadow;
     border-radius: 30px;
     width: 21rem;
+    max-width: 80vw;
     height: calc(100% + 1.5rem);
     line-height: 1em;
     p {
@@ -56,13 +50,13 @@
         text-transform: uppercase;
     }
 }
-.add, .edit, .view-message {
+.add, .edit {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
     margin-top: 5vh;
-    margin-left: 15rem;
+    margin-left: 2.5rem;
 }
 .messages {
     display: flex;
@@ -70,7 +64,7 @@
     align-items: center;
     flex-flow: column;
     margin-top: 5vh;
-    margin-left: 15rem;
+    margin-left: 2.9rem;
     transition: transform ease-out 0.5s;
     a {
         color: $black;
@@ -91,11 +85,12 @@
         justify-content: space-between;
         align-items: baseline;
         flex-flow: row nowrap;
-        width: 75vw;
+        width: 80vw;
         padding: 0.8rem;
         h5 {
             width: 25%;
             margin-left: 1rem;
+            @media screen and (max-width: 800px) { display: none; }
         }
         p {
             white-space: nowrap; 
@@ -107,6 +102,11 @@
     }   
 }
 .view-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-left: 2.8rem;
     margin-top: 10%;
     form {
         gap: 1rem;

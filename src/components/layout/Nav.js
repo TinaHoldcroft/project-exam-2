@@ -10,18 +10,21 @@ function Nav() {
 
     return (
         <>{admin ? ( // Admin side
-            <div className="menu menu__admin">
+            <div className={isActive ? "menu menu__admin inn" : "menu menu__admin out"}>
                 <div className="brand">
-                    <NavLink activeClassName="none" to="/" exact>
-                        <div className="logo"></div>
-                        <h1 title="Home">Holidaze</h1>
-                    </NavLink>
+                    
+                <NavLink activeClassName="none" to="/" exact><h1 title="Home">Holidaze</h1></NavLink>
+                        <div className={isActive ? "btn-inn" : "btn-out"} onClick={handleToggle}>
+                            <i className="fas fa-arrow-right"></i>
+                            <i className="fas fa-arrow-left"></i>
+                        </div>
+                    
                 </div>
                 <div className="nav-links">
-                    <NavLink activeClassName="active" to="/admin/establishments"><i className="fas fa-hotel"></i> Overview</NavLink>
-                    <NavLink activeClassName="active" to="/admin/add"><i className="fas fa-plus-square"></i> Add</NavLink>
-                    <NavLink activeClassName="active" to="/admin/messages"><i className="fas fa-envelope-open"></i> Messages</NavLink>
-                    <NavLink activeClassName="active" to="/admin/enquiries"><i className="fas fa-calendar-plus"></i> Enquiries</NavLink>
+                    <NavLink activeClassName="active" to="/admin/establishments"><p>Overview </p><i className="fas fa-hotel"></i></NavLink>
+                    <NavLink activeClassName="active" to="/admin/add"><p>Add </p><i className="fas fa-plus-square"></i></NavLink>
+                    <NavLink activeClassName="active" to="/admin/messages"><p>Messages </p><i className="fas fa-envelope-open"></i></NavLink>
+                    <NavLink activeClassName="active" to="/admin/enquiries"><p>Enquiries </p><i className="fas fa-calendar-plus"></i></NavLink>
                     <Logout/>
                 </div>
             </div>

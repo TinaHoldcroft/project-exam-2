@@ -3,7 +3,7 @@ import { BASE_URL, headers } from "../../constants/api";
 import Item from "../accommodations/Item";
 import Search from "./Search";
 
-function RecentlyViewed() {
+function SearchList() {
     const [error, setError] = useState(null);
     const url = BASE_URL + "establishments";
     const [accommodations, setEstablishments] = useState([]);
@@ -54,4 +54,4 @@ function RecentlyViewed() {
     );
 }
 
-export default RecentlyViewed;
+export default SearchList;
