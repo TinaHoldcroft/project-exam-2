@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
 import DeleteMessage from "./DeleteMessage";
-import Spinner from "../accommodations/Spinner";
+import Spinner from "../spinner/Spinner";
 
 function Edit() {
     const defaultState = {

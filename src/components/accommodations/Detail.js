@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
-import Spinner from "./Spinner";
+import Spinner from "../spinner/Spinner";
 import { useParams } from "react-router-dom";
 import Footer from "../layout/Footer"
 import { Link } from "react-router-dom";

@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 function Enquiries() {
     const [enquiries, setEnquiries] = useState([]);
     const [error, setError] = useState(null);
-    const url = BASE_URL + "enquiries/";
+    const url = BASE_URL + "enquiries";
 
     useEffect(() => {
         const options = { headers };

@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import Footer from "../layout/Footer";
 import RecentlyViewed from "./RecentlyViewed";
-import SearchList from "../accommodations/SearchList";
+import SearchList from "../search/SearchList";
 import { Helmet } from "react-helmet";
 
 export function Home() {

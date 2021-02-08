@@ -1,5 +1,5 @@
 import React from "react";
-import SearchList from "./SearchList"
+import SearchList from "../search/SearchList"
 import Footer from "../layout/Footer"
 import { Helmet } from "react-helmet";
 

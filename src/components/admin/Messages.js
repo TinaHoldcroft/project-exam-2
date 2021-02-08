@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
-import Spinner from "../accommodations/Spinner";
+import Spinner from "../spinner/Spinner";
 
 function Messages() {
     const [loading, setLoading] = useState(true);

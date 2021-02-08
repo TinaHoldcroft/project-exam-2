@@ -31,9 +31,7 @@ function Contact() {
         var con = window.confirm("Said everything you needed to say? \nClick cancel to keep filling out the form or click OK to send it in");
    
         if (con === true) {
-            localStorage.setItem("name", data.name);
-            localStorage.setItem("email", data.email);
-            localStorage.setItem("message", data.message);
+            localStorage.setItem("enquiry", JSON.stringify(data));
         }
         if (con === false) {
             localStorage.setItem("cancel", "message was canceled");

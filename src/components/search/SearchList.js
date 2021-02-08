@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
-import Item from "./Item";
+import Item from "../accommodations/Item";
 import Search from "./Search";
 
 function RecentlyViewed() {

@@ -24,6 +24,8 @@ function Enquiry() {
     const defaultState = {
         name: "",
         email: "",
+        checkIn: "",
+        checkOut: "",
     };
 
     const history = useHistory();
@@ -48,10 +50,7 @@ function Enquiry() {
         var con = window.confirm("Thanks for choosing " + hotel.name + "\nYou will typically get a response within 48 hours");
    
         if (con === true) {
-            localStorage.setItem("name", data.name);
-            localStorage.setItem("email", data.email);
-            localStorage.setItem("checkIn", data.checkIn);
-            localStorage.setItem("checkIn", data.checkOut);
+            localStorage.setItem("enquiry", JSON.stringify(data));
         }
         if (con === false) {
             localStorage.setItem("cancel", "enquiry was canceled");
@@ -71,7 +70,6 @@ function Enquiry() {
             </div>
             <div>
                 <form className="enquiry-form" onSubmit={handleSubmit(onSubmit)}>
-       
                     <h1>Booking Enquiry</h1>
                     <p>Please fill out the form</p>
 
