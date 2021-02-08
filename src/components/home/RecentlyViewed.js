@@ -36,7 +36,7 @@ function RecentlyViewed() {
                 {error && <div className="error">{error}</div>}
                 {establishments.map(establishment => {
                     const { id, name, image, price, maxGuests, description, address } = establishment;
-                    return ( <Item id={id} name={name} image={image} price={price} maxGuests={maxGuests} description={description} address={address}/> );
+                    return ( <Item key={id} id={id} name={name} image={image} price={price} maxGuests={maxGuests} description={description} address={address}/> );
                 })}
             </div>
             <button className={isActive ? "btn-default" : "btn-more"} onClick={handleToggle}>View more <i className="fas fa-arrow-right"></i></button>

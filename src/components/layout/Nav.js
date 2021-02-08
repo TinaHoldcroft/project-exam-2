@@ -35,7 +35,7 @@ function Nav() {
                 <div className="nav-links dropdown">
                     <button className={isActive ? "btn-closed" : "btn-open"} onClick={handleToggle}>
                         <i className="fas fa-bars"></i>
-                        <i class="fas fa-times"></i>
+                        <i className="fas fa-times"></i>
                     </button>         
                     <div className={isActive ? "closed" : "open"}>
                         <NavLink activeClassName="active" to="/" exact id="home" title="Home">Home</NavLink>

@@ -7,7 +7,6 @@ import DeleteMessage from "./DeleteMessage";
 import Spinner from "../accommodations/Spinner";
 
 function Edit() {
-
     const defaultState = {
         name: "",
         email: "",

@@ -44,7 +44,6 @@ function Establishments() {
                                     <p><b>Price: </b>{establishment.price}</p>
                                     <p><b>Max-guests: </b>{establishment.maxGuests}</p>
                                     <p><b>Description: </b>{establishment.description}</p>
-                                    <p><b>Message: </b>{establishment.message}</p>
                                     <p><b>Address: </b>{establishment.address}</p>
                                     <p><b>Location: </b>{establishment.lat}, {establishment.lng}</p>
                                 </div>

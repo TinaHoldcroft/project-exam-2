@@ -26,10 +26,10 @@ function Item({ id, name, image, price, maxGuests, description, address}) {
 }
 
 Item.propTypes = {
-	id: PropTypes.number.isRequired,
+	id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-	maxGuests: PropTypes.string.isRequired,
+	maxGuests: PropTypes.number.isRequired,
 	image: PropTypes.string.isRequired,
 	address: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired
