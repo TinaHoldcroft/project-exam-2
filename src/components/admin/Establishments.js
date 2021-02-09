@@ -37,7 +37,7 @@ function Establishments() {
                                     <NavLink to={"../accommodations/" + establishment.id}><i className="fas fa-eye"></i></NavLink>
                                     <a target={"_blank"} rel="noreferrer" href={establishment.image}><i className="fas fa-camera"></i></a>
                                 </div>
-                                <div id={establishment.id} className="accommodations-info">
+                                <div className="accommodations-info">
                                     <h4>{establishment.name}</h4>
                                     <p><b>ID: </b>{establishment.id}</p>
                                     <p><b>E-mail: </b>{establishment.email}</p>

@@ -11,9 +11,9 @@ function Detail() {
 	const [loading, setLoading] = useState(true);
 	let { id } = useParams();
 	const url = BASE_URL + "establishments/" + id;
-	const options = { headers };
 
 	useEffect(() => {
+		const options = { headers };
 		fetch(url, options)
 			.then(response => response.json())
 			.then(json => setEstablishment(json))

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
 
+
 function Enquiries() {
     const [enquiries, setEnquiries] = useState([]);
     const [error, setError] = useState(null);
@@ -25,9 +26,11 @@ function Enquiries() {
     return (
         <div className="enquiries">
             <Helmet><title>Enquiries | Holidaze</title></Helmet>
-            {error && <div className="error">{error}</div>}
-            {enquiries.length === 0 &&<p className="empty">no enquiries</p>}
-            {enquiries.map((enquiry) => {
+            <div><h1>[Placeholder]</h1></div>
+            <div>
+                {error && <div className="error">{error}</div>}
+                {enquiries.length === 0 &&<p className="empty">no enquiries</p>}
+                {enquiries.map((enquiry) => {
                     return (
 						<div key={enquiry.id}>
 							<h5>{enquiry.name}</h5>
@@ -39,6 +42,7 @@ function Enquiries() {
 						</div>
                     );
                 })}
+            </div>
         </div>
     );
 }
