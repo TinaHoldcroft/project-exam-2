@@ -20,10 +20,10 @@ const schema = yup.object().shape({
         .required('E-mail is required'),
     checkIn: yup
         .string()
-        .required('DD.MM.YYYY is required'),
+        .required('Date is required'),
     checkOut: yup
         .string()
-        .required('DD.MM.YYYY is required'),
+        .required('Date is required'),
 });
 
 function Enquiry() {

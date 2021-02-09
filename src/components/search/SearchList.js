@@ -30,7 +30,7 @@ function SearchList() {
 		const filteredArray = accommodations.filter(function(h) {
 			const lowerCaseName = h.name.toLowerCase(); // lowercase
 			if (lowerCaseName.includes(searchValue)) { return true; } // check if the name matches the search value
-			return false;
+            return false;
 		});
 		setFilteredEstablishments(filteredArray);
 	};

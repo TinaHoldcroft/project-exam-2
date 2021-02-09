@@ -35,11 +35,11 @@ function Edit() {
     return (
         <div className="edit">
             <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
-                <div><h1>Edit establishment</h1></div>
+                <div><h2>Edit establishment</h2></div>
                 
                 <div>
                     <label>Name: </label>
-                    <input name="name" defaultValue={hotel.name} placeholder="Enter a name for the hotel" ref={register}/>
+                    <input name="name" defaultValue={hotel.name} placeholder="Enter name for the hotel" ref={register}/>
                 </div>
 
                 <div>

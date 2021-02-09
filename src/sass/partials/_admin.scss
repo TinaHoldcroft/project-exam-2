@@ -7,19 +7,17 @@
     left: 0;
     column-gap: 2.2rem;
     row-gap: 3.5rem;
-    margin: 1.5rem 0rem 0rem 2.5rem;
+    margin: 1.5rem 0rem 0rem 2.9rem;
     padding-bottom: 5rem;
 }
 .accommodations-tiles {
     box-shadow: $box-shadow;
     border-radius: 30px;
     width: 21rem;
-    max-width: 80vw;
+    max-width: 82vw;
     height: calc(100% + 1.5rem);
     line-height: 1em;
-    p {
-        margin-bottom: 0.5rem; 
-    }
+    p { margin-bottom: 0.5rem; }
 }
 .accommodations-links  {
     position: relative;
@@ -55,8 +53,8 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    margin-top: 5vh;
-    margin-left: 2.5rem;
+    margin-top: 3vw;
+    margin-left: 2.7rem;
 }
 .messages {
     display: flex;
@@ -117,9 +115,7 @@
             flex-flow: row nowrap;
             margin-top: 1rem;
         }
-        div + div {
-            margin-top: 0rem;
-        }
+        div + div { margin-top: 0rem; }
         p {
             width: 86%;
             display: flex;

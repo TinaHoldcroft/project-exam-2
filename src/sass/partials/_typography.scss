@@ -7,5 +7,8 @@ body, input {
     font-family: montserrat, sans-serif;
 }
 
-a, a:hover { text-decoration: none; }
+a, a:hover, a:focus { 
+    text-decoration: none;
+    outline: none;
+}
 .txt__bold { font-weight: 900; }

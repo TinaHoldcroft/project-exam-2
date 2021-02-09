@@ -2,7 +2,7 @@ button {
     display: block;
     position: relative;
     padding: 0.5rem 1.6rem;
-    width: 10rem;
+    width: auto;
     border: 2px solid $dark-blue;
     background-color: $white;
     outline: none;
@@ -63,10 +63,11 @@ button {
     margin-bottom: 5rem;
     text-transform: capitalize;
     transition: transform ease-out 0.1s;
+    color: $black;
     &:hover { 
         transform: scale(1.05);
         background-color: transparent;
-        color: #000000;
+        color: $black;
     }
 }
 .react-confirm-alert-button-group {
@@ -103,16 +104,13 @@ button {
             color: $black;
             transform: none;
         }
-        @media screen and (max-width: 800px) {
-           display: none;
-        }
+        @media screen and (max-width: 800px) { display: none;}
     }
     form {
         button {
             margin: 0;
             padding: 0;
             border: 0;
-            width: 7%;
             transition: transform ease-out 0.1s;
             i { color: $light-grey; }
             &:hover {
@@ -137,15 +135,9 @@ button {
             &:hover { transform: scale(1.1); }
         }
     }
-    .btn-blue {
-        display: none;
-    }
+    .btn-blue { display: none; }
 }
 .footer-col-3 {
-   .btn-blue {
-        display: inline;
-   }
-   .btn-contact {
-        display: none;
-    }
+   .btn-blue { display: inline; }
+   .btn-contact { display: none; }
 }

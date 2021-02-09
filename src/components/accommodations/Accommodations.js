@@ -1,5 +1,6 @@
 import React from "react";
 import SearchList from "../search/SearchList"
+import RecentlyViewed from "../home/RecentlyViewed"
 import Footer from "../layout/Footer"
 import { Helmet } from "react-helmet";
 
@@ -15,7 +16,8 @@ export function Accommodations() {
 				</div>
 			</div>
 			<div className="accommodations-page">
-				<SearchList/>
+				<SearchList/> 
+				<RecentlyViewed/>
 			</div>
 			<div className="accommodations-footer">
 				<Footer/>

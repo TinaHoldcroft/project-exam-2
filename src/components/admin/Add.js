@@ -20,7 +20,7 @@ function Add() {
         <div className="add">
             <Helmet><title>Add | Holidaze</title></Helmet>
             <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
-                <div><h1>Add Establishment</h1></div>
+                <div><h2>Add Establishment</h2></div>
                 
                 <div>
                     <label>Name: </label>
@@ -61,7 +61,7 @@ function Add() {
                     <input name="address" placeholder="streetname, postalcode" ref={register}/>
                 </div>
 
-                <div className="btn-group"><button className="btn-blue">Add establishment</button></div>
+                <div className="btn-group"><button className="btn-blue">Add</button></div>
             </form>
         </div>
     );

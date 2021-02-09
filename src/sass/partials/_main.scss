@@ -1,6 +1,10 @@
 .accommodations-page {
-    margin-bottom: 55rem;
+    margin-bottom: 5rem;
     @media screen and (max-width: 800px) { margin-bottom: 35rem; }
+    .recently-veiwed-container {
+        margin-top: 90vh;
+        h2 { display: none;}
+    }
     .search-bar {
         position: absolute;
         top: 85vh;
@@ -25,9 +29,7 @@
         width: 100vw;
         height: 100%;
         box-shadow: none;
-        @media screen and (max-width: 800px) { 
-            top: 65vh;
-        }
+        @media screen and (max-width: 800px) { top: 65vh; }
         .cards {
             margin-top: 2rem;
             margin-bottom: 1rem;
@@ -61,8 +63,8 @@
     background-size: cover;
     background-color: $dark-blue;
     position: absolute;
-    height: 100%;
-    width: 105%;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: -9;

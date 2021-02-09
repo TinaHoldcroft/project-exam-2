@@ -30,12 +30,8 @@ function Contact() {
         await fetch(url, options);
         var con = window.confirm("Said everything you needed to say? \nClick cancel to keep filling out the form or click OK to send it in");
    
-        if (con === true) {
-            localStorage.setItem("enquiry", JSON.stringify(data));
-        }
-        if (con === false) {
-            localStorage.setItem("cancel", "message was canceled");
-        }
+        if (con === true) { localStorage.setItem("enquiry", JSON.stringify(data)); }
+        if (con === false) { localStorage.setItem("cancel", "message was canceled"); }
         //window.localStorage.clear();
     }
 
