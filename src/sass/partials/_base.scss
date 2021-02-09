@@ -34,9 +34,12 @@ $light-grey: #8d8d8d;
     }
 }
 .empty {
+    width: 16rem;
     position: absolute;
-    top: 30vh;
+    top: 50vh;
+    margin-top: -1em;
     left: 50vw;
+    margin-left: -7rem;
     opacity: 0.6;
     text-transform: uppercase;
     letter-spacing: 0.1em;
