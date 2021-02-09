@@ -12,6 +12,7 @@ function Register() {
 
     function onSubmit(data) {
         console.log("data", data);
+        localStorage.setItem("name", data.name);
         registerUser(data.email);
         registerPassword(data.password);
         history.push("/admin/establishments");
@@ -30,8 +31,9 @@ function Register() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h3>Register</h3>
                     <p title="Enter your information to create an account">Enter your information to create an account</p>
-                    <input name="email" placeholder="E-mail" ref={register} required/>
-                    <input name="password" placeholder="password" ref={register} required/>
+                    <input name="name" type="name" placeholder="name" ref={register} required/>
+                    <input name="email" type="email" placeholder="E-mail" ref={register} required/>
+                    <input name="password" type="password" title="Must contain at at least 8 characters that includes one number, one uppercase and one lowercase letter" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" ref={register} required/>
                     <button className="btn-blue" type="submit">Send</button>
                     <Link to={"/login"}><button className="login-btn btn-blue">Log in</button></Link>
                 </form>

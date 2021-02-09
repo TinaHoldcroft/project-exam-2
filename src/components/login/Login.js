@@ -47,8 +47,8 @@ function Login() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h3>Login</h3>
                     <p title="Please enter your login information">Please enter your login information</p>
-                    <input name="name" placeholder="name" ref={register} required/>
-                    <input name="loginPassword" placeholder="Password" ref={register} required/>
+                    <input name="name" type="name" placeholder="name" ref={register} required/>
+                    <input name="loginPassword" type="password" placeholder="password" pattern=".{4,}" ref={register} required/>
                     <button className="btn-blue" type="submit">Log in</button>
                     <Link to={"/register"}><button className="register-btn btn-blue">Register</button></Link> 
                 </form>
