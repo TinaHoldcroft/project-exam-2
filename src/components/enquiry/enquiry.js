@@ -51,16 +51,12 @@ function Enquiry() {
     async function onSubmit(data) {
         console.log("data", data);
         const url = BASE_URL + "enquiries";
-        const options = { headers, method: "POST", body: JSON.stringify(data) };
+        const options = { headers, method: "POST", body: JSON.stringify({...data, establishmentId: id}) };
         await fetch(url, options);
         var con = window.confirm("Thanks for choosing " + hotel.name + "\nYou will typically get a response within 48 hours");
    
-        if (con === true) {
-            localStorage.setItem("enquiry", JSON.stringify(data));
-        }
-        if (con === false) {
-            localStorage.setItem("cancel", "enquiry was canceled");
-        }
+        if (con === true) { localStorage.setItem("enquiry", JSON.stringify(data)); }
+        if (con === false) { localStorage.setItem("cancel", "enquiry was canceled"); }
         //window.localStorage.clear();
 
         history.push("/");

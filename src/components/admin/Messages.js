@@ -9,23 +9,24 @@ function Messages() {
     const [contacts, setContacts] = useState(null);
     const [error, setError] = useState(null);
     const url = BASE_URL + "contacts/";
-    const options = { headers };
+    
 
     useEffect(() => {
+        const options = { headers };
         fetch(url, options)
             .then((response) => response.json())
             .then((json) => {
                 console.dir(json);
                 if (json.error) {
-                    setContacts();
+                    setContacts([]);
                     setError(json.message);
                 } 
                 else { setContacts(json); }
             })
             .catch((error) => console.debug(error))
             .finally(() => setLoading(false));
-    },);
-
+    },[url]);
+    
     if (loading) { return <Spinner/>; }
 
     return (
