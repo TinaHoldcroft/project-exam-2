@@ -25,6 +25,7 @@ function Delete(props) {
         const options = { headers, method: DELETE };
         await fetch(url, options);
         history.push("/admin/establishments");
+        window.location.reload();
     }
 
     return ( <button className="btn-red" onClick={checkDelete}>Delete</button> );

@@ -42,7 +42,7 @@ function Edit() {
                 <button className="btn-link">&#8592; Back to messages</button>
                 <div>
                     <p>{contact.name} <span>{contact.email}</span></p>
-                    <button title="reply"><i className="fas fa-reply"></i></button>
+                    <a title="reply" href={`mailto:${contact.email}`}><i className="fas fa-reply"></i></a>
                     <DeleteMessage id={id}/>
                 </div>
                 <div><p>{contact.message}</p></div>

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { BASE_URL, headers, PATCH } from "../../constants/api";
-import Delete from "./Delete";
+import Delete from "./DeleteEstablishment";
 
 function Edit() {
     const defaultState = {

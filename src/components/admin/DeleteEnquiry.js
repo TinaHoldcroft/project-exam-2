@@ -1,12 +1,9 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { confirmAlert } from "react-confirm-alert";
 import { BASE_URL, headers, DELETE } from "../../constants/api";
 import "react-confirm-alert/src/react-confirm-alert.css";
 
-function DeleteMessage(props) {
-    const history = useHistory();
-
+function DeleteEnquiry(props) {
     function checkDelete() {
         confirmAlert({
             title: "Are you sure you want to delete?",
@@ -21,13 +18,12 @@ function DeleteMessage(props) {
     }
 
     async function deleteEstablishment() {
-        const url = BASE_URL + "contacts/" + props.id;
+        const url = BASE_URL + "enquiries/" + props.id;
         const options = { headers, method: DELETE };
         await fetch(url, options);
-        history.push("/admin/messages");
         window.location.reload();
     }
-    return ( <button title="delete" onClick={checkDelete}><i className="fas fa-trash"></i></button> );
+    return ( <i title="delete" className="fas fa-trash" onClick={checkDelete}></i> );
 }
 
-export default DeleteMessage;
+export default DeleteEnquiry;

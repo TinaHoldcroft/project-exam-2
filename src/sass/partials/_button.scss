@@ -107,7 +107,7 @@ button {
         @media screen and (max-width: 800px) { display: none;}
     }
     form {
-        button {
+        button, a {
             margin: 0;
             padding: 0;
             border: 0;

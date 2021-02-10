@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
+import DeleteEnquiry from "./DeleteEnquiry";
 
 function Enquiries() {
     const [enquiries, setEnquiries] = useState([]);
@@ -26,30 +27,32 @@ function Enquiries() {
     return (
         <div className="enquiries">
             <Helmet><title>Enquiries | Holidaze</title></Helmet>
-            <div>
-                {error && <div className="error">{error}</div>}
-                {enquiries.length === 0 &&<p className="empty">no enquiries</p>}
-                {enquiries.map((enquiry) => {
-                    const format = { year: 'numeric', month: 'short', day: 'numeric' };
-                    const checkIn = new Date(enquiry.checkIn);
-                    const checkOut = new Date(enquiry.checkOut);
-                    const createdAt = new Date(enquiry.createdAt);
-                    const newFormat = new Intl.DateTimeFormat('en-GB', format);
-                    const newCheckIn = newFormat.format(checkIn);
-                    const newCheckOut = newFormat.format(checkOut);    
-                    const newCreatedAt = newFormat.format(createdAt);       
+            {error && <div className="error">{error}</div>}
+            {enquiries.length === 0 &&<p className="empty">no enquiries</p>}
+            {enquiries.map((enquiry) => {
+                const format = { year: 'numeric', month: 'short', day: 'numeric' };
+                const checkIn = new Date(enquiry.checkIn);
+                const checkOut = new Date(enquiry.checkOut);
+                const createdAt = new Date(enquiry.createdAt);
+                const newFormat = new Intl.DateTimeFormat('en-GB', format);
+                const newCheckIn = newFormat.format(checkIn);
+                const newCheckOut = newFormat.format(checkOut);    
+                const newCreatedAt = newFormat.format(createdAt);       
 
-                    return (
-						<div key={enquiry.id}>
-							<p>From: {enquiry.email}</p>
-                            <NavLink to={`enquirydetail/${enquiry.establishmentId}`}><i className="fas fa-address-card"></i></NavLink>
+                return (
+					<div className="enquiries-cards" key={enquiry.id}>
+                        <NavLink target="_blank" to={`enquirydetail/${enquiry.establishmentId}`}><i className="fas fa-address-card"></i></NavLink>
+                        <div>
                             <p>Sent: {newCreatedAt}</p>
-							<p>Check in: {newCheckIn}</p>
-							<p>Check out: {newCheckOut}</p>
-						</div>
-                    );
-                })}
-            </div>
+                            <p>{enquiry.establishmentId}</p>
+                            <p>From: {enquiry.email}</p>
+                            <p>Check in: {newCheckIn}</p>
+                            <p>Check out: {newCheckOut}</p>
+                            <DeleteEnquiry/>
+                        </div>
+					</div>
+                );
+            })}
         </div>
     );
 }

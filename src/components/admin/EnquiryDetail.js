@@ -21,11 +21,12 @@ function EnquiryDetail() {
     },);
 
     return (
-        <div>
-            <p>Name: {hotel.name} </p>
-            <p>E-mail: {hotel.email}</p>
-            <p>Image URL: {hotel.image} </p>
+        <div className="enquiry-detail">
+            <h4>Contact Information</h4>
             <img src={hotel.image} alt={hotel.id}/>
+            <p>{hotel.name}</p>
+            <p>{hotel.id}</p>
+            <a href={`mailto:${hotel.email}`}><i className="fas fa-at"></i> {hotel.email}</a>
         </div>
     );
 }
