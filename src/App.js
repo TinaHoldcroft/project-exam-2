@@ -10,6 +10,7 @@ import Accommodations from "./components/accommodations/Accommodations";
 import Establishments from "./components/admin/Establishments";
 import Add from "./components/admin/Add";
 import Edit from "./components/admin/Edit";
+import EnquiryDetail from "./components/admin/EnquiryDetail";
 import ViewMessage from "./components/admin/ViewMessage";
 import Delete from "./components/admin/Delete";
 import DeleteMessage from "./components/admin/DeleteMessage";
@@ -33,6 +34,7 @@ function App() {
 					<ProtectedRoute path="/admin/establishments" exact component={Establishments}/>
 					<ProtectedRoute path="/admin/add" exact component={Add}/>
 					<ProtectedRoute path="/admin/edit/:id" exact component={Edit}/>
+					<ProtectedRoute path="/admin/enquirydetail/:id" exact component={EnquiryDetail}/>
 					<ProtectedRoute path="/admin/viewmessage/:id" exact component={ViewMessage}/>
 					<ProtectedRoute path="/admin/delete" exact component={Delete}/>
 					<ProtectedRoute path="/admin/deletemessage" exact component={DeleteMessage}/>

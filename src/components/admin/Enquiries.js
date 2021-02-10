@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import { Helmet } from "react-helmet";
-
+import { NavLink } from "react-router-dom";
 
 function Enquiries() {
     const [enquiries, setEnquiries] = useState([]);
@@ -22,23 +22,30 @@ function Enquiries() {
             })
             .catch((error) => console.debug(error));
     },[url]);
-    
+
     return (
         <div className="enquiries">
             <Helmet><title>Enquiries | Holidaze</title></Helmet>
-            <div><h1>[Placeholder]</h1></div>
             <div>
                 {error && <div className="error">{error}</div>}
                 {enquiries.length === 0 &&<p className="empty">no enquiries</p>}
                 {enquiries.map((enquiry) => {
+                    const format = { year: 'numeric', month: 'short', day: 'numeric' };
+                    const checkIn = new Date(enquiry.checkIn);
+                    const checkOut = new Date(enquiry.checkOut);
+                    const createdAt = new Date(enquiry.createdAt);
+                    const newFormat = new Intl.DateTimeFormat('en-GB', format);
+                    const newCheckIn = newFormat.format(checkIn);
+                    const newCheckOut = newFormat.format(checkOut);    
+                    const newCreatedAt = newFormat.format(createdAt);       
+
                     return (
 						<div key={enquiry.id}>
-							<h5>{enquiry.name}</h5>
-							<p>{enquiry.email}</p>
-                            <p>{enquiry.establishmentId}</p>
-                            <p>Sent: {enquiry.createdAt}</p>
-							<p>Check in: {enquiry.checkIn}</p>
-							<p>Check out: {enquiry.checkIn}</p>
+							<p>From: {enquiry.email}</p>
+                            <NavLink to={`enquirydetail/${enquiry.establishmentId}`}><i className="fas fa-address-card"></i></NavLink>
+                            <p>Sent: {newCreatedAt}</p>
+							<p>Check in: {newCheckIn}</p>
+							<p>Check out: {newCheckOut}</p>
 						</div>
                     );
                 })}
