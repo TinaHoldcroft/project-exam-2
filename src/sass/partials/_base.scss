@@ -3,18 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    display: flex;
-    flex-flow: column nowrap;
-    overflow-y: auto; //shows scroll only when necessary
-    overflow-x: hidden;
-}
-::-webkit-scrollbar {
-    width: 10px;
-    background: #ffffff; 
-}
-::-webkit-scrollbar-thumb { background: #bdbdbd; }
-::-webkit-scrollbar-thumb:hover { background: #bdbdbd86; }
+
 $dark-blue: #1e313e;
 $white: #ffffff;
 $orange: #ffa500;
@@ -23,7 +12,18 @@ $black: #242424;
 $box-shadow: -4px -2px 16px rgba(0, 0, 0, 0.55);
 $light-grey: #8d8d8d;
 
-//react alert module
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: auto; //shows scroll only when necessary
+    overflow-x: hidden;
+}
+::-webkit-scrollbar-thumb { background: #bdbdbd; }
+::-webkit-scrollbar-thumb:hover { background: #bdbdbd86; }
+::-webkit-scrollbar {
+    width: 10px;
+    background: #ffffff; 
+}
 .react-confirm-alert-body  {
     display: flex;
     align-items: center;
