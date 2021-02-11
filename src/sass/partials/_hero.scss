@@ -1,13 +1,13 @@
+@keyframes cursorAnimation {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 .typed-style::after { //flashing cursor
     content: '|';
     display: inline;
     animation: cursorAnimation 1.5s infinite;
     opacity: 1;
-}
-@keyframes cursorAnimation {
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
 }
 .typed-banner {
     position: absolute;

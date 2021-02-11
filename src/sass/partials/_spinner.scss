@@ -1,12 +1,16 @@
 $size: 5em;
 
+@keyframes spin{
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
 .spinner-wrapper {
     position: relative;
     margin-left: calc(50% - 2.5em);
     margin-top: 15%;
     margin-bottom: 15%;
 }
-
 .spinner{
     position: relative;
     width: $size;
@@ -21,9 +25,4 @@ $size: 5em;
         border-radius: 50%;
         box-shadow: $size/20 $size/20 $dark-blue;
     }
-}
-
-@keyframes spin{
-    0% { transform: rotateZ(0deg); }
-    100% { transform: rotateZ(360deg); }
 }

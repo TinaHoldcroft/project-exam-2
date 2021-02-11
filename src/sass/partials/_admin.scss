@@ -129,10 +129,79 @@
     }
 }
 .enquiries {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row;
+    display: flex; 
+    flex-flow: row wrap;
+    gap: 1rem;
+    width: 83vw;
     margin-top: 5vh;
-    margin-left: 2.9rem;
+    margin-left: 15vw;
+    @media screen and (max-width: 800px) { justify-content: center; }
+    .enquiries-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+        gap: 1rem;
+        box-shadow: $box-shadow;
+        width: auto;
+        padding: 0 2rem;
+        @media screen and (max-width: 800px) { flex-flow: column; }
+        a {
+            font-size: 10rem;
+            transition: 0.2s;
+            &:hover { transform: scale(1.1); }
+            i { color: $dark-blue; }
+        }
+        .fa-trash {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            margin-left: 13.2rem;
+            top: 4rem;
+            color: $light-grey;
+            transition: 0.2s;
+            font-size: 1.5em;
+            @media screen and (max-width: 800px) { 
+                position: relative;
+                top: -2rem;
+            }
+            &:hover { transform: scale(1.1); }
+        }
+    }
+}
+.enquiry-detail {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    gap: 0.25em;
+    top: 50vh;
+    margin-top: -17rem;
+    left: 50vw;
+    margin-left: -13.5rem;
+    height: 30rem;
+    width: 30rem;
+    box-shadow: $box-shadow;
+    text-align: center;
+    color: $black;
+    @media screen and (max-width: 800px) { transform: scale(0.65); }
+    h4 {
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(204, 204, 204, 0.753);
+        font-weight: 200;
+    }
+    img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    a {
+        color: $black;
+        font-weight: 900;
+        &:hover, &:focus {
+            transform: scale(1.05);
+        }
+    }
 }

@@ -16,6 +16,20 @@
     animation-name: fade;
     @include float-animation;
 }
+@keyframes float-left {
+    0%   { margin-left: 0rem; }
+    100% { margin-left: -30rem;}
+}
+@keyframes float-right {
+    0%   { margin-left: -30rem; }
+    100% { margin-left: 0rem;}
+}
+@keyframes fade {
+    0%   { opacity: 0; }
+    80% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
 form {
     display: flex;
     background-color: $white;
@@ -246,19 +260,6 @@ label {
         font-weight: 900;
         &:hover { opacity: 0.7; }
     }
-}
-@keyframes float-left {
-    0%   { margin-left: 0rem; }
-    100% { margin-left: -30rem;}
-}
-@keyframes float-right {
-    0%   { margin-left: -30rem; }
-    100% { margin-left: 0rem;}
-}
-@keyframes fade {
-    0%   { opacity: 0; }
-    80% { opacity: 0.3; }
-    100% { opacity: 1; }
 }
 .admin-form {
     flex-flow: column nowrap;
