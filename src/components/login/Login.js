@@ -13,7 +13,7 @@ function Login() {
 
     function onSubmit(data) { 
         console.log("data", data); 
-        localStorage.setItem("name", data.name);
+        localStorage.setItem("user", data.name);
         let loginInput = data.loginPassword;
 
         function strCompare(loginInput, adminPassword){

@@ -11,18 +11,18 @@ const AuthorizationProvider = ({ children }) => {
         setUser(username);
     }
 
-    function registerPassword(password) {
-        localStorage.setItem("password", JSON.stringify(password));
-        setUser(password);
+    function registerEmail(email) {
+        localStorage.setItem("email", JSON.stringify(email));
+        setUser(email);
     }
 
     function logout() {
         setUser(null);
         localStorage.removeItem("user");
-        localStorage.removeItem("password");
+        localStorage.removeItem("email");
     }
 
-    return <Authorization.Provider value={{ admin, registerUser, registerPassword, logout }}>{children}</Authorization.Provider>;
+    return <Authorization.Provider value={{ admin, registerUser, registerEmail, logout }}>{children}</Authorization.Provider>;
 };
 
 export { Authorization, AuthorizationProvider };

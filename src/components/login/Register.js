@@ -7,14 +7,13 @@ import { Helmet } from "react-helmet";
 
 function Register() {
     const { register, handleSubmit } = useForm();
-    const { registerUser, registerPassword } = useContext(Authorization);
+    const { registerUser, registerEmail } = useContext(Authorization);
     const history = useHistory();
 
     function onSubmit(data) {
         console.log("data", data);
-        localStorage.setItem("name", data.name);
-        registerUser(data.email);
-        registerPassword(data.password);
+        registerUser(data.name);
+        registerEmail(data.email);
         history.push("/admin/establishments");
         alert('Welcome');
     }

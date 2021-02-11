@@ -5,7 +5,7 @@ import { Authorization } from "../../constants/Authorization";
 function LogOut() {
     const { logout } = useContext(Authorization);
     const history = useHistory();
-    const username = localStorage.getItem("name");
+    const username = localStorage.getItem("user");
 
     function doLogout() {
         logout();
