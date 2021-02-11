@@ -24,44 +24,44 @@ function Add() {
                 
                 <div>
                     <label>Name: </label>
-                    <input name="name" placeholder="The Example Inn" ref={register} required/>
+                    <input title="Name" name="name"  type="name" placeholder="The Example Inn" ref={register} required/>
                 </div>
 
                 <div>
                     <label>E-mail: </label>
-                    <input name="email" placeholder="example@domain .com" ref={register} required/>
+                    <input title="E-mail" name="email" type="email" placeholder="example@domain.com" ref={register} required/>
                 </div>
 
                 <div className="topic-group">
                     <label>Price: </label>
-                    <input name="price" placeholder="00" ref={register} required/>
+                    <input title="Price" type="number" name="price" placeholder="00" ref={register} required/>
                     <label>Maximum guests: </label>
-                    <input name="maxGuests" placeholder="00" ref={register}/>
+                    <input title="Maximum number of guests" type="number" name="maxGuests" placeholder="00" ref={register}/>
                 </div>
 
                 <div>
                     <label>Image URL: </label>
-                    <input name="image" placeholder="https://...." ref={register} required/>
+                    <input title="Image" name="image" type="url" placeholder="https://...." ref={register} required/>
                 </div>
 
                 <div>
                     <label>Description: </label>
-                    <input name="description" placeholder="full establishment description" ref={register} required/>
+                    <input title="Description" type="text" name="description"  placeholder="full establishment description" ref={register} required/>
                 </div>
 
                 <div className="topic-group">
                     <label>Latitude: </label>
-                    <input name="lat" placeholder="00.000000" ref={register}/>
+                    <input title="Latitude" type="number" name="lat" placeholder="00.000000" ref={register}/>
                     <label>Longitude: </label>
-                    <input name="lng" placeholder="00.000000" ref={register}/>
+                    <input title="Longitude" type="number" name="lng" placeholder="00.000000" ref={register}/>
                 </div>
 
                 <div>
                     <label>Address: </label>
-                    <input name="address" placeholder="streetname, postalcode" ref={register}/>
+                    <input title="Address" type="address" name="address" placeholder="streetname, postalcode" ref={register}/>
                 </div>
 
-                <div className="btn-group"><button className="btn-blue">Add</button></div>
+                <div className="btn-group"><button className="btn-blue" type="submit">Add</button></div>
             </form>
         </div>
     );

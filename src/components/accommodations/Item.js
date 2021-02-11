@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 function Item({ id, name, image, price, maxGuests, description, address}) {
 	return (
 		<div className="cards" key={id}>
-			<div className="cards__img">
-				<img src={image} alt={name}/>
-			</div>
+			<div className="cards__img"><img src={image} alt={name}/></div>
 			<div className="cards__txt">
 				<h3>{name}</h3>
-				<p className="cards__address"><i className="fas fa-map-marker-alt"></i> {address}</p>
+				<p><i className="fas fa-map-marker-alt"></i> {address}</p>
 				<p>{description}</p>
 				<div className="highlights">
 					<p>€ {price} per night</p>

@@ -39,46 +39,46 @@ function Edit() {
                 
                 <div>
                     <label>Name: </label>
-                    <input name="name" defaultValue={hotel.name} placeholder="Enter name for the hotel" ref={register}/>
+                    <input title="Name" type="name" name="name" defaultValue={hotel.name} placeholder="Enter name for the hotel" ref={register}/>
                 </div>
 
                 <div>
                     <label>E-mail: </label>
-                    <input name="email" defaultValue={hotel.email} placeholder="Enter an email address" ref={register}/>
+                    <input title="E-mail" type="email" name="email" defaultValue={hotel.email} placeholder="Enter an email address" ref={register}/>
                 </div>
 
 
                 <div className="topic-group">
                     <label>Price: </label>
-                    <input name="price" defaultValue={hotel.price} placeholder="00" ref={register}/>
+                    <input title="Price" type="number" name="price" defaultValue={hotel.price} placeholder="00" ref={register}/>
                     <label>Maximum guests: </label>
-                    <input name="maxGuests" defaultValue={hotel.maxGuests} placeholder="00" ref={register}/>
+                    <input title="Maximum number of guests" type="number" name="maxGuests" defaultValue={hotel.maxGuests} placeholder="00" ref={register}/>
                 </div>
 
                 <div>
                     <label>Image URL: </label>
-                    <input name="image" defaultValue={hotel.image} placeholder="URL" ref={register}/>
+                    <input title="Image URL" type="url" name="image" defaultValue={hotel.image} placeholder="URL" ref={register}/>
                 </div>
 
                 <div>
                     <label>Description: </label>
-                    <input name="description" defaultValue={hotel.description} placeholder="description" ref={register}/>
+                    <input title="Description" type="text" name="description" defaultValue={hotel.description} placeholder="description" ref={register}/>
                 </div>
 
                 <div className="topic-group">
                     <label>Latitude: </label>
-                    <input name="lat" defaultValue={hotel.lat} placeholder="00.000000" ref={register}/>
+                    <input title="Latitude" type="number" name="lat" defaultValue={hotel.lat} placeholder="00.000000" ref={register}/>
                     <label>Longitude: </label>
-                    <input name="lng" defaultValue={hotel.lng} placeholder="00.000000" ref={register}/>
+                    <input title="Longitude" type="number" name="lng" defaultValue={hotel.lng} placeholder="00.000000" ref={register}/>
                 </div>
             
                 <div>
                     <label>address</label>
-                    <input name="address" defaultValue={hotel.address} placeholder="address" ref={register}/>
+                    <input title="Address" type="address" name="address" defaultValue={hotel.address} placeholder="address" ref={register}/>
                 </div>
 
                 <div className="btn-group">
-                    <button className="btn-blue">Update</button>
+                    <button title="Update establishment" className="btn-blue" type="submit">Update</button>
                     <Delete id={id}/>
                 </div>
             </form>

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Search({ handleSearch }) {
 	return (
 		<div className="search-bar">
-			<input placeholder="Search...                       
+			<input title="Search for accommodations" placeholder="Search...                       
 			&#xF002;" onChange={event => handleSearch(event)}/>
 		</div>
 	);
@@ -12,4 +12,4 @@ function Search({ handleSearch }) {
 
 Search.propTypes = { handleSearch: PropTypes.func.isRequired };
 
-export default Search;		
+export default Search;

@@ -20,9 +20,9 @@ const Footer = () => (
 			<div>
 				<h4>Contact</h4>
 				<a href="/Contact">Contact Us</a>
-				<a href="https://www.messenger.com/">Messenger</a>
-				<a href="mailto:contact@holidaze.com">E-mail</a>
-				<a href="/Login">Admin Login</a>
+				<a title="Messenger" href="https://www.messenger.com/">Messenger</a>
+				<a title="E-mail us" href="mailto:contact@holidaze.com">E-mail</a>
+				<a title="Admin log in form" href="/Login">Admin Login</a>
 			</div>
 			<div>
 				<h4>Accommodations</h4>
@@ -33,9 +33,9 @@ const Footer = () => (
 			</div>
 			<div>
 				<h4>Follow Us</h4>
-				<a target={"_blank"} rel="noreferrer" href="https://www.messenger.com/">Facebook</a>
-				<a target={"_blank"} rel="noreferrer" href="https://www.youtube.com/">LinkedIn</a>
-				<a target={"_blank"} rel="noreferrer" href="https://twitter.com/">Twitter</a>
+				<a title="Messenger" target={"_blank"} rel="noreferrer" href="https://www.messenger.com/">Facebook</a>
+				<a title="YouTube" target={"_blank"} rel="noreferrer" href="https://www.youtube.com/">LinkedIn</a>
+				<a title="Twitter" target={"_blank"} rel="noreferrer" href="https://twitter.com/">Twitter</a>
 			</div>
 		</div>
 

@@ -27,9 +27,7 @@ function Detail() {
 		<div className="detail-page">
 			<Helmet><title>{establishment.name} | Holidaze</title></Helmet>
 			<div className="detail-col-1">
-				<div>
-					<img src={establishment.image} alt={establishment.name}/>
-				</div>
+				<div><img src={establishment.image} alt={establishment.name}/></div>
 				<div>
 					<h2>{establishment.name}</h2>
 					<div className="highlights">
@@ -45,14 +43,10 @@ function Detail() {
 						<i className="fas fa-map-marker-alt"></i> {establishment.address}
 					</a>
 					<p>{establishment.description}</p>
-					<Link to={"../enquiry/" + id}>
-						<button className="btn-white">Book now</button>
-					</Link>
+					<Link to={"../enquiry/" + id}><button className="btn-white">Book now</button></Link>
 				</div>
 			</div>
-			<div className="detail-footer">
-				<Footer/>
-			</div>
+			<div className="detail-footer"><Footer/></div>
 		</div>
 	);
 }

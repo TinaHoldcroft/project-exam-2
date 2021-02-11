@@ -20,17 +20,17 @@ function NewsLetter() {
     return (
         <Popup trigger={
                 <div>
-                    <button className="btn-blue">Sign Up</button>
-                    <button className="btn-contact"><i className="fas fa-newspaper"></i></button>
+                    <button title="Click to sign up for our newsletter" className="btn-blue">Sign Up</button>
+                    <button title="Click to sign up for our newsletter" className="btn-contact"><i className="fas fa-newspaper"></i></button>
                 </div>
             }>
             <div className="pop-up">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h2>Sign Up</h2>
                     <h3>Submit your e-mail adress to register for our newsletter</h3>
-                    <input name="email" placeholder="example@domain.com" ref={register}/>
+                    <input title="E-mail" type="email" name="email" placeholder="example@domain.com" ref={register}/>
                     <p className="error">{errors.email?.message}</p>
-                    <button className="btn-blue" type="submit">Send</button>
+                    <button className="btn-blue" title="Submit form" type="submit">Send</button>
                 </form>
             </div>
         </Popup>

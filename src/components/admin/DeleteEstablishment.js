@@ -28,7 +28,7 @@ function Delete(props) {
         window.location.reload();
     }
 
-    return ( <button className="btn-red" onClick={checkDelete}>Delete</button> );
+    return ( <button title="delete" className="btn-red" onClick={checkDelete}>Delete</button> );
 }
 
 export default Delete;

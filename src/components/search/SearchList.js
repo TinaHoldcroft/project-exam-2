@@ -44,7 +44,7 @@ function SearchList() {
                     const { id, name, image, price, maxGuests, description, address } = establishments;
                     return (
                         <>
-                            <button  className="btn__close" onClick={() => {window.location.reload()}}><i className="fas fa-times"></i></button>
+                            <button title="Close search results" className="btn__close" onClick={() => {window.location.reload()}}><i className="fas fa-times"></i></button>
                             <div><Item id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/></div>
                         </>
                     );

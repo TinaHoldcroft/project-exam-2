@@ -35,7 +35,7 @@ function Register() {
                     <input name="email" type="email" placeholder="E-mail" ref={register} required/>
                     <input name="password" type="password" title="Must contain at at least 8 characters that includes one number, one uppercase and one lowercase letter" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" ref={register} required/>
                     <button className="btn-blue" type="submit">Send</button>
-                    <Link to={"/login"}><button className="login-btn btn-blue">Log in</button></Link>
+                    <Link to={"/login"}><button type="submit" className="login-btn btn-blue">Log in</button></Link>
                 </form>
             </div>
         </div>

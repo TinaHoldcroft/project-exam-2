@@ -77,21 +77,21 @@ function Enquiry() {
                     <h1 className="small-screen">Enquiry</h1>
                     <p className="small-screen">Please fill out the form to book your stay at {hotel.name}</p>
 
-                    <input placeholder="name" type="text" name="name" ref={register}/>
+                    <input title="Name" placeholder="name" type="name" name="name" ref={register}/>
                     <span className="error">{errors.name?.message}</span>
 
-                    <input placeholder="e-mail" name="email" ref={register}/>
+                    <input title="E-mail" placeholder="e-mail" type="email" name="email" ref={register}/>
                     <span className="error">{errors.email?.message}</span>
 
                     <label>Check in</label>
-                    <input type="date" name="checkIn" ref={register}/>
+                    <input title="Check in date" type="date" name="checkIn" ref={register}/>
                     <span className="error">{errors.checkIn?.message}</span>
 
                     <label>Check out</label>
-                    <input type="date" name="checkOut" ref={register}/>
+                    <input title="Check out date" type="date" name="checkOut" ref={register}/>
                     <span className="error">{errors.checkOut?.message}</span>
 
-                    <button className="btn-blue">Submit</button>
+                    <button title="Submit form" type="submit" className="btn-blue">Submit</button>
                 </form>
             </div>
         </div>

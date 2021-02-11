@@ -33,9 +33,9 @@ function Establishments() {
                         <div key={establishment.id}>
                             <div className="accommodations-tiles">
                                 <div className="accommodations-links">
-                                    <NavLink to={`edit/${establishment.id}`}><i className="fas fa-edit"></i></NavLink>
-                                    <NavLink to={"../accommodations/" + establishment.id}><i className="fas fa-eye"></i></NavLink>
-                                    <a target={"_blank"} rel="noreferrer" href={establishment.image}><i className="fas fa-camera"></i></a>
+                                    <NavLink title="Edit establishment" to={`edit/${establishment.id}`}><i className="fas fa-edit"></i></NavLink>
+                                    <NavLink title="Establishment details page" to={"../accommodations/" + establishment.id}><i className="fas fa-eye"></i></NavLink>
+                                    <a title="Establishment image" target={"_blank"} rel="noreferrer" href={establishment.image}><i className="fas fa-camera"></i></a>
                                 </div>
                                 <div className="accommodations-info">
                                     <h4>{establishment.name}</h4>

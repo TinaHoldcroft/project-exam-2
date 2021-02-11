@@ -26,7 +26,7 @@ function EnquiryDetail() {
             <img src={hotel.image} alt={hotel.id}/>
             <p>{hotel.name}</p>
             <p>{hotel.id}</p>
-            <a href={`mailto:${hotel.email}`}><i className="fas fa-at"></i> {hotel.email}</a>
+            <a title="Send an e-mail to the establishment" href={`mailto:${hotel.email}`}><i className="fas fa-at"></i> {hotel.email}</a>
         </div>
     );
 }

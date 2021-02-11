@@ -39,15 +39,15 @@ function Contact() {
         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <h2>Contact Us</h2>
             <label>Name</label>
-            <input type="text" name="name" ref={register}/>
+            <input title="Name" type="name" name="name" ref={register}/>
             <p className="error">{errors.name?.message}</p>
             <label>E-mail</label>
-            <input name="email" ref={register}/>
+            <input title="E-mail" type="email" name="email" ref={register}/>
             <p className="error">{errors.email?.message}</p>
             <label>Message</label>
             <textarea type="text" name="message" ref={register}></textarea>
             <p className="error">{errors.message?.message}</p>
-            <button className="btn-blue" type="submit">Send</button>
+            <button title="Send message" className="btn-blue" type="submit">Send</button>
         </form>
     );
 }

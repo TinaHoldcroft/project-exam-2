@@ -42,7 +42,10 @@ button {
     position: absolute;
     top: -2vh;
     left: calc(100% - 7rem);
-    @media screen and (max-width: 800px) { top: 1vh; }
+    @media screen and (max-width: 800px) { 
+        top: 1vh; 
+        left: calc(100% - 4rem);
+    }
     i { 
         color: $dark-blue; 
         font-size: 2em;
