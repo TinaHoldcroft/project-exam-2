@@ -48,7 +48,7 @@ function Enquiries() {
                             <p>From: {enquiry.email}</p>
                             <p>Check in: {newCheckIn}</p>
                             <p>Check out: {newCheckOut}</p>
-                            <DeleteEnquiry/>
+                            <DeleteEnquiry id={enquiry.id}/>
                         </div>
 					</div>
                 );
