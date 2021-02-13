@@ -1,5 +1,6 @@
 import React from "react";
 import Newsletter from "./Newsletter"
+import { NavLink } from "react-router-dom";
 
 const Footer = () => (
     <div className="footer">
@@ -19,17 +20,18 @@ const Footer = () => (
         <div className="footer-col-2">
 			<div>
 				<h4>Contact</h4>
-				<a href="/Contact">Contact Us</a>
+				<NavLink to={"./Contact"}>Contact Us</NavLink>
 				<a title="Messenger" href="https://www.messenger.com/">Messenger</a>
 				<a title="E-mail us" href="mailto:contact@holidaze.com">E-mail</a>
-				<a title="Admin log in form" href="/Login">Admin Login</a>
+				<NavLink to={"./Login"}>Admin Login</NavLink>
+				<NavLink to={"./Register"}>Admin Register</NavLink>
 			</div>
 			<div>
 				<h4>Accommodations</h4>
-				<a href="/Accommodations">Search</a>
-				<a href="/Accommodations">Hotels</a>
-				<a href="/Accommodations">Bed and Breakfasts</a>
-				<a href="/Accommodations">Guesthouses</a>
+				<NavLink to={"./Accommodations"}>Search</NavLink>
+				<NavLink to={"./Accommodations"}>Hotels</NavLink>
+				<NavLink to={"./Accommodations"}>Bed and Breakfasts</NavLink>
+				<NavLink to={"./Accommodations"}>Guesthouses</NavLink>
 			</div>
 			<div>
 				<h4>Follow Us</h4>
