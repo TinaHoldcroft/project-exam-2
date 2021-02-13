@@ -17,7 +17,7 @@ function Login() {
         let loginInput = data.loginPassword;
 
         function strCompare(loginInput, adminPassword){
-            return loginInput === adminPassword ;
+            return loginInput === adminPassword;
         }
         if(strCompare(loginInput, adminPassword) === true) {
             alert('Welcome ' + data.name);

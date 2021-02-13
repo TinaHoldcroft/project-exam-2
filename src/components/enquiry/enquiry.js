@@ -73,9 +73,9 @@ function Enquiry() {
             <div>
                 <form className="enquiry-form" onSubmit={handleSubmit(onSubmit)}>
                     <h1 className="big-screen">Booking Enquiry</h1>
-                    <p className="big-screen">Please fill out the form</p>
+                    <p className="big-screen" title="Please fill out the form">Please fill out the form</p>
                     <h1 className="small-screen">Enquiry</h1>
-                    <p className="small-screen">Please fill out the form to book your stay at {hotel.name}</p>
+                    <p className="small-screen" title="Please fill out the form">Please fill out the form to book your stay at {hotel.name}</p>
 
                     <input title="Name" placeholder="name" type="name" name="name" ref={register}/>
                     <span className="error">{errors.name?.message}</span>
