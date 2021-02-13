@@ -40,10 +40,10 @@ button {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: -2vh;
+    top: 2vh;
     left: calc(100% - 7rem);
     @media screen and (max-width: 800px) { 
-        top: 1vh; 
+        top: 5vh; 
         left: calc(100% - 4rem);
     }
     i { 

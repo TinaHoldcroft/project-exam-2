@@ -21,7 +21,6 @@ function DeleteEnquiry(props) {
         const url = BASE_URL + "enquiries/" + props.id;
         const options = { headers, method: DELETE };
         await fetch(url, options);
-        window.location.reload();
     }
     return ( <i title="delete" className="fas fa-trash" onClick={checkDelete}></i> );
 }

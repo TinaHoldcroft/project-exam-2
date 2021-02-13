@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL, headers } from "../../constants/api";
 import Item from "../accommodations/Item";
 import Search from "./Search";
+import { NavLink } from "react-router-dom";
 
 function SearchList() {
     const [error, setError] = useState(null);
@@ -44,7 +45,7 @@ function SearchList() {
                     const { id, name, image, price, maxGuests, description, address } = establishments;
                     return (
                         <>
-                            <button title="Close search results" className="btn__close" onClick={() => {window.location.reload()}}><i className="fas fa-times"></i></button>
+                            <NavLink to={"/home"}  title="Close search results" className="btn__close"><i className="fas fa-times"></i></NavLink>
                             <div><Item id={id} name={name} image={image} price={price} maxGuests={maxGuests}  description={description} address={address}/></div>
                         </>
                     );

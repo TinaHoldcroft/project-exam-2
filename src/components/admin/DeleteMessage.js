@@ -25,7 +25,6 @@ function DeleteMessage(props) {
         const options = { headers, method: DELETE };
         await fetch(url, options);
         history.push("/admin/messages");
-        window.location.reload();
     }
     return ( <button title="delete" onClick={checkDelete}><i className="fas fa-trash"></i></button> );
 }
