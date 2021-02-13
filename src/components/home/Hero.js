@@ -11,9 +11,9 @@ function Hero() {
 				<h2>
 					<Typed className="typed-style"
 						strings={[
-							'<a href="/accommodations">Bed and Breakfasts </a>',
-							'<a href="/accommodations">Hotels </a>',
-							'<a href="/accommodations">Guesthouses </a>']}
+							'Bed and Breakfasts',
+							'Hotels',
+							'Guesthouses']}
 						typeSpeed={30}
 						stringsElement={null}
 						startDelay={1500}

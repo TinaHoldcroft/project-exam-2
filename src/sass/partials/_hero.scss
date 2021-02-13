@@ -17,6 +17,7 @@
     width: 55rem;
     margin-left: -27.5rem;
     text-align: center;
+    cursor: none;
     h2 { 
         color: $white; //contast tested: AAA
         font-weight: 100;
@@ -24,7 +25,6 @@
         line-height: 1.3em;
         @media screen and (max-width: 600px) { font-size: 1.1em; }
     }
-    a { color: $white; }
 }
 .hero-img {
     background-image: url("../images/hero.svg");

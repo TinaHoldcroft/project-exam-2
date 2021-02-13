@@ -68,7 +68,7 @@ function Enquiry() {
             <div className="enquiry__dark">
                 <h3>Book Your Stay at {hotel.name}</h3>
                 <p>Fill out the form to book your accommodations</p>
-                <Link to={"../accommodations/"}><i className="fas fa-arrow-left"></i> Keep browsing</Link>
+                <Link to={"../accommodations/"}>&#8592; Keep browsing</Link>
             </div>
             <div>
                 <form className="enquiry-form" onSubmit={handleSubmit(onSubmit)}>
