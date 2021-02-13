@@ -1,5 +1,6 @@
-#Holidaze
-![Image of site](https://github.com/TinaHoldcroft/2020-09_GameofDice/blob/master/styles/images/readme.PNG)
+# Holidaze
+
+![Image of site](https://github.com/TinaHoldcroft/project-exam-2/blob/master/src/sass/images/Capture.PNG)
 
 # Getting Started with Create React App
 
