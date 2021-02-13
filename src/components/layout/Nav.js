@@ -12,13 +12,11 @@ function Nav() {
         <>{admin ? ( // Admin side
             <div className={isActive ? "menu menu__admin inn" : "menu menu__admin out"}>
                 <div className="brand">
-                    
                 <NavLink activeClassName="none" to="/" exact><h1 title="Home">Holidaze</h1></NavLink>
-                        <div className={isActive ? "btn-inn" : "btn-out"} onClick={handleToggle}>
-                            <i className="fas fa-arrow-right"></i>
-                            <i className="fas fa-arrow-left"></i>
-                        </div>
-                    
+                <div className={isActive ? "btn-inn" : "btn-out"} onClick={handleToggle}>
+                    <i className="fas fa-arrow-right"></i>
+                    <i className="fas fa-arrow-left"></i>
+                </div>            
                 </div>
                 <div className="nav-links">
                     <NavLink activeClassName="active" to="/admin/establishments"><p>Overview </p><i className="fas fa-hotel"></i></NavLink>
