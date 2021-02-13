@@ -1,3 +1,6 @@
+#Holidaze
+![Image of site](https://github.com/TinaHoldcroft/2020-09_GameofDice/blob/master/styles/images/readme.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
