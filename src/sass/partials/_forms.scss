@@ -158,6 +158,12 @@ label {
             margin-top: 0;
         }
     }
+    i {
+        position: relative;
+        top: -4.1rem;
+        right: -90%;
+        color: $light-grey;
+    }
     p {
         font-family: learning-curve, sans-serif;
         font-size: 1.5em;

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -10,6 +10,11 @@ function Login() {
     const { registerUser } = useContext(Authorization);
     const adminPassword = "admin123";
     const history = useHistory();
+    const [passwordShown, shownPassword] = useState(false);
+    
+    const passwordVisiblity = () => {
+        shownPassword(passwordShown ? false : true);
+    };
 
     function onSubmit(data) { 
         console.log("data", data); 
@@ -43,7 +48,8 @@ function Login() {
                     <h3>Login</h3>
                     <p title="Please enter your login information">Please enter your login information</p>
                     <input title="Please enter your name" name="name" type="name" placeholder="name" ref={register} required/>
-                    <input title="Please enter your password" name="loginPassword" type="password" placeholder="password" pattern=".{4,}" ref={register} required/>
+                    <input title="Please enter your password" name="loginPassword" type={passwordShown ? "text" : "password"} placeholder="password" pattern=".{4,}" ref={register} required/>
+                    <i onClick={passwordVisiblity} class={passwordShown ? "fas fa-eye" : "fas fa-eye-slash"}></i>
                     <button title="Log in" className="btn-blue">Log in</button>
                     <Link to={"/register"}><button title="Click to register" className="register-btn btn-blue">Register</button></Link> 
                 </form>

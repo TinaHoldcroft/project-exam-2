@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { Authorization } from "../../constants/Authorization";
@@ -9,6 +9,11 @@ function Register() {
     const { register, handleSubmit } = useForm();
     const { registerUser, registerEmail } = useContext(Authorization);
     const history = useHistory();
+    const [passwordShown, shownPassword] = useState(false);
+    
+    const passwordVisiblity = () => {
+        shownPassword(passwordShown ? false : true);
+    };
 
     function onSubmit(data) {
         console.log("data", data);
@@ -33,6 +38,7 @@ function Register() {
                     <input name="name" type="name" placeholder="name" ref={register} required/>
                     <input name="email" type="email" placeholder="E-mail" ref={register} required/>
                     <input name="password" type="password" title="Must contain at at least 8 characters that includes one number, one uppercase and one lowercase letter" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" ref={register} required/>
+                    <i onClick={passwordVisiblity} class={passwordShown ? "fas fa-eye" : "fas fa-eye-slash"}></i>
                     <button className="btn-blue" type="submit">Send</button>
                     <Link to={"/login"}><button type="submit" className="login-btn btn-blue">Log in</button></Link>
                 </form>
