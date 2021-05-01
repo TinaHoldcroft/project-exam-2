@@ -52,7 +52,6 @@
 @media only screen and (max-width: 800px)  { //phone
     .dropdown { //phone menu
         flex-flow: column;
-        gap: 0.5em;
         text-align: right;
         position: absolute;
         top: 0;
@@ -157,7 +156,6 @@
         flex-flow: column nowrap;
         margin-top: 1rem;
         margin-left: 0.5rem;
-        gap: 0.5rem;
         i { 
             font-size: 1.2em;
             margin-left: 2rem;

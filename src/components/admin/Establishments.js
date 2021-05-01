@@ -30,7 +30,7 @@ function Establishments() {
             {error && <div className="error">{error}</div>}
                 {establishments.map((establishment) => {
                     return (
-                        <div key={establishment.id}>
+                        <div class="accommodations-wrapper" key={establishment.id}>
                             <div className="accommodations-tiles">
                                 <div className="accommodations-links">
                                     <NavLink title="Edit establishment" to={`edit/${establishment.id}`}><i className="fas fa-edit"></i></NavLink>

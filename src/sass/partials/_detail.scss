@@ -49,16 +49,18 @@
         }
         div {
             display: flex; 
-            gap: 1rem;
             flex-flow: column;
         }
         h2 {
             font-size: 3em;
             font-weight: 900;
             text-transform: uppercase;
+            margin-bottom: 1rem;
             @media screen and (max-width: 800px) { font-size: 2em; }
         }
+        p { margin-bottom: 1rem; }
         a {
+            margin-bottom: 1rem;
             color: $light-grey;
             &:hover { color: $black; }
         }

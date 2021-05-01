@@ -5,10 +5,11 @@
     justify-content: center;
     top: 0;
     left: 0;
-    column-gap: 2.2rem;
-    row-gap: 3.5rem;
     margin: 1.5rem 0rem 0rem 2.9rem;
     padding-bottom: 5rem;
+}
+.accommodations-wrapper {
+    margin: 2.2rem;
 }
 .accommodations-tiles {
     box-shadow: $box-shadow;
@@ -107,7 +108,6 @@
     margin-left: 2.8rem;
     margin-top: 10%;
     form {
-        gap: 1rem;
         div {
             display: flex;
             justify-content: space-between;
@@ -115,7 +115,6 @@
             flex-flow: row nowrap;
             margin-top: 1rem;
         }
-        div + div { margin-top: 0rem; }
         p {
             width: 86%;
             display: flex;
@@ -131,24 +130,35 @@
 .enquiries {
     display: flex; 
     flex-flow: row wrap;
-    gap: 1rem;
-    width: 83vw;
-    margin-top: 5vh;
-    margin-left: 15vw;
-    @media screen and (max-width: 800px) { justify-content: center; }
+    justify-content: center;
+    margin-left: 3rem;
+    @media screen and (max-width: 800px) { flex-flow: column; }
     .enquiries-cards {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-flow: row;
-        gap: 1rem;
+        flex-flow: row wrap;
         box-shadow: $box-shadow;
-        width: auto;
+        width: 32rem;
+
         padding: 0 2rem;
-        @media screen and (max-width: 800px) { flex-flow: column; }
+        margin: 2rem;
+        @media screen and (max-width: 800px) { 
+            width: 15rem;
+            flex-flow: column;
+        }
+        div {
+            max-width: 50%;
+            @media screen and (max-width: 800px) { 
+                max-width: 100%;
+                p { font-size: 0.8em; }
+            }
+            p { font-size: 0.9em; }
+        }
         a {
             font-size: 10rem;
             transition: 0.2s;
+            margin-right: 1rem;
             &:hover { transform: scale(1.1); }
             i { color: $dark-blue; }
         }
@@ -163,7 +173,8 @@
             font-size: 1.5em;
             @media screen and (max-width: 800px) { 
                 position: relative;
-                top: -2rem;
+                top: -1.5rem;
+                margin-left: 11.5rem;
             }
             &:hover { transform: scale(1.1); }
         }
@@ -173,7 +184,7 @@
     position: absolute;
     display: flex;
     flex-flow: column;
-    gap: 0.25em;
+    line-height: 1.5em;
     top: 50vh;
     margin-top: -17rem;
     left: 50vw;

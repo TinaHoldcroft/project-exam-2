@@ -44,7 +44,6 @@ function Enquiries() {
                         <NavLink target="_blank" to={`enquirydetail/${enquiry.establishmentId}`}><i className="fas fa-address-card"></i></NavLink>
                         <div>
                             <p>Sent: {newCreatedAt}</p>
-                            <p>{enquiry.establishmentId}</p>
                             <p>From: {enquiry.email}</p>
                             <p>Check in: {newCheckIn}</p>
                             <p>Check out: {newCheckOut}</p>
