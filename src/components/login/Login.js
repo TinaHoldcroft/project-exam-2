@@ -27,7 +27,7 @@ function Login() {
         if(strCompare(loginInput, adminPassword) === true) {
             alert('Welcome ' + data.name);
             registerUser(data.name);
-            history.push("/admin/establishments");
+            history.push("/admin/dashboard");
         }
         if(strCompare(loginInput, adminPassword) === false) {
             alert("You typed an invalid password \nPlease try again or register an account");

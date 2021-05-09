@@ -43,35 +43,35 @@
         font-size: 0.18em;
         @include card-txt;
     }
-}
-.date {
-    font-size: 0.9rem;
-    bottom: 1.8rem;
-    right: 2.6rem;
-    @include card-txt;
-}
-.logo {
-    @include card-img;
-    top: 2rem;
-    right: 2.5rem;
-    width: 5rem;
-}
-.chip {
-    @include card-img;
-    bottom: 8rem;
-    left: 2.6rem;
-    width: 3.5rem;
-}
-.number {
-    left: 2.6rem;
-    bottom: 4.5rem;
-    @include card-txt;
-}
-.name {
-    font-size: 0.65em;
-    bottom: 1.8rem;
-    left: 2.6rem;
-    @include card-txt;
+    .logo {
+        @include card-img;
+        top: 2rem;
+        right: 2.5rem;
+        width: 5rem;
+    }
+    .date {
+        font-size: 0.9rem;
+        bottom: 1.8rem;
+        right: 2.6rem;
+        @include card-txt;
+    }
+    .chip {
+        @include card-img;
+        bottom: 8rem;
+        left: 2.6rem;
+        width: 3.5rem;
+    }
+    .number {
+        left: 2.6rem;
+        bottom: 4.5rem;
+        @include card-txt;
+    }
+    .name {
+        font-size: 0.65em;
+        bottom: 1.8rem;
+        left: 2.6rem;
+        @include card-txt;
+    }
 }
 .ring {
     position: absolute;
