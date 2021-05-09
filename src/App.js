@@ -20,6 +20,7 @@ import Detail from "./components/accommodations/Detail";
 import Enquiry from "./components/enquiry/Enquiry";
 import Messages from "./components/admin/Messages";
 import Enquiries from "./components/admin/Enquiries";
+import Dashboard from "./components/admin/Dashboard";
 
 function App() {
 	return (
@@ -43,6 +44,7 @@ function App() {
 					<ProtectedRoute path="/admin/edit/:id" exact component={Edit}/>
 					<ProtectedRoute path="/admin/enquirydetail/:id" exact component={EnquiryDetail}/>
 					<ProtectedRoute path="/admin/viewmessage/:id" exact component={ViewMessage}/>
+					<ProtectedRoute path="/admin/dashboard" exact component={Dashboard}/>
 					<Redirect to="/"/>
 				</Switch>
 			</Router>

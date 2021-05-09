@@ -19,6 +19,7 @@ function Nav() {
                 </div>            
                 </div>
                 <div className="nav-links">
+                    <NavLink activeClassName="active" to="/admin/dashboard"><p>Dashboard </p><i class="fas fa-tachometer-alt"></i></NavLink>
                     <NavLink activeClassName="active" to="/admin/establishments"><p>Overview </p><i className="fas fa-hotel"></i></NavLink>
                     <NavLink activeClassName="active" to="/admin/add"><p>Add </p><i className="fas fa-plus-square"></i></NavLink>
                     <NavLink activeClassName="active" to="/admin/messages"><p>Messages </p><i className="fas fa-envelope-open"></i></NavLink>
