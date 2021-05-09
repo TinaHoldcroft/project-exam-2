@@ -35,11 +35,16 @@ function Messages() {
             {error && <div className="error">{error}</div>}
             {contacts.length === 0 &&<p className="empty">no messages</p>}
                 {contacts.map((contact) => {
+                     const format = { year: 'numeric', month: 'short', day: 'numeric' };
+                    const newFormat = new Intl.DateTimeFormat('en-GB', format);
+                    const createdAt = new Date(contact.createdAt);
+                    const newCreatedAt = newFormat.format(createdAt);    
                     return (
 						<NavLink to={`viewmessage/${contact.id}`}>
 							<div key={contact.id}>
 								<h5>{contact.name}</h5>
 								<p>{contact.message}</p>
+                                <p>{newCreatedAt}</p>
 							</div>
 						</NavLink>
                     );
