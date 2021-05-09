@@ -21,7 +21,6 @@ function Dashboard() {
                                 <div class="ring"></div>
                             </div>
                             <div class="flip-card-back">
-                                <h5>Most used payment methods</h5>
                                 <div>[placeholder]</div>
                             </div>
                         </div>
