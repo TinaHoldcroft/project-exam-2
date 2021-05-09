@@ -29,12 +29,13 @@
     height: 270px;
     width: 450px;
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
+    transform: scale(0.9);
     &:hover .flip-card-inner { transform: rotateY(180deg); }
     p {
         bottom: 1.85rem;
