@@ -306,3 +306,13 @@ label {
     padding-top: 5vw;
     padding-bottom: 6vw;
 }
+.enquiry-form {
+    .btn-group {
+        button {
+            margin-right: 1rem;
+        }
+        button + button {
+            margin-right: 0rem;
+        }
+    }
+}

@@ -83,15 +83,18 @@ function Enquiry() {
                     <input title="E-mail" placeholder="e-mail" type="email" name="email" ref={register}/>
                     <span className="error">{errors.email?.message}</span>
 
-                    <label>Check in</label>
+                    <label htmlFor="checkIn">Check in</label>
                     <input title="Check in date" type="date" name="checkIn" ref={register}/>
                     <span className="error">{errors.checkIn?.message}</span>
 
-                    <label>Check out</label>
+                    <label htmlFor="checkOut">Check out</label>
                     <input title="Check out date" type="date" name="checkOut" ref={register}/>
                     <span className="error">{errors.checkOut?.message}</span>
-
-                    <button title="Submit form" type="submit" className="btn-blue">Submit</button>
+                    
+                    <div className="btn-group">
+                        <button title="Submit form" type="submit" className="btn-blue">Submit</button>
+                        <button title="Reset form" type="reset" className="btn-white">Reset</button>
+                    </div>
                 </form>
             </div>
         </div>
