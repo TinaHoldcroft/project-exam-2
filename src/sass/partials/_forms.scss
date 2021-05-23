@@ -136,7 +136,7 @@ label {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     h3 { 
         font-size: 2.5em; 
@@ -153,7 +153,7 @@ label {
             top: 15vh;
             left: 5vw;
             width: 90vw;
-            height: 70vh;
+            height: auto;
             padding: 3rem;
             margin-top: 0;
         }
@@ -178,6 +178,7 @@ label {
     .btn-blue { border: 2px solid $dark-blue; }
     .register-btn, .login-btn {
         display: none;
+        width: 100%;
         @media screen and (max-width: 800px) { display: block;}
     }
     .login__dark, .register__dark, .enquiry__dark {

@@ -38,13 +38,13 @@ function Contact() {
     return (
         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <h2>Contact Us</h2>
-            <label>Name</label>
+            <label htmlFor="name">Name</label>
             <input title="Name" type="name" name="name" ref={register}/>
             <p className="error">{errors.name?.message}</p>
-            <label>E-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input title="E-mail" type="email" name="email" ref={register}/>
             <p className="error">{errors.email?.message}</p>
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea type="text" name="message" ref={register}></textarea>
             <p className="error">{errors.message?.message}</p>
             <button title="Send message" className="btn-blue" type="submit">Send</button>

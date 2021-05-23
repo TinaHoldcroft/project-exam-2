@@ -36,14 +36,13 @@ function Nav() {
                 </div>
                 <div className="nav-links dropdown">
                     <button className={isActive ? "btn-closed" : "btn-open"} onClick={handleToggle}>
-                        <i className="fas fa-bars"></i>
-                        <i className="fas fa-times"></i>
+                        <i className={isActive ? "fas fa-bars" : "fas fa-times"}></i>
                     </button>         
                     <div className={isActive ? "closed" : "open"}>
-                        <NavLink activeClassName="active" to="/" exact id="home" title="Home">Home</NavLink>
-                        <NavLink activeClassName="active" to="/accommodations" exact title="Accommodations">Accommodations</NavLink>
-                        <NavLink activeClassName="active" to="/contact" title="Contact">Contact</NavLink> 
-                        <NavLink activeClassName="active" to="/login"><i title="Admin login" className="fas fa-user"></i></NavLink>
+                        <NavLink activeClassName="active" onClick={handleToggle} to="/" exact id="home" title="Home">Home</NavLink>
+                        <NavLink activeClassName="active" onClick={handleToggle} to="/accommodations" exact title="Accommodations">Accommodations</NavLink>
+                        <NavLink activeClassName="active" onClick={handleToggle} to="/contact" title="Contact">Contact</NavLink> 
+                        <NavLink activeClassName="active" onClick={handleToggle} to="/login"><i title="Admin login" className="fas fa-user"></i></NavLink>
                     </div>
                 </div>
             </div>

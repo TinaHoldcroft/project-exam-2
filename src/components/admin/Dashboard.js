@@ -21,7 +21,11 @@ function Dashboard() {
                                 <div class="ring"></div>
                             </div>
                             <div class="flip-card-back">
-                                <div>[placeholder]</div>
+                                <h4>Payment methods</h4>
+                                <ol>
+                                    <li>Visa</li>
+                                    <li>Mastercard</li>
+                                </ol>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,10 @@ import { Helmet } from "react-helmet";
 export function Home() {
 	return (
 		<>
-			<Helmet><title>Home | Holidaze</title></Helmet>
+			<Helmet>
+				<title>Home | Holidaze</title>
+				<link rel="icon" type="image/svg" href="/favicon.svg"/>
+			</Helmet>
 			<Hero/>
 			<SearchList/>
 			<RecentlyViewed/>

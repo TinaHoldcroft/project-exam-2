@@ -61,41 +61,33 @@
             height: auto;
             width: auto;
             position: absolute;
-            top: 0;
-            right: 0;
-            margin: 1rem;
+            top: 1rem;
+            right: 1rem;
             padding: 0;
             background: transparent;
             border: none;
-            font-size: 2em;
+            font-size: 1em;
             color: $white;
             &:hover { background: transparent; }
         }
-        .btn-closed { //when closed = hamburger
-            .fa-times {display: none; }
-            .fa-bars { display: inline; }
-        }
-        .btn-open { //when open = X
-            .fa-bars { display: none; }
-            .fa-times {
-                display: inline;
-                color: $dark-blue;
-            }
+        .fa-times { 
+            color: black;
+            z-index: 999;
         }
         .closed { display: none; }
         .open {
             display: flex;
             flex-flow: column;
             background: $white;
-            height: 40vh;
+            height: 30vh;
             width: 100vw;
             border-radius: 0 0 25px 25px;
             box-shadow: $box-shadow;
-            a:first-child { margin-top: 5rem;}
+            a:first-child { margin-top: 3.5rem;}
             a {
                 margin-right: 1rem;
                 color: $dark-blue;
-                font-size: 1.2em;
+                font-size: 1em;
                 line-height: 2em;
             }
         }
@@ -105,6 +97,7 @@
     #home, .btn-open, .btn-closed { display: none;}
 }
 .menu__user .active { opacity: 0.7; }
+
 //admin side//admin side//admin side//admin side//admin side//admin side//admin side
 @mixin absolute-right {
     position: absolute;

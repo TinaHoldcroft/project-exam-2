@@ -38,7 +38,7 @@
     transform: scale(1);
     &:hover .flip-card-inner { transform: rotateY(180deg); }
     p {
-        bottom: 1.85rem;
+        bottom: 2rem;
         right: 5.6rem;
         font-weight: 200;
         font-size: 0.18em;
@@ -119,4 +119,14 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    div {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    h4 {
+        margin-bottom: 1rem;
+    }
+    li {
+        font-size: 0.8em;
+    }
 }
