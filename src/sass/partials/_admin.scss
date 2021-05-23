@@ -57,6 +57,13 @@
     margin-top: 3vw;
     margin-left: 2.7rem;
 }
+.edit  {
+    .btn-white, .btn-blue, .btn-red {
+                padding: 0.5rem 0rem;
+                margin-right: 0.5rem;
+            
+        }
+}
 .messages {
     display: flex;
     justify-content: center;
